@@ -7,12 +7,14 @@ import pycldf
 from cldfbench import CLDFSpec
 from cldfbench import Dataset as BaseDataset
 from cltoolkit import Wordlist
-from cltoolkit.features import FEATURES
+from cltoolkit.features import FeatureCollection, Feature
+from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
 from pyclts import CLTS
 from git import Repo, GitCommandError
 from tqdm import tqdm
 from csvw.dsv import reader
+from csvw.utils import slug
 
 COLLECTIONS = {
     'LexiCore': (
@@ -214,6 +216,27 @@ class Dataset(BaseDataset):
                 d['Concepts'] = len(d['Concepts'])
                 writer.objects['collections.csv'].append(d)
 
+    def _colexification_features(self):
+        concept_list = self.etc_dir.read_csv(
+            'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
+        bodyparts = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'body']
+        objects = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'object']
+        return FeatureCollection(
+            Feature(
+                id='{}And{}'.format(
+                    slug(bodypart).capitalize(),
+                    slug(obj).capitalize()),
+                name="colexification of {} and {}".format(bodypart, obj),
+                function=Colexification(bodypart, obj))
+            for bodypart in bodyparts
+            for obj in objects)
+
     def cmd_makecldf(self, args):
         dsinfo = {row["ID"]: row for row in reader(self.etc_dir /
             'lexibank.csv', dicts=True, delimiter=",")}
@@ -325,7 +348,7 @@ class Dataset(BaseDataset):
                 {"name": "Feature_Spec", "datatype": "json"},
             )
 
-            features = [f for f in FEATURES if f.function.__module__.endswith("phonology")]
+            features = []
 
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
@@ -356,7 +379,7 @@ class Dataset(BaseDataset):
                 'ParameterTable',
                 {"name": "Feature_Spec", "datatype": "json"},
             )
-            features = [f for f in FEATURES if f.function.__module__.endswith("lexicon")]
+            features = self._colexification_features()
 
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
