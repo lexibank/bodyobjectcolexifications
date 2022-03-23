@@ -52,7 +52,7 @@ _loaded = {}
 
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
-    id = "lexibank-analysed"
+    id = "tjukabodyobject"
 
     def cldf_specs(self):
         return {
