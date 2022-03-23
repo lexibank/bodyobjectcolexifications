@@ -88,7 +88,7 @@ class Dataset(BaseDataset):
             if not row['Zenodo'].strip():
                 continue
             row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
-            if any(coll in row['collections'] for coll in ['LexiCore', 'ClicsCore']):
+            if 'ClicsCore' in row['collections']:
                 res[row['Dataset']] = row
         return res
 
