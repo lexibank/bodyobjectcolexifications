@@ -36,31 +36,14 @@ class Dataset(BaseDataset):
     id = "tjukabodyobject"
 
     def cldf_specs(self):
-        return {
-            'phonology': CLDFSpec(
-                metadata_fname='phonology-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='phonology-features.csv',
-                    ValueTable='phonology-values.csv',
-                    CodeTable='phonology-codes.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-            'lexicon': CLDFSpec(
-                metadata_fname='lexicon-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='lexicon-features.csv',
-                    ValueTable='lexicon-values.csv',
-                    CodeTable='lexicon-codes.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-            'phonemes': CLDFSpec(
-                metadata_fname='phonemes-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='phonemes.csv',
-                    ValueTable='frequencies.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-        }
+        return CLDFSpec(
+            metadata_fname='lexicon-metadata.json',
+            data_fnames=dict(
+                ParameterTable='lexicon-features.csv',
+                ValueTable='lexicon-values.csv',
+                CodeTable='lexicon-codes.csv',
+            ),
+            dir=self.cldf_dir, module="StructureDataset")
 
     @property
     def dataset_meta(self):
@@ -329,7 +312,7 @@ class Dataset(BaseDataset):
                             collection=collection, visited=visited)
                     yield language
 
-        with self.cldf_writer(args, cldf_spec='lexicon', clean=True) as writer:
+        with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
                 'ParameterTable',
