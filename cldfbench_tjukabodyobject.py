@@ -217,25 +217,40 @@ class Dataset(BaseDataset):
                 writer.objects['collections.csv'].append(d)
 
     def _colexification_features(self):
-        concept_list = self.etc_dir.read_csv(
-            'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
-        bodyparts = [
-            row['CONCEPTICON_GLOSS']
-            for row in concept_list
-            if row['GROUP'] == 'body']
-        objects = [
-            row['CONCEPTICON_GLOSS']
-            for row in concept_list
-            if row['GROUP'] == 'object']
-        return FeatureCollection(
+        # concept_list = self.etc_dir.read_csv(
+        #     'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
+        # bodyparts = [
+        #     row['CONCEPTICON_GLOSS']
+        #     for row in concept_list
+        #     if row['GROUP'] == 'body']
+        # objects = [
+        #     row['CONCEPTICON_GLOSS']
+        #     for row in concept_list
+        #     if row['GROUP'] == 'object']
+        # return FeatureCollection(
+        #     Feature(
+        #         id='{}And{}'.format(
+        #             slug(bodypart).capitalize(),
+        #             slug(obj).capitalize()),
+        #         name="colexification of {} and {}".format(bodypart, obj),
+        #         function=Colexification(bodypart, obj))
+        #     for bodypart in bodyparts
+        #     for obj in objects)
+        # FIXME ^ This blows out RAM currently. Testing things with toy examples for now.
+        return FeatureCollection((
             Feature(
-                id='{}And{}'.format(
-                    slug(bodypart).capitalize(),
-                    slug(obj).capitalize()),
-                name="colexification of {} and {}".format(bodypart, obj),
-                function=Colexification(bodypart, obj))
-            for bodypart in bodyparts
-            for obj in objects)
+                id='BarkAndSkin',
+                name='colexification of BARK and SKIN',
+                function=Colexification(['BARK'], ['SKIN'])),
+            Feature(
+                id='ArmAndBranch',
+                name='colexification of ARM and BRANCH',
+                function=Colexification(['ARM'], ['BRANCH'])),
+            Feature(
+                id='KneeAndPoncho',
+                name='colexification of KNEE and PONCHO',
+                function=Colexification(['KNEE'], ['PONCHO'])),
+        ))
 
     def cmd_makecldf(self, args):
         dsinfo = {row["ID"]: row for row in reader(self.etc_dir /
