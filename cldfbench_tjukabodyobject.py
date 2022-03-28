@@ -7,43 +7,24 @@ import pycldf
 from cldfbench import CLDFSpec
 from cldfbench import Dataset as BaseDataset
 from cltoolkit import Wordlist
-from cltoolkit.features import FEATURES
+from cltoolkit.features import FeatureCollection, Feature
+from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
 from pyclts import CLTS
 from git import Repo, GitCommandError
 from tqdm import tqdm
 from csvw.dsv import reader
+from csvw.utils import slug
 
 COLLECTIONS = {
-    'LexiCore': (
-        'Wordlists with phonetic transcriptions in which sound segments can be readily described '
-        'by the CLTS system',
-        'wordlists with phonetic transcriptions)'),
     'ClicsCore': (
         'Wordlists with large form inventories in which at least 250 concepts can be linked to '
         'the Concepticon',
         'large wordlists with at least 250 concepts'),
-    'CogCore': (
-        'Wordlists with phonetic transcriptions in which cognate sets have been annotated '
-        '(a subset of LexiCore)',
-        'wordlists with phonetic transcriptions and cognate sets'),
-    'ProtoCore': (
-        'Wordlists with phonetic transcriptions in which cognate sets have been annotated and '
-        'which contain one or more ancestral languages whose forms are proto-forms from which '
-        'forms in the descendant languages can be derived (a subset of CogCore)',
-        'wordlists with phonetic transcriptions, cognate sets, and proto-languages'),
-    'Lexibank': (
-        'Metacollection of wordlists belonging to either of the datasets',
-        'all wordlists in the Lexibank collection'
-        ),
 }
 CONDITIONS = {
-        "LexiCore": lambda x: len(x.forms_with_sounds) >= 80,
-        "ClicsCore": lambda x: len(x.concepts) >= 250,
-        "ProtoCore": lambda x: len(x.forms_with_sounds) >= 80,
-        "CogCore": lambda x: len(x.forms_with_sounds) >= 80,
-        "Lexibank": lambda x: len(x.forms_with_sounds) >= 80 or len(x.concepts) >= 250
-        }
+    "ClicsCore": lambda x: len(x.concepts) >= 250,
+}
 CLTS_2_1 = (
     "https://zenodo.org/record/4705149/files/cldf-clts/clts-v2.1.0.zip?download=1",
     'cldf-clts-clts-04f04e3')
@@ -55,31 +36,14 @@ class Dataset(BaseDataset):
     id = "tjukabodyobject"
 
     def cldf_specs(self):
-        return {
-            'phonology': CLDFSpec(
-                metadata_fname='phonology-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='phonology-features.csv',
-                    ValueTable='phonology-values.csv',
-                    CodeTable='phonology-codes.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-            'lexicon': CLDFSpec(
-                metadata_fname='lexicon-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='lexicon-features.csv',
-                    ValueTable='lexicon-values.csv',
-                    CodeTable='lexicon-codes.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-            'phonemes': CLDFSpec(
-                metadata_fname='phonemes-metadata.json',
-                data_fnames=dict(
-                    ParameterTable='phonemes.csv',
-                    ValueTable='frequencies.csv',
-                ),
-                dir=self.cldf_dir, module="StructureDataset"),
-        }
+        return CLDFSpec(
+            metadata_fname='lexicon-metadata.json',
+            data_fnames=dict(
+                ParameterTable='lexicon-features.csv',
+                ValueTable='lexicon-values.csv',
+                CodeTable='lexicon-codes.csv',
+            ),
+            dir=self.cldf_dir, module="StructureDataset")
 
     @property
     def dataset_meta(self):
@@ -214,6 +178,30 @@ class Dataset(BaseDataset):
                 d['Concepts'] = len(d['Concepts'])
                 writer.objects['collections.csv'].append(d)
 
+    def _colexification_features(self):
+        # concept_list = self.etc_dir.read_csv(
+        #     'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
+        # bodyparts = [
+        #     row['CONCEPTICON_GLOSS']
+        #     for row in concept_list
+        #     if row['GROUP'] == 'body']
+        # objects = [
+        #     row['CONCEPTICON_GLOSS']
+        #     for row in concept_list
+        #     if row['GROUP'] == 'object']
+        # FIXME ^ This blows out RAM currently. Testing things with toy examples for now.
+        bodyparts = ['SKIN', 'ARM', 'KNEE']
+        objects = ['BARK', 'BRANCH', 'PONCHO']
+        return FeatureCollection(
+            Feature(
+                id='{}And{}'.format(
+                    slug(bodypart).capitalize(),
+                    slug(obj).capitalize()),
+                name="colexification of {} and {}".format(bodypart, obj),
+                function=Colexification(bodypart, obj))
+            for bodypart in bodyparts
+            for obj in objects)
+
     def cmd_makecldf(self, args):
         dsinfo = {row["ID"]: row for row in reader(self.etc_dir /
             'lexibank.csv', dicts=True, delimiter=",")}
@@ -269,22 +257,16 @@ class Dataset(BaseDataset):
             else:
                 l['Incollections'] = l['Incollections'] + collection
             if language.id not in visited:
-                for cid in ["ClicsCore", "LexiCore", "CogCore", "ProtoCore"]:
-                    try:
-                        if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
-                            collstats[cid]["Glottocodes"].add(language.glottocode)
-                            collstats[cid]["Varieties"] += 1
-                            collstats[cid]["Forms"] += len(language.forms)
-                            collstats[cid]["Concepts"].update(
-                                    [concept.id for concept in language.concepts])
-                    except:
-                        print("problems with {0}".format(language.dataset))
-                if CONDITIONS["Lexibank"](language):
-                    collstats["Lexibank"]["Glottocodes"].add(language.glottocode)
-                    collstats["Lexibank"]["Varieties"] += 1
-                    collstats["Lexibank"]["Forms"] += len(language.forms)
-                    collstats["Lexibank"]["Concepts"].update(
-                                    [concept.id for concept in language.concepts])
+                cid = 'ClicsCore'
+                try:
+                    if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
+                        collstats[cid]["Glottocodes"].add(language.glottocode)
+                        collstats[cid]["Varieties"] += 1
+                        collstats[cid]["Forms"] += len(language.forms)
+                        collstats[cid]["Concepts"].update(
+                            [concept.id for concept in language.concepts])
+                except:
+                    print("problems with {0}".format(language.dataset))
                 visited.add(language.id)
             languages[language.id] = l
             writer.objects['LanguageTable'].append(l)
@@ -318,45 +300,13 @@ class Dataset(BaseDataset):
                             collection=collection, visited=visited)
                     yield language
 
-        with self.cldf_writer(args, cldf_spec='phonology') as writer:
+        with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
                 'ParameterTable',
                 {"name": "Feature_Spec", "datatype": "json"},
             )
-
-            features = [f for f in FEATURES if f.function.__module__.endswith("phonology")]
-
-            for fid, fname, fdesc in [
-                ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
-                ('forms', 'Number of forms', ''),
-                ('forms_with_sounds', 'Number of BIPA conforming forms', ''),
-                ('senses', 'Number of senses', ''),
-            ]:
-                writer.objects['ParameterTable'].append(
-                    dict(ID=fid, Name=fname, Description=fdesc))
-            _add_features(writer, features)
-
-            sounds = collections.defaultdict(collections.Counter)
-            for language in _add_languages(
-                writer,
-                Wordlist(datasets=self._datasets('LexiCore'), ts=CLTS(self.raw_dir / CLTS_2_1[1]).bipa),
-                CONDITIONS["LexiCore"], # len(l.forms_with_sounds) >= 80,
-                features,
-                ['concepts', 'forms', 'forms_with_sounds', 'senses'],
-                collection='LexiCore',
-                visited=visited
-            ):
-                for sound in language.sound_inventory.segments:
-                    sounds[(sound.obj.name.replace(' ', '_'), sound.obj.s)][language.id] = len(sound.occurrences)
-
-        with self.cldf_writer(args, cldf_spec='lexicon', clean=False) as writer:
-            self._schema(writer)
-            writer.cldf.add_columns(
-                'ParameterTable',
-                {"name": "Feature_Spec", "datatype": "json"},
-            )
-            features = [f for f in FEATURES if f.function.__module__.endswith("lexicon")]
+            features = self._colexification_features()
 
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
@@ -375,26 +325,3 @@ class Dataset(BaseDataset):
                 collection='ClicsCore',
                 visited=visited,
             ))
-
-        with self.cldf_writer(args, cldf_spec='phonemes', clean=False) as writer:
-            writer.cldf.add_columns('ParameterTable', 'cltsReference')
-            self._schema(writer, with_stats=True, collstats=collstats)
-            writer.objects['LanguageTable'] = languages.values()
-            for clts_id, glyphs in itertools.groupby(sorted(sounds.keys()), lambda k: k[0]):
-                glyphs = [g[1] for g in glyphs]
-                occurrences = collections.Counter()
-                for glyph in glyphs:
-                    occurrences.update(**sounds[clts_id, glyph])
-
-                writer.objects['ParameterTable'].append(dict(
-                    ID=clts_id,
-                    Name=' / '.join(glyphs),
-                    CLTS_ID=clts_id,
-                ))
-                for lid, freq in sorted(occurrences.items()):
-                    writer.objects['ValueTable'].append(dict(
-                        ID='{}-{}'.format(lid, clts_id),
-                        Language_ID=lid,
-                        Parameter_ID=clts_id,
-                        Value=freq,
-                    ))

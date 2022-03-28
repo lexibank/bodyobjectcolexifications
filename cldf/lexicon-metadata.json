@@ -10,12 +10,12 @@
     "dc:identifier": "https://lexibank.clld.org",
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:title": "Lexibank Analysed",
-    "dcat:accessURL": "https://github.com/lexibank/lexibank-analysed",
+    "dcat:accessURL": "https://github.com/lexibank/tjukabodyobject",
     "prov:wasDerivedFrom": [
         {
-            "rdf:about": "https://github.com/lexibank/lexibank-analysed",
+            "rdf:about": "https://github.com/lexibank/tjukabodyobject",
             "rdf:type": "prov:Entity",
-            "dc:created": "v0.2-6-geb9b58c",
+            "dc:created": "v0.2-12-gf953fcb",
             "dc:title": "Repository"
         },
         {
@@ -349,7 +349,6 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
-            "dc:extent": 59598,
             "tableSchema": {
                 "columns": [
                     {
@@ -429,17 +428,6 @@
                                 "ID"
                             ]
                         }
-                    },
-                    {
-                        "columnReference": [
-                            "Language_ID"
-                        ],
-                        "reference": {
-                            "resource": "languages.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
                     }
                 ],
                 "primaryKey": [
@@ -450,7 +438,6 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
-            "dc:extent": 33,
             "tableSchema": {
                 "columns": [
                     {
@@ -473,10 +460,6 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
                         "required": false,
                         "name": "Description"
-                    },
-                    {
-                        "datatype": "json",
-                        "name": "Feature_Spec"
                     }
                 ],
                 "primaryKey": [
@@ -487,7 +470,6 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable",
-            "dc:extent": 90,
             "tableSchema": {
                 "columns": [
                     {
@@ -538,240 +520,6 @@
                 ]
             },
             "url": "lexicon-codes.csv"
-        },
-        {
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 1806,
-            "tableSchema": {
-                "columns": [
-                    {
-                        "datatype": {
-                            "base": "string",
-                            "format": "[a-zA-Z0-9_\\-]+"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "required": true,
-                        "name": "ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
-                        "required": false,
-                        "name": "Name"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
-                        "required": false,
-                        "name": "Macroarea"
-                    },
-                    {
-                        "datatype": {
-                            "base": "decimal",
-                            "minimum": "-90",
-                            "maximum": "90"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
-                        "required": false,
-                        "name": "Latitude"
-                    },
-                    {
-                        "datatype": {
-                            "base": "decimal",
-                            "minimum": "-180",
-                            "maximum": "180"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
-                        "required": false,
-                        "name": "Longitude"
-                    },
-                    {
-                        "datatype": {
-                            "base": "string",
-                            "format": "[a-z0-9]{4}[1-9][0-9]{3}"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
-                        "required": false,
-                        "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}",
-                        "name": "Glottocode"
-                    },
-                    {
-                        "datatype": {
-                            "base": "string",
-                            "format": "[a-z]{3}"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
-                        "required": false,
-                        "name": "ISO639P3code"
-                    },
-                    {
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributionReference",
-                        "name": "Dataset"
-                    },
-                    {
-                        "dc:description": "Number of forms",
-                        "datatype": "integer",
-                        "name": "Forms"
-                    },
-                    {
-                        "dc:description": "Number of forms with sounds",
-                        "datatype": "integer",
-                        "name": "FormsWithSounds"
-                    },
-                    {
-                        "dc:description": "Number of concepts",
-                        "datatype": "integer",
-                        "name": "Concepts"
-                    },
-                    {
-                        "name": "Incollections"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Subgroup"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Family"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": [
-                            "Dataset"
-                        ],
-                        "reference": {
-                            "resource": "contributions.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    }
-                ],
-                "primaryKey": [
-                    "ID"
-                ]
-            },
-            "url": "languages.csv"
-        },
-        {
-            "tableSchema": {
-                "columns": [
-                    {
-                        "datatype": "string",
-                        "name": "ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Name"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Description"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Varieties"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Glottocodes"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Concepts"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Forms"
-                    }
-                ],
-                "primaryKey": [
-                    "ID"
-                ]
-            },
-            "url": "collections.csv"
-        },
-        {
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
-            "tableSchema": {
-                "columns": [
-                    {
-                        "datatype": {
-                            "base": "string",
-                            "format": "[a-zA-Z0-9_\\-]+"
-                        },
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "required": true,
-                        "name": "ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
-                        "required": false,
-                        "name": "Name"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
-                        "required": false,
-                        "name": "Description"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributor",
-                        "required": false,
-                        "name": "Contributor"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#citation",
-                        "required": false,
-                        "name": "Citation"
-                    },
-                    {
-                        "separator": " ",
-                        "name": "Collection_IDs"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Glottocodes"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Doculects"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Concepts"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Senses"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Forms"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": [
-                            "Collection_IDs"
-                        ],
-                        "reference": {
-                            "resource": "collections.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    }
-                ],
-                "primaryKey": [
-                    "ID"
-                ]
-            },
-            "url": "contributions.csv"
         }
     ]
 }
