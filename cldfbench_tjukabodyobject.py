@@ -104,18 +104,21 @@ class Dataset(BaseDataset):
         Load all datasets from a defined group of datasets.
         """
         if set_:
-            dss = [key for key, md in self.dataset_meta.items() if set_ in md['collections']]
+            dataset_ids = [
+                dataset_id
+                for dataset_id, md in self.dataset_meta.items()
+                if set_ in md['collections']]
         else:
-            dss = list(self.dataset_meta.keys())
+            dataset_ids = list(self.dataset_meta)
 
-        res = []
-        for ds in dss:
-            if ds not in _loaded:
-                _loaded[ds] = (
-                    pycldf.Dataset.from_metadata(self.raw_dir / ds / "cldf" / "cldf-metadata.json"),
-                    self.dataset_meta[ds])
-            res.append(_loaded[ds]) if with_metadata else res.append(_loaded[ds][0])
-        return res
+        # avoid duplicates
+        dataset_ids = sorted(set(dataset_ids))
+
+        for dataset_id in dataset_ids:
+            dataset = pycldf.Dataset.from_metadata(
+                self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
+            metadata = self.dataset_meta[dataset_id]
+            yield (dataset, metadata) if with_metadata else dataset
 
     def _schema(self, writer, with_stats=False, collstats=None):
         writer.cldf.add_component(
@@ -235,6 +238,7 @@ class Dataset(BaseDataset):
                             Name=v,
                         ))
 
+        features_found = set()
         def _add_language(
                 writer, language, features, attr_features,
                 collection='', visited=set()):
@@ -276,9 +280,12 @@ class Dataset(BaseDataset):
                     Language_ID=language.id,
                     Parameter_ID=attr,
                     Value=len(getattr(language, attr))
-                )) 
+                ))
             for feature in features:
                 v = feature(language)
+                if not v:
+                    continue
+                features_found.add(feature.id)
                 if feature.categories:
                     assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
                 writer.objects['ValueTable'].append(dict(
@@ -315,13 +322,17 @@ class Dataset(BaseDataset):
             ]:
                 writer.objects['ParameterTable'].append(
                     dict(ID=fid, Name=fname, Description=fdesc))
-            _add_features(writer, features)
-            _ = list(_add_languages(
+
+            for dataset in self._datasets('ClicsCore'):
+                _ = list(_add_languages(
+                    writer,
+                    Wordlist(datasets=[dataset]),
+                    CONDITIONS["ClicsCore"], #lambda l: len(l.concepts) >= 250,
+                    features,
+                    ['concepts', 'forms', 'senses'],
+                    collection='ClicsCore',
+                    visited=visited,
+                ))
+            _add_features(
                 writer,
-                Wordlist(datasets=self._datasets('ClicsCore')),
-                CONDITIONS["ClicsCore"], #lambda l: len(l.concepts) >= 250,
-                features,
-                ['concepts', 'forms', 'senses'],
-                collection='ClicsCore',
-                visited=visited,
-            ))
+                (f for f in features if f.id in features_found))
