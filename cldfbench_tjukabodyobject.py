@@ -182,19 +182,16 @@ class Dataset(BaseDataset):
                 writer.objects['collections.csv'].append(d)
 
     def _colexification_features(self):
-        # concept_list = self.etc_dir.read_csv(
-        #     'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
-        # bodyparts = [
-        #     row['CONCEPTICON_GLOSS']
-        #     for row in concept_list
-        #     if row['GROUP'] == 'body']
-        # objects = [
-        #     row['CONCEPTICON_GLOSS']
-        #     for row in concept_list
-        #     if row['GROUP'] == 'object']
-        # FIXME ^ This blows out RAM currently. Testing things with toy examples for now.
-        bodyparts = ['SKIN', 'ARM', 'KNEE']
-        objects = ['BARK', 'BRANCH', 'PONCHO']
+        concept_list = self.etc_dir.read_csv(
+            'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
+        bodyparts = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'body']
+        objects = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'object']
         return FeatureCollection(
             Feature(
                 id='{}And{}'.format(
