@@ -5,17 +5,16 @@
             "@language": "en"
         }
     ],
-    "dc:bibliographicCitation": "List, Johann-Mattis; Forkel, Robert; Greenhill, Simon J.; Rzymski, Christoph; Englisch, Johannes; and Russell D. Gray (2021): Lexibank: A publicly available repository of standardized lexical datasets with automatically computed phonological and lexical features for more than 2000 language varieties [Dataset, Version 1.0]. Geneva: Zenodo.",
+    "dc:bibliographicCitation": "Tjuka, Annika; List, Johann-Mattis; Englisch, Johannes; Rzymski, Christoph; and Robert Forkel (2022): Body-Object Colexifications",
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
-    "dc:identifier": "https://lexibank.clld.org",
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
-    "dc:title": "Lexibank Analysed",
+    "dc:title": "Tjuka 2022: Body-Object Colexifications",
     "dcat:accessURL": "https://github.com/lexibank/tjukabodyobject",
     "prov:wasDerivedFrom": [
         {
             "rdf:about": "https://github.com/lexibank/tjukabodyobject",
             "rdf:type": "prov:Entity",
-            "dc:created": "v0.2-12-gf953fcb",
+            "dc:created": "v0.2-22-g242f319",
             "dc:title": "Repository"
         },
         {
