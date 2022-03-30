@@ -40,14 +40,18 @@ class Dataset(BaseDataset):
 
     @property
     def dataset_meta(self):
-        res = collections.OrderedDict()
-        for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
-            if not row['Zenodo'].strip():
-                continue
-            row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
-            if 'ClicsCore' in row['collections']:
-                res[row['Dataset']] = row
-        return res
+        if getattr(self, '_dataset_meta', None):
+            return self._dataset_meta
+        else:
+            dataset_meta = collections.OrderedDict()
+            for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
+                if not row['Zenodo'].strip():
+                    continue
+                row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
+                if 'ClicsCore' in row['collections']:
+                    dataset_meta[row['Dataset']] = row
+            self._dataset_meta = dataset_meta
+            return self._dataset_meta
 
     def cmd_download(self, args):
         github_info = {rec.doi: rec.github_repos for rec in oai_lexibank()}
