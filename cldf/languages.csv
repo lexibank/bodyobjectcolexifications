@@ -1154,6 +1154,11 @@ listsamplesize-german,German,,48.649,12.4676,stan1295,,listsamplesize,642,0,549,
 listsamplesize-dutch,Dutch,,52.0,5.0,dutc1256,,listsamplesize,579,0,549,ClicsCore,,Indo-European
 listsamplesize-french,French,,48.0,2.0,stan1290,,listsamplesize,631,0,548,ClicsCore,,Indo-European
 listsamplesize-english,English,,53.0,-1.0,stan1293,,listsamplesize,577,0,549,ClicsCore,,Indo-European
+logos-Venetianstd,Venetian-std,,45.503581,12.214167,vene1258,,logos,625,0,504,ClicsCore,,Indo-European
+logos-Hindistd,Hindi-std,,25.0,77.0,hind1269,,logos,631,0,537,ClicsCore,,Indo-European
+logos-Romagnolstd,Romagnol-std,,44.2349,11.7189,roma1328,,logos,627,0,531,ClicsCore,,Indo-European
+logos-Latinstd,Latin-std,,41.9026,12.4502,lati1261,,logos,780,0,624,ClicsCore,,Indo-European
+logos-Galicianstd,Galician-std,,42.2446,-7.5343,gali1258,,logos,620,0,501,ClicsCore,,Indo-European
 mannburmish-Achang,Achang,,24.25,97.8333,acha1249,,mannburmish,361,0,359,ClicsCore,Burmish,Sino-Tibetan
 mannburmish-Lashi,Lashi,,24.45,98.6,lash1243,,mannburmish,375,0,372,ClicsCore,Burmish,Sino-Tibetan
 mannburmish-Maru,Maru,,24.45,98.6,maru1249,,mannburmish,334,0,332,ClicsCore,Burmish,Sino-Tibetan
@@ -1800,8 +1805,3 @@ zgraggenmadang-yabong,yabong,,-5.61718,146.2065,yabo1240,,zgraggenmadang,343,0,2
 zgraggenmadang-yangulam,yangulam,,-5.52697,145.858,yang1298,,zgraggenmadang,290,0,253,ClicsCore,,Nuclear Trans New Guinea
 zgraggenmadang-yarawata,yarawata,,-4.93943,145.454,yara1250,,zgraggenmadang,359,0,296,ClicsCore,,Nuclear Trans New Guinea
 zgraggenmadang-yoidik,yoidik,,-4.94044,145.758,yoid1240,,zgraggenmadang,349,0,296,ClicsCore,,Nuclear Trans New Guinea
-logos-Venetianstd,Venetian-std,,45.503581,12.214167,vene1258,,logos,625,0,504,ClicsCore,,Indo-European
-logos-Hindistd,Hindi-std,,25.0,77.0,hind1269,,logos,631,0,537,ClicsCore,,Indo-European
-logos-Romagnolstd,Romagnol-std,,44.2349,11.7189,roma1328,,logos,627,0,531,ClicsCore,,Indo-European
-logos-Latinstd,Latin-std,,41.9026,12.4502,lati1261,,logos,780,0,624,ClicsCore,,Indo-European
-logos-Galicianstd,Galician-std,,42.2446,-7.5343,gali1258,,logos,620,0,501,ClicsCore,,Indo-European
