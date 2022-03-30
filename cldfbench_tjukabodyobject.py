@@ -40,9 +40,9 @@ class Dataset(BaseDataset):
 
     @property
     def dataset_meta(self):
-        if getattr(self, '_dataset_meta', None):
+        try:
             return self._dataset_meta
-        else:
+        except AttributeError:
             dataset_meta = collections.OrderedDict()
             for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
                 if not row['Zenodo'].strip():
@@ -264,7 +264,7 @@ class Dataset(BaseDataset):
                         collstats[cid]["Varieties"] += 1
                         collstats[cid]["Forms"] += len(language.forms)
                         collstats[cid]["Concepts"].update(
-                            [concept.id for concept in language.concepts])
+                            concept.id for concept in language.concepts)
                 except:
                     print("problems with {0}".format(language.dataset))
                 visited.add(language.id)
