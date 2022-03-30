@@ -1,6 +1,5 @@
 import pathlib
 import zipfile
-import itertools
 import collections
 
 import pycldf
@@ -10,7 +9,6 @@ from cltoolkit import Wordlist
 from cltoolkit.features import FeatureCollection, Feature
 from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
-from pyclts import CLTS
 from git import Repo, GitCommandError
 from tqdm import tqdm
 from csvw.dsv import reader
@@ -203,8 +201,10 @@ class Dataset(BaseDataset):
             for obj in objects)
 
     def cmd_makecldf(self, args):
-        dsinfo = {row["ID"]: row for row in reader(self.etc_dir /
-            'lexibank.csv', dicts=True, delimiter=",")}
+        dsinfo = {
+            row["ID"]: row
+            for row in reader(
+                self.etc_dir / 'lexibank.csv', dicts=True, delimiter=",")}
         visited = set()
         collstats = collections.OrderedDict()
         for cid, (desc, name) in COLLECTIONS.items():
@@ -236,9 +236,11 @@ class Dataset(BaseDataset):
                         ))
 
         features_found = set()
+
         def _add_language(
-                writer, language, features, attr_features,
-                collection='', visited=set()):
+            writer, language, features, attr_features,
+            collection='', visited=set()
+        ):
             l = languages.get(language.id)
             if not l:
                 l = {
@@ -293,15 +295,18 @@ class Dataset(BaseDataset):
                     Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
                 ))
 
-        def _add_languages(writer, wordlist, condition, features,
-                attr_features, collection='', visited=set([]), ):
+        def _add_languages(
+            writer, wordlist, condition, features,
+            attr_features, collection='', visited=set([]),
+        ):
             for language in tqdm(wordlist.languages, desc='computing features'):
-                if language.name == None or language.name == "None":
+                if language.name is None or language.name == "None":
                     args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
                     continue
                 if language.latitude and condition(language):
-                    _add_language(writer, language, features, attr_features,
-                            collection=collection, visited=visited)
+                    _add_language(
+                        writer, language, features, attr_features,
+                        collection=collection, visited=visited)
                     yield language
 
         with self.cldf_writer(args) as writer:
@@ -324,7 +329,7 @@ class Dataset(BaseDataset):
                 _ = list(_add_languages(
                     writer,
                     Wordlist(datasets=[dataset]),
-                    CONDITIONS["ClicsCore"], #lambda l: len(l.concepts) >= 250,
+                    CONDITIONS["ClicsCore"],  # lambda l: len(l.concepts) >= 250,
                     features,
                     ['concepts', 'forms', 'senses'],
                     collection='ClicsCore',
