@@ -234,9 +234,10 @@ class Dataset(BaseDataset):
         features_found = set()
 
         def _add_language(
-            writer, language, features, attr_features,
-            collection='', visited=set()
+            writer, language, features, attr_features, collection='',
+            visited=None
         ):
+            visited = visited if visited is not None else set()
             l = languages.get(language.id)
             if not l:
                 l = {
@@ -292,9 +293,10 @@ class Dataset(BaseDataset):
                 ))
 
         def _add_languages(
-            writer, wordlist, condition, features,
-            attr_features, collection='', visited=set([]),
+            writer, wordlist, condition, features, attr_features, collection='',
+            visited=None
         ):
+            visited = visited if visited is not None else set()
             for language in tqdm(wordlist.languages, desc='computing features'):
                 if language.name is None or language.name == "None":
                     args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
