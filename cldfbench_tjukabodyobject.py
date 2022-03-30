@@ -1,5 +1,4 @@
 import pathlib
-import zipfile
 import collections
 
 import pycldf
@@ -23,10 +22,6 @@ COLLECTIONS = {
 CONDITIONS = {
     "ClicsCore": lambda x: len(x.concepts) >= 250,
 }
-CLTS_2_1 = (
-    "https://zenodo.org/record/4705149/files/cldf-clts/clts-v2.1.0.zip?download=1",
-    'cldf-clts-clts-04f04e3')
-_loaded = {}
 
 
 class Dataset(BaseDataset):
@@ -93,9 +88,6 @@ class Dataset(BaseDataset):
                     except AttributeError:
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
-
-        with self.raw_dir.temp_download(CLTS_2_1[0], 'ds.zip', log=args.log) as zipp:
-            zipfile.ZipFile(str(zipp)).extractall(self.raw_dir)
 
     def _datasets(self, set_=None, with_metadata=False):
         """
