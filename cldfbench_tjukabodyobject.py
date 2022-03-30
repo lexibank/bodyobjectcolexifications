@@ -1,6 +1,4 @@
 import pathlib
-import zipfile
-import itertools
 import collections
 
 import pycldf
@@ -10,7 +8,6 @@ from cltoolkit import Wordlist
 from cltoolkit.features import FeatureCollection, Feature
 from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
-from pyclts import CLTS
 from git import Repo, GitCommandError
 from tqdm import tqdm
 from csvw.dsv import reader
@@ -25,10 +22,6 @@ COLLECTIONS = {
 CONDITIONS = {
     "ClicsCore": lambda x: len(x.concepts) >= 250,
 }
-CLTS_2_1 = (
-    "https://zenodo.org/record/4705149/files/cldf-clts/clts-v2.1.0.zip?download=1",
-    'cldf-clts-clts-04f04e3')
-_loaded = {}
 
 
 class Dataset(BaseDataset):
@@ -47,14 +40,18 @@ class Dataset(BaseDataset):
 
     @property
     def dataset_meta(self):
-        res = collections.OrderedDict()
-        for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
-            if not row['Zenodo'].strip():
-                continue
-            row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
-            if 'ClicsCore' in row['collections']:
-                res[row['Dataset']] = row
-        return res
+        try:
+            return self._dataset_meta
+        except AttributeError:
+            dataset_meta = collections.OrderedDict()
+            for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
+                if not row['Zenodo'].strip():
+                    continue
+                row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
+                if 'ClicsCore' in row['collections']:
+                    dataset_meta[row['Dataset']] = row
+            self._dataset_meta = dataset_meta
+            return self._dataset_meta
 
     def cmd_download(self, args):
         github_info = {rec.doi: rec.github_repos for rec in oai_lexibank()}
@@ -95,9 +92,6 @@ class Dataset(BaseDataset):
                     except AttributeError:
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
-
-        with self.raw_dir.temp_download(CLTS_2_1[0], 'ds.zip', log=args.log) as zipp:
-            zipfile.ZipFile(str(zipp)).extractall(self.raw_dir)
 
     def _datasets(self, set_=None, with_metadata=False):
         """
@@ -203,8 +197,10 @@ class Dataset(BaseDataset):
             for obj in objects)
 
     def cmd_makecldf(self, args):
-        dsinfo = {row["ID"]: row for row in reader(self.etc_dir /
-            'lexibank.csv', dicts=True, delimiter=",")}
+        dsinfo = {
+            row["ID"]: row
+            for row in reader(
+                self.etc_dir / 'lexibank.csv', dicts=True, delimiter=",")}
         visited = set()
         collstats = collections.OrderedDict()
         for cid, (desc, name) in COLLECTIONS.items():
@@ -236,9 +232,12 @@ class Dataset(BaseDataset):
                         ))
 
         features_found = set()
+
         def _add_language(
-                writer, language, features, attr_features,
-                collection='', visited=set()):
+            writer, language, features, attr_features, collection='',
+            visited=None
+        ):
+            visited = visited if visited is not None else set()
             l = languages.get(language.id)
             if not l:
                 l = {
@@ -265,7 +264,7 @@ class Dataset(BaseDataset):
                         collstats[cid]["Varieties"] += 1
                         collstats[cid]["Forms"] += len(language.forms)
                         collstats[cid]["Concepts"].update(
-                            [concept.id for concept in language.concepts])
+                            concept.id for concept in language.concepts)
                 except:
                     print("problems with {0}".format(language.dataset))
                 visited.add(language.id)
@@ -293,15 +292,19 @@ class Dataset(BaseDataset):
                     Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
                 ))
 
-        def _add_languages(writer, wordlist, condition, features,
-                attr_features, collection='', visited=set([]), ):
+        def _add_languages(
+            writer, wordlist, condition, features, attr_features, collection='',
+            visited=None
+        ):
+            visited = visited if visited is not None else set()
             for language in tqdm(wordlist.languages, desc='computing features'):
-                if language.name == None or language.name == "None":
+                if language.name is None or language.name == "None":
                     args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
                     continue
                 if language.latitude and condition(language):
-                    _add_language(writer, language, features, attr_features,
-                            collection=collection, visited=visited)
+                    _add_language(
+                        writer, language, features, attr_features,
+                        collection=collection, visited=visited)
                     yield language
 
         with self.cldf_writer(args) as writer:
@@ -324,7 +327,7 @@ class Dataset(BaseDataset):
                 _ = list(_add_languages(
                     writer,
                     Wordlist(datasets=[dataset]),
-                    CONDITIONS["ClicsCore"], #lambda l: len(l.concepts) >= 250,
+                    CONDITIONS["ClicsCore"],  # lambda l: len(l.concepts) >= 250,
                     features,
                     ['concepts', 'forms', 'senses'],
                     collection='ClicsCore',
