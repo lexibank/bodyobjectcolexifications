@@ -276,21 +276,6 @@ class Dataset(BaseDataset):
                     Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
                 ))
 
-        def _add_languages(
-            writer, wordlist, condition, features, attr_features, collection='',
-            visited=None
-        ):
-            visited = visited if visited is not None else set()
-            for language in tqdm(wordlist.languages, desc='computing features'):
-                if language.name is None or language.name == "None":
-                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
-                    continue
-                if language.latitude and condition(language):
-                    _add_language(
-                        writer, language, features, attr_features,
-                        collection=collection, visited=visited)
-                    yield language
-
         with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
@@ -308,15 +293,20 @@ class Dataset(BaseDataset):
                     dict(ID=fid, Name=fname, Description=fdesc))
 
             for dataset in self._datasets('ClicsCore'):
-                _ = list(_add_languages(
-                    writer,
-                    Wordlist(datasets=[dataset]),
-                    CONDITIONS["ClicsCore"],  # lambda l: len(l.concepts) >= 250,
-                    features,
-                    ['concepts', 'forms', 'senses'],
-                    collection='ClicsCore',
-                    visited=visited,
-                ))
+                wordlist = Wordlist(datasets=[dataset])
+                condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
+                attr_features = ['concepts', 'forms', 'senses']
+                collection = 'ClicsCore'
+                visited = visited if visited is not None else set()
+                for language in tqdm(wordlist.languages, desc='computing features'):
+                    if language.name is None or language.name == "None":
+                        args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
+                        continue
+                    if language.latitude and condition(language):
+                        _add_language(
+                            writer, language, features, attr_features,
+                            collection=collection, visited=visited)
+                        # yield language
 
             for feature in features:
                 if feature.id not in features_found:
