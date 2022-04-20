@@ -215,22 +215,6 @@ class Dataset(BaseDataset):
             )
         languages = collections.OrderedDict()
 
-        def _add_features(writer, features):
-            for feature in features:
-                writer.objects['ParameterTable'].append(dict(
-                    ID=feature.id,
-                    Name=feature.name,
-                    Description=feature.doc,
-                    Feature_Spec=feature.to_json(),
-                ))
-                if feature.categories:
-                    for k, v in feature.categories.items():
-                        writer.objects['CodeTable'].append(dict(
-                            Parameter_ID=feature.id,
-                            ID='{}-{}'.format(feature.id, k),
-                            Name=v,
-                        ))
-
         features_found = set()
 
         def _add_language(
@@ -333,6 +317,20 @@ class Dataset(BaseDataset):
                     collection='ClicsCore',
                     visited=visited,
                 ))
-            _add_features(
-                writer,
-                (f for f in features if f.id in features_found))
+
+            for feature in features:
+                if feature.id not in features_found:
+                    continue
+                writer.objects['ParameterTable'].append(dict(
+                    ID=feature.id,
+                    Name=feature.name,
+                    Description=feature.doc,
+                    Feature_Spec=feature.to_json(),
+                ))
+                if feature.categories:
+                    for k, v in feature.categories.items():
+                        writer.objects['CodeTable'].append(dict(
+                            Parameter_ID=feature.id,
+                            ID='{}-{}'.format(feature.id, k),
+                            Name=v,
+                        ))
