@@ -209,9 +209,10 @@ class Dataset(BaseDataset):
                 else:
                     return True
 
-            for language in tqdm(wordlist.languages, desc='computing features'):
-                if not _valid_language(language):
-                    continue
+            ds_languages = [
+                l for l in wordlist.languages if _valid_language(l)]
+
+            for language in tqdm(ds_languages, desc='computing features'):
                 for attr in attr_features:
                     values.append(dict(
                         ID='{}-{}'.format(language.id, attr),
@@ -236,8 +237,7 @@ class Dataset(BaseDataset):
 
             languages.update(
                 (lang.id, _make_cldf_lang(lang, collection))
-                for lang in wordlist.languages
-                if _valid_language(lang))
+                for lang in ds_languages)
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
