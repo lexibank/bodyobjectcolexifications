@@ -212,14 +212,7 @@ class Dataset(BaseDataset):
             ds_languages = [
                 l for l in wordlist.languages if _valid_language(l)]
 
-            for language in tqdm(ds_languages, desc='computing features'):
-                for attr in attr_features:
-                    values.append(dict(
-                        ID='{}-{}'.format(language.id, attr),
-                        Language_ID=language.id,
-                        Parameter_ID=attr,
-                        Value=len(getattr(language, attr))
-                    ))
+            for language in tqdm(ds_languages, desc='computing colex'):
                 for feature in features:
                     v = feature(language)
                     if not v:
@@ -233,6 +226,15 @@ class Dataset(BaseDataset):
                         Parameter_ID=feature.id,
                         Value=v,
                         Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
+                    ))
+
+            for language in tqdm(ds_languages, desc='count concepts, forms, etc.'):
+                for attr in attr_features:
+                    values.append(dict(
+                        ID='{}-{}'.format(language.id, attr),
+                        Language_ID=language.id,
+                        Parameter_ID=attr,
+                        Value=len(getattr(language, attr))
                     ))
 
             languages.update(
