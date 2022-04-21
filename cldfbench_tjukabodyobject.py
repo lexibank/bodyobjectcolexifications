@@ -114,7 +114,7 @@ class Dataset(BaseDataset):
             metadata = self.dataset_meta[dataset_id]
             yield (dataset, metadata) if with_metadata else dataset
 
-    def _schema(self, writer, with_stats=False, collstats=None):
+    def _schema(self, writer):
         writer.cldf.add_component(
             'LanguageTable',
             {
@@ -149,31 +149,6 @@ class Dataset(BaseDataset):
             'Forms',
         )
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
-
-        if not with_stats:
-            return
-        for ds, md in tqdm(self._datasets(with_metadata=True), desc='Computing summary stats'):
-            langs = list(ds.iter_rows('LanguageTable', 'glottocode'))
-            gcs = set(lg['glottocode'] for lg in langs if lg['glottocode'])
-            senses = list(ds.iter_rows('ParameterTable', 'concepticonReference'))
-            csids = set(sense['concepticonReference'] for sense in senses if sense['concepticonReference'])
-            contrib = dict(
-                ID=md['ID'],
-                Name=ds.properties['dc:title'],
-                Citation=ds.properties['dc:bibliographicCitation'],
-                Collection_IDs=[key for key in COLLECTIONS if md.get(key, '').strip() == 'x'],
-                Glottocodes=len(gcs),
-                Doculects=len(langs),
-                Concepts=len(csids),
-                Senses=len(senses),
-                Forms=len(list(ds['FormTable'])),
-            )
-            writer.objects['ContributionTable'].append(contrib)
-        if collstats:
-            for d in collstats.values():
-                d['Glottocodes'] = len(d['Glottocodes'])
-                d['Concepts'] = len(d['Concepts'])
-                writer.objects['collections.csv'].append(d)
 
     def cmd_makecldf(self, args):
         dsinfo = {
