@@ -172,6 +172,7 @@ class Dataset(BaseDataset):
             for obj in objects)
 
         languages = collections.OrderedDict()
+        values = []
 
         features_found = set()
 
@@ -223,7 +224,7 @@ class Dataset(BaseDataset):
                         l['Incollections'] = l['Incollections'] + collection
                     languages[language.id] = l
                     for attr in attr_features:
-                        writer.objects['ValueTable'].append(dict(
+                        values.append(dict(
                             ID='{}-{}'.format(language.id, attr),
                             Language_ID=language.id,
                             Parameter_ID=attr,
@@ -236,7 +237,7 @@ class Dataset(BaseDataset):
                         features_found.add(feature.id)
                         if feature.categories:
                             assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-                        writer.objects['ValueTable'].append(dict(
+                        values.append(dict(
                             ID='{}-{}'.format(language.id, feature.id),
                             Language_ID=language.id,
                             Parameter_ID=feature.id,
@@ -247,6 +248,7 @@ class Dataset(BaseDataset):
                         # yield language
 
             writer.objects['LanguageTable'] = languages.values()
+            writer.objects['ValueTable'] = values
 
             for feature in features:
                 if feature.id not in features_found:
