@@ -222,7 +222,6 @@ class Dataset(BaseDataset):
                     else:
                         l['Incollections'] = l['Incollections'] + collection
                     languages[language.id] = l
-                    writer.objects['LanguageTable'].append(l)
                     for attr in attr_features:
                         writer.objects['ValueTable'].append(dict(
                             ID='{}-{}'.format(language.id, attr),
@@ -246,6 +245,8 @@ class Dataset(BaseDataset):
                         ))
 
                         # yield language
+
+            writer.objects['LanguageTable'] = languages.values()
 
             for feature in features:
                 if feature.id not in features_found:
