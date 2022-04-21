@@ -236,13 +236,11 @@ class Dataset(BaseDataset):
                 condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
                 attr_features = ['concepts', 'forms', 'senses']
                 collection = 'ClicsCore'
-                visited = visited if visited is not None else set()
                 for language in tqdm(wordlist.languages, desc='computing features'):
                     if language.name is None or language.name == "None":
                         args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
                         continue
                     if language.latitude and condition(language):
-                        visited = visited if visited is not None else set()
                         l = languages.get(language.id)
                         if not l:
                             l = {
