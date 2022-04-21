@@ -24,6 +24,23 @@ CONDITIONS = {
 }
 
 
+def _make_cldf_lang(lang, collection):
+    return {
+        "ID": lang.id,
+        "Name": lang.name,
+        "Glottocode": lang.glottocode,
+        "Dataset": lang.dataset,
+        "Latitude": lang.latitude,
+        "Longitude": lang.longitude,
+        "Subgroup": lang.subgroup,
+        "Family": lang.family,
+        "Forms": len(lang.forms or []),
+        "FormsWithSounds": len(lang.forms_with_sounds or []),
+        "Concepts": len(lang.concepts),
+        "Incollections": collection,
+    }
+
+
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "tjukabodyobject"
@@ -218,23 +235,7 @@ class Dataset(BaseDataset):
                     ))
 
             languages.update(
-                (
-                    lang.id,
-                    {
-                        "ID": lang.id,
-                        "Name": lang.name,
-                        "Glottocode": lang.glottocode,
-                        "Dataset": lang.dataset,
-                        "Latitude": lang.latitude,
-                        "Longitude": lang.longitude,
-                        "Subgroup": lang.subgroup,
-                        "Family": lang.family,
-                        "Forms": len(lang.forms or []),
-                        "FormsWithSounds": len(lang.forms_with_sounds or []),
-                        "Concepts": len(lang.concepts),
-                        "Incollections": collection,
-                    }
-                )
+                (lang.id, _make_cldf_lang(lang, collection))
                 for lang in wordlist.languages
                 if _valid_language(lang))
 
