@@ -184,7 +184,6 @@ class Dataset(BaseDataset):
 
         condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
         collection = 'ClicsCore'
-        # XXX: doe we actually need the `concepts`, `forms`, and `senses` params?
         attr_features = ['concepts', 'forms', 'senses']
 
         with self.cldf_writer(args) as writer:
@@ -194,6 +193,7 @@ class Dataset(BaseDataset):
                 {"name": "Feature_Spec", "datatype": "json"},
             )
 
+            # XXX: doe we actually need the `concepts`, `forms`, and `senses` params?
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
                 ('forms', 'Number of forms', ''),
