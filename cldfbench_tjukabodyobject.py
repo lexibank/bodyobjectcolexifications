@@ -180,6 +180,55 @@ class Dataset(BaseDataset):
         collection = 'ClicsCore'
         attr_features = ['concepts', 'forms', 'senses']
 
+        for dataset in self._datasets('ClicsCore'):
+            wordlist = Wordlist(datasets=[dataset])
+            for language in tqdm(wordlist.languages, desc='computing features'):
+                if language.name is None or language.name == "None":
+                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
+                    continue
+                if not language.latitude or not condition(language):
+                    continue
+                l = languages.get(language.id)
+                if not l:
+                    l = {
+                        "ID": language.id,
+                        "Name": language.name,
+                        "Glottocode": language.glottocode,
+                        "Dataset": language.dataset,
+                        "Latitude": language.latitude,
+                        "Longitude": language.longitude,
+                        "Subgroup": language.subgroup,
+                        "Family": language.family,
+                        "Forms": len(language.forms or []),
+                        "FormsWithSounds": len(language.forms_with_sounds or []),
+                        "Concepts": len(language.concepts),
+                        "Incollections": collection,
+                    }
+                else:
+                    l['Incollections'] = l['Incollections'] + collection
+                languages[language.id] = l
+                for attr in attr_features:
+                    values.append(dict(
+                        ID='{}-{}'.format(language.id, attr),
+                        Language_ID=language.id,
+                        Parameter_ID=attr,
+                        Value=len(getattr(language, attr))
+                    ))
+                for feature in features:
+                    v = feature(language)
+                    if not v:
+                        continue
+                    features_found.add(feature.id)
+                    if feature.categories:
+                        assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
+                    values.append(dict(
+                        ID='{}-{}'.format(language.id, feature.id),
+                        Language_ID=language.id,
+                        Parameter_ID=feature.id,
+                        Value=v,
+                        Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
+                    ))
+
         with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
@@ -195,57 +244,6 @@ class Dataset(BaseDataset):
             ]:
                 writer.objects['ParameterTable'].append(
                     dict(ID=fid, Name=fname, Description=fdesc))
-
-            for dataset in self._datasets('ClicsCore'):
-                wordlist = Wordlist(datasets=[dataset])
-                for language in tqdm(wordlist.languages, desc='computing features'):
-                    if language.name is None or language.name == "None":
-                        args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
-                        continue
-                    if not language.latitude or not condition(language):
-                        continue
-                    l = languages.get(language.id)
-                    if not l:
-                        l = {
-                            "ID": language.id,
-                            "Name": language.name,
-                            "Glottocode": language.glottocode,
-                            "Dataset": language.dataset,
-                            "Latitude": language.latitude,
-                            "Longitude": language.longitude,
-                            "Subgroup": language.subgroup,
-                            "Family": language.family,
-                            "Forms": len(language.forms or []),
-                            "FormsWithSounds": len(language.forms_with_sounds or []),
-                            "Concepts": len(language.concepts),
-                            "Incollections": collection,
-                        }
-                    else:
-                        l['Incollections'] = l['Incollections'] + collection
-                    languages[language.id] = l
-                    for attr in attr_features:
-                        values.append(dict(
-                            ID='{}-{}'.format(language.id, attr),
-                            Language_ID=language.id,
-                            Parameter_ID=attr,
-                            Value=len(getattr(language, attr))
-                        ))
-                    for feature in features:
-                        v = feature(language)
-                        if not v:
-                            continue
-                        features_found.add(feature.id)
-                        if feature.categories:
-                            assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-                        values.append(dict(
-                            ID='{}-{}'.format(language.id, feature.id),
-                            Language_ID=language.id,
-                            Parameter_ID=feature.id,
-                            Value=v,
-                            Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
-                        ))
-
-                        # yield language
 
             writer.objects['LanguageTable'] = languages.values()
             writer.objects['ValueTable'] = values
