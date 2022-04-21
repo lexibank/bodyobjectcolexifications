@@ -240,60 +240,61 @@ class Dataset(BaseDataset):
                     if language.name is None or language.name == "None":
                         args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
                         continue
-                    if language.latitude and condition(language):
-                        l = languages.get(language.id)
-                        if not l:
-                            l = {
-                                "ID": language.id,
-                                "Name": language.name,
-                                "Glottocode": language.glottocode,
-                                "Dataset": language.dataset,
-                                "Latitude": language.latitude,
-                                "Longitude": language.longitude,
-                                "Subgroup": language.subgroup,
-                                "Family": language.family,
-                                "Forms": len(language.forms or []),
-                                "FormsWithSounds": len(language.forms_with_sounds or []),
-                                "Concepts": len(language.concepts),
-                                "Incollections": collection,
-                            }
-                        else:
-                            l['Incollections'] = l['Incollections'] + collection
-                        if language.id not in visited:
-                            cid = 'ClicsCore'
-                            try:
-                                if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
-                                    collstats[cid]["Glottocodes"].add(language.glottocode)
-                                    collstats[cid]["Varieties"] += 1
-                                    collstats[cid]["Forms"] += len(language.forms)
-                                    collstats[cid]["Concepts"].update(
-                                        concept.id for concept in language.concepts)
-                            except:
-                                print("problems with {0}".format(language.dataset))
-                            visited.add(language.id)
-                        languages[language.id] = l
-                        writer.objects['LanguageTable'].append(l)
-                        for attr in attr_features:
-                            writer.objects['ValueTable'].append(dict(
-                                ID='{}-{}'.format(language.id, attr),
-                                Language_ID=language.id,
-                                Parameter_ID=attr,
-                                Value=len(getattr(language, attr))
-                            ))
-                        for feature in features:
-                            v = feature(language)
-                            if not v:
-                                continue
-                            features_found.add(feature.id)
-                            if feature.categories:
-                                assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-                            writer.objects['ValueTable'].append(dict(
-                                ID='{}-{}'.format(language.id, feature.id),
-                                Language_ID=language.id,
-                                Parameter_ID=feature.id,
-                                Value=v,
-                                Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
-                            ))
+                    if not language.latitude or not condition(language):
+                        continue
+                    l = languages.get(language.id)
+                    if not l:
+                        l = {
+                            "ID": language.id,
+                            "Name": language.name,
+                            "Glottocode": language.glottocode,
+                            "Dataset": language.dataset,
+                            "Latitude": language.latitude,
+                            "Longitude": language.longitude,
+                            "Subgroup": language.subgroup,
+                            "Family": language.family,
+                            "Forms": len(language.forms or []),
+                            "FormsWithSounds": len(language.forms_with_sounds or []),
+                            "Concepts": len(language.concepts),
+                            "Incollections": collection,
+                        }
+                    else:
+                        l['Incollections'] = l['Incollections'] + collection
+                    if language.id not in visited:
+                        cid = 'ClicsCore'
+                        try:
+                            if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
+                                collstats[cid]["Glottocodes"].add(language.glottocode)
+                                collstats[cid]["Varieties"] += 1
+                                collstats[cid]["Forms"] += len(language.forms)
+                                collstats[cid]["Concepts"].update(
+                                    concept.id for concept in language.concepts)
+                        except:
+                            print("problems with {0}".format(language.dataset))
+                        visited.add(language.id)
+                    languages[language.id] = l
+                    writer.objects['LanguageTable'].append(l)
+                    for attr in attr_features:
+                        writer.objects['ValueTable'].append(dict(
+                            ID='{}-{}'.format(language.id, attr),
+                            Language_ID=language.id,
+                            Parameter_ID=attr,
+                            Value=len(getattr(language, attr))
+                        ))
+                    for feature in features:
+                        v = feature(language)
+                        if not v:
+                            continue
+                        features_found.add(feature.id)
+                        if feature.categories:
+                            assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
+                        writer.objects['ValueTable'].append(dict(
+                            ID='{}-{}'.format(language.id, feature.id),
+                            Language_ID=language.id,
+                            Parameter_ID=feature.id,
+                            Value=v,
+                            Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
+                        ))
 
                         # yield language
 
