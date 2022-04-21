@@ -171,42 +171,30 @@ class Dataset(BaseDataset):
             for bodypart in bodyparts
             for obj in objects)
 
-        languages = collections.OrderedDict()
-        values = []
-
         features_found = set()
 
         condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
         collection = 'ClicsCore'
         attr_features = ['concepts', 'forms', 'senses']
 
+        languages = collections.OrderedDict()
+        values = []
         for dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
-            for language in tqdm(wordlist.languages, desc='computing features'):
-                if language.name is None or language.name == "None":
-                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
-                    continue
-                if not language.latitude or not condition(language):
-                    continue
-                l = languages.get(language.id)
-                if not l:
-                    l = {
-                        "ID": language.id,
-                        "Name": language.name,
-                        "Glottocode": language.glottocode,
-                        "Dataset": language.dataset,
-                        "Latitude": language.latitude,
-                        "Longitude": language.longitude,
-                        "Subgroup": language.subgroup,
-                        "Family": language.family,
-                        "Forms": len(language.forms or []),
-                        "FormsWithSounds": len(language.forms_with_sounds or []),
-                        "Concepts": len(language.concepts),
-                        "Incollections": collection,
-                    }
+
+            # TODO remove
+            def _valid_language(lang):
+                if not lang.name or lang.name == 'None':
+                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(lang))
+                    return False
+                elif not lang.latitude or not condition(lang):
+                    return False
                 else:
-                    l['Incollections'] = l['Incollections'] + collection
-                languages[language.id] = l
+                    return True
+
+            for language in tqdm(wordlist.languages, desc='computing features'):
+                if not _valid_language(language):
+                    continue
                 for attr in attr_features:
                     values.append(dict(
                         ID='{}-{}'.format(language.id, attr),
@@ -228,6 +216,27 @@ class Dataset(BaseDataset):
                         Value=v,
                         Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
                     ))
+
+            languages.update(
+                (
+                    lang.id,
+                    {
+                        "ID": lang.id,
+                        "Name": lang.name,
+                        "Glottocode": lang.glottocode,
+                        "Dataset": lang.dataset,
+                        "Latitude": lang.latitude,
+                        "Longitude": lang.longitude,
+                        "Subgroup": lang.subgroup,
+                        "Family": lang.family,
+                        "Forms": len(lang.forms or []),
+                        "FormsWithSounds": len(lang.forms_with_sounds or []),
+                        "Concepts": len(lang.concepts),
+                        "Incollections": collection,
+                    }
+                )
+                for lang in wordlist.languages
+                if _valid_language(lang))
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
