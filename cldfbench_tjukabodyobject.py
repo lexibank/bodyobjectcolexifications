@@ -177,17 +177,7 @@ class Dataset(BaseDataset):
             for obj in objects)
 
         visited = set()
-        collstats = collections.OrderedDict()
-        for cid, (desc, name) in COLLECTIONS.items():
-            collstats[cid] = dict(
-                ID=cid,
-                Name=name,
-                Description=desc,
-                Varieties=0,
-                Glottocodes=set(),
-                Concepts=set(),
-                Forms=0,
-            )
+
         languages = collections.OrderedDict()
 
         features_found = set()
@@ -238,18 +228,6 @@ class Dataset(BaseDataset):
                         }
                     else:
                         l['Incollections'] = l['Incollections'] + collection
-                    if language.id not in visited:
-                        cid = 'ClicsCore'
-                        try:
-                            if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
-                                collstats[cid]["Glottocodes"].add(language.glottocode)
-                                collstats[cid]["Varieties"] += 1
-                                collstats[cid]["Forms"] += len(language.forms)
-                                collstats[cid]["Concepts"].update(
-                                    concept.id for concept in language.concepts)
-                        except:
-                            print("problems with {0}".format(language.dataset))
-                        visited.add(language.id)
                     languages[language.id] = l
                     writer.objects['LanguageTable'].append(l)
                     for attr in attr_features:
