@@ -1,5 +1,6 @@
-import pathlib
 import collections
+import itertools
+import pathlib
 
 import pycldf
 from cldfbench import CLDFSpec
@@ -194,6 +195,7 @@ class Dataset(BaseDataset):
         collection = 'ClicsCore'
         attr_features = ['concepts', 'forms', 'senses']
 
+        colexification_count = collections.Counter()
         languages = collections.OrderedDict()
         values = []
         for dataset in self._datasets('ClicsCore'):
@@ -211,6 +213,19 @@ class Dataset(BaseDataset):
 
             ds_languages = [
                 l for l in wordlist.languages if _valid_language(l)]
+
+            ds_formconcepts = collections.defaultdict(set)
+            for language in ds_languages:
+                for form in language.forms:
+                    if form.concept:
+                        ds_formconcepts[language.id, form.form].add(
+                            form.concept.concepticon_gloss)
+
+            for concept_ids in ds_formconcepts.values():
+                colexification_count.update(
+                    (bodyp, obj)
+                    for bodyp, obj in itertools.combinations(concept_ids, r=2)
+                    if bodyp in bodyparts and obj in objects)
 
             for language in tqdm(ds_languages, desc='computing colex'):
                 for feature in features:
