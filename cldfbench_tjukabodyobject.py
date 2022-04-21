@@ -180,6 +180,27 @@ class Dataset(BaseDataset):
             row["ID"]: row
             for row in reader(
                 self.etc_dir / 'lexibank.csv', dicts=True, delimiter=",")}
+
+        concept_list = self.etc_dir.read_csv(
+            'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
+        bodyparts = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'body']
+        objects = [
+            row['CONCEPTICON_GLOSS']
+            for row in concept_list
+            if row['GROUP'] == 'object']
+        features = FeatureCollection(
+            Feature(
+                id='{}And{}'.format(
+                    slug(bodypart).capitalize(),
+                    slug(obj).capitalize()),
+                name="colexification of {} and {}".format(bodypart, obj),
+                function=Colexification(bodypart, obj))
+            for bodypart in bodyparts
+            for obj in objects)
+
         visited = set()
         collstats = collections.OrderedDict()
         for cid, (desc, name) in COLLECTIONS.items():
@@ -196,32 +217,17 @@ class Dataset(BaseDataset):
 
         features_found = set()
 
+        condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
+        collection = 'ClicsCore'
+        # XXX: doe we actually need the `concepts`, `forms`, and `senses` params?
+        attr_features = ['concepts', 'forms', 'senses']
+
         with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
                 'ParameterTable',
                 {"name": "Feature_Spec", "datatype": "json"},
             )
-
-            concept_list = self.etc_dir.read_csv(
-                'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
-            bodyparts = [
-                row['CONCEPTICON_GLOSS']
-                for row in concept_list
-                if row['GROUP'] == 'body']
-            objects = [
-                row['CONCEPTICON_GLOSS']
-                for row in concept_list
-                if row['GROUP'] == 'object']
-            features = FeatureCollection(
-                Feature(
-                    id='{}And{}'.format(
-                        slug(bodypart).capitalize(),
-                        slug(obj).capitalize()),
-                    name="colexification of {} and {}".format(bodypart, obj),
-                    function=Colexification(bodypart, obj))
-                for bodypart in bodyparts
-                for obj in objects)
 
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
@@ -233,9 +239,6 @@ class Dataset(BaseDataset):
 
             for dataset in self._datasets('ClicsCore'):
                 wordlist = Wordlist(datasets=[dataset])
-                condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
-                attr_features = ['concepts', 'forms', 'senses']
-                collection = 'ClicsCore'
                 for language in tqdm(wordlist.languages, desc='computing features'):
                     if language.name is None or language.name == "None":
                         args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
