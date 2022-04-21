@@ -151,11 +151,6 @@ class Dataset(BaseDataset):
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
 
     def cmd_makecldf(self, args):
-        dsinfo = {
-            row["ID"]: row
-            for row in reader(
-                self.etc_dir / 'lexibank.csv', dicts=True, delimiter=",")}
-
         concept_list = self.etc_dir.read_csv(
             'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
         bodyparts = [
@@ -175,8 +170,6 @@ class Dataset(BaseDataset):
                 function=Colexification(bodypart, obj))
             for bodypart in bodyparts
             for obj in objects)
-
-        visited = set()
 
         languages = collections.OrderedDict()
 
