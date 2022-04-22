@@ -179,17 +179,6 @@ class Dataset(BaseDataset):
             row['CONCEPTICON_GLOSS']
             for row in concept_list
             if row['GROUP'] == 'object']
-        features = FeatureCollection(
-            Feature(
-                id='{}And{}'.format(
-                    slug(bodypart).capitalize(),
-                    slug(obj).capitalize()),
-                name="colexification of {} and {}".format(bodypart, obj),
-                function=Colexification(bodypart, obj))
-            for bodypart in bodyparts
-            for obj in objects)
-
-        features_found = set()
 
         condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
         collection = 'ClicsCore'
@@ -266,6 +255,17 @@ class Dataset(BaseDataset):
         #             Value=v,
         #             Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
         #         ))
+
+        features_found = set()
+        features = FeatureCollection(
+            Feature(
+                id='{}And{}'.format(
+                    slug(bodypart).capitalize(),
+                    slug(obj).capitalize()),
+                name="colexification of {} and {}".format(bodypart, obj),
+                function=Colexification(bodypart, obj))
+            for bodypart in bodyparts
+            for obj in objects)
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
