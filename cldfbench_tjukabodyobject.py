@@ -239,22 +239,6 @@ class Dataset(BaseDataset):
             for obj in glosses
             if bodyp in bodyparts and obj in objects)
 
-        # for language in tqdm(ds_languages, desc='computing colex'):
-        #     for feature in features:
-        #         v = feature(language)
-        #         if not v:
-        #             continue
-        #         features_found.add(feature.id)
-        #         if feature.categories:
-        #             assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-        #         values.append(dict(
-        #             ID='{}-{}'.format(language.id, feature.id),
-        #             Language_ID=language.id,
-        #             Parameter_ID=feature.id,
-        #             Value=v,
-        #             Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
-        #         ))
-
         # TODO maybe adding concepticon ids to the feature table might be useful
         # TODO add Bodypart and object to the cldf spec
         features = [
@@ -284,6 +268,25 @@ class Dataset(BaseDataset):
                 ('true', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
                 ('false', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])),
                 ('null', 'missing data'))]
+
+        def _colex_value(lang_id, bodyp, obj):
+            if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
+                return 'null'
+            elif forms_by_concept[lang_id, bodyp] & forms_by_concept[lang_id, obj]:
+                return 'true'
+            else:
+                return 'false'
+        values.extend(
+            {
+                'ID': '{}-{}'.format(lang_id, feat['ID']),
+                'Language_ID': lang_id,
+                'Parameter_ID': feat['ID'],
+                'Code_ID': '{}-{}'.format(
+                    feat['ID'],
+                    _colex_value(lang_id, feat['Bodypart'], feat['Object'])),
+            }
+            for lang_id in languages
+            for feat in features.values())
 
         # Write CLDF data
 
