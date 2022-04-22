@@ -255,19 +255,23 @@ class Dataset(BaseDataset):
         #             Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
         #         ))
 
-        print('len(colex_counter) =', len(colex_counter))
-        for ((bodyp, obj), count) in colex_counter.most_common(100):
-            print(count, bodyp, '+', obj)
-
-        features = FeatureCollection(
-            Feature(
-                id='{}And{}'.format(
-                    slug(bodypart).capitalize(),
+        # TODO maybe adding concepticon ids to the feature table might be useful
+        # TODO add Bodypart and object to the cldf spec
+        features = [
+            {
+                'ID': '{}And{}'.format(
+                    slug(bodyp).capitalize(),
                     slug(obj).capitalize()),
-                name="colexification of {} and {}".format(bodypart, obj),
-                function=Colexification(bodypart, obj))
-            for bodypart in bodyparts
-            for obj in objects)
+                'Name': 'Colexification of {} and {}'.format(bodyp, obj),
+                'Description':
+                    'Computes if the concepts {} and {} are expressed'
+                    ' with the same form in a language'
+                    ' (i.e. they are colexified)'.format(bodyp, obj),
+                'Bodypart': bodyp,
+                'Object': obj,
+            }
+            for bodyp, obj in colex_counter.most_common(100)]
+        features = OrderedDict((f['ID'], f) for f in features)
 
         # Write CLDF data
 
