@@ -240,7 +240,6 @@ class Dataset(BaseDataset):
             if bodyp in bodyparts and obj in objects)
 
         # TODO maybe adding concepticon ids to the feature table might be useful
-        # TODO add Bodypart and object to the cldf spec
         features = [
             {
                 'ID': '{}And{}'.format(
@@ -294,6 +293,8 @@ class Dataset(BaseDataset):
             self._schema(writer)
             writer.cldf.add_columns(
                 'ParameterTable',
+                'Bodypart',
+                'Object',
                 {"name": "Feature_Spec", "datatype": "json"},
             )
 
