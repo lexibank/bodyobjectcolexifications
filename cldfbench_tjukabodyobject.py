@@ -6,12 +6,8 @@ import pycldf
 from cldfbench import CLDFSpec
 from cldfbench import Dataset as BaseDataset
 from cltoolkit import Wordlist
-from cltoolkit.features import FeatureCollection, Feature
-from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
 from git import Repo, GitCommandError
-from tqdm import tqdm
-from csvw.dsv import reader
 from csvw.utils import slug
 
 COLLECTIONS = {
