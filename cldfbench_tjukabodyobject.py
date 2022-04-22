@@ -169,6 +169,8 @@ class Dataset(BaseDataset):
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
 
     def cmd_makecldf(self, args):
+        # Read data
+
         concept_list = self.etc_dir.read_csv(
             'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
         bodyparts = [
@@ -193,7 +195,6 @@ class Dataset(BaseDataset):
         for dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
 
-            # TODO remove
             def _valid_language(lang):
                 if not lang.name or lang.name == 'None':
                     args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(lang))
@@ -223,6 +224,8 @@ class Dataset(BaseDataset):
             languages.update(
                 (lang.id, _make_cldf_lang(lang, collection))
                 for lang in ds_languages)
+
+        # Process data
 
         colexifications = collections.defaultdict(set)
         for (lang_id, gloss), _forms in forms_by_concept.items():
@@ -266,6 +269,8 @@ class Dataset(BaseDataset):
                 function=Colexification(bodypart, obj))
             for bodypart in bodyparts
             for obj in objects)
+
+        # Write CLDF data
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
