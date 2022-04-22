@@ -270,12 +270,12 @@ class Dataset(BaseDataset):
                 'Bodypart': bodyp,
                 'Object': obj,
             }
-            for bodyp, obj in colex_counter.most_common(100)]
-        features = OrderedDict((f['ID'], f) for f in features)
+            for (bodyp, obj), _ in colex_counter.most_common(100)]
+        features = collections.OrderedDict((f['ID'], f) for f in features)
 
         codes = [
             {
-                'ID': '{}-{}'.format(f['ID'], val)
+                'ID': '{}-{}'.format(f['ID'], val),
                 'Parameter_ID': f['ID'],
                 'Name': name,
             }
@@ -294,6 +294,9 @@ class Dataset(BaseDataset):
                 {"name": "Feature_Spec", "datatype": "json"},
             )
 
+            writer.objects['ParameterTable'] = list(features.values())
+            writer.objects['CodeTable'] = codes
+
             # XXX: doe we actually need the `concepts`, `forms`, and `senses` params?
             for fid, fname, fdesc in [
                 ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
@@ -305,18 +308,3 @@ class Dataset(BaseDataset):
 
             writer.objects['LanguageTable'] = languages.values()
             writer.objects['ValueTable'] = values
-
-            for feature in features:
-                writer.objects['ParameterTable'].append(dict(
-                    ID=feature.id,
-                    Name=feature.name,
-                    Description=feature.doc,
-                    Feature_Spec=feature.to_json(),
-                ))
-                if feature.categories:
-                    for k, v in feature.categories.items():
-                        writer.objects['CodeTable'].append(dict(
-                            Parameter_ID=feature.id,
-                            ID='{}-{}'.format(feature.id, k),
-                            Name=v,
-                        ))
