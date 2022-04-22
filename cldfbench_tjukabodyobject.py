@@ -273,6 +273,18 @@ class Dataset(BaseDataset):
             for bodyp, obj in colex_counter.most_common(100)]
         features = OrderedDict((f['ID'], f) for f in features)
 
+        codes = [
+            {
+                'ID': '{}-{}'.format(f['ID'], val)
+                'Parameter_ID': f['ID'],
+                'Name': name,
+            }
+            for f in features.values()
+            for val, name in (
+                ('true', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
+                ('false', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])),
+                ('null', 'missing data'))]
+
         # Write CLDF data
 
         with self.cldf_writer(args) as writer:
