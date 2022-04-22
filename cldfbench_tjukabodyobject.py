@@ -239,10 +239,6 @@ class Dataset(BaseDataset):
             for obj in glosses
             if bodyp in bodyparts and obj in objects)
 
-        print('len(colex_counter) =', len(colex_counter))
-        for ((bodyp, obj), count) in colex_counter.most_common(100):
-            print(count, bodyp, '+', obj)
-
         # for language in tqdm(ds_languages, desc='computing colex'):
         #     for feature in features:
         #         v = feature(language)
@@ -259,7 +255,10 @@ class Dataset(BaseDataset):
         #             Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
         #         ))
 
-        features_found = set()
+        print('len(colex_counter) =', len(colex_counter))
+        for ((bodyp, obj), count) in colex_counter.most_common(100):
+            print(count, bodyp, '+', obj)
+
         features = FeatureCollection(
             Feature(
                 id='{}And{}'.format(
@@ -292,8 +291,6 @@ class Dataset(BaseDataset):
             writer.objects['ValueTable'] = values
 
             for feature in features:
-                if feature.id not in features_found:
-                    continue
                 writer.objects['ParameterTable'].append(dict(
                     ID=feature.id,
                     Name=feature.name,
