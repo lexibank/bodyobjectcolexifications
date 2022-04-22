@@ -195,9 +195,12 @@ class Dataset(BaseDataset):
         collection = 'ClicsCore'
         attr_features = ['concepts', 'forms', 'senses']
 
-        colexification_count = collections.Counter()
-        languages = collections.OrderedDict()
+        the_concepts_we_want = set(itertools.chain(bodyparts, objects))
+
+        forms_by_concept = collections.defaultdict(set)
         values = []
+        languages = collections.OrderedDict()
+
         for dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
 
@@ -214,36 +217,12 @@ class Dataset(BaseDataset):
             ds_languages = [
                 l for l in wordlist.languages if _valid_language(l)]
 
-            ds_formconcepts = collections.defaultdict(set)
+            for lang in ds_languages:
+                for form in lang.forms:
+                    if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
+                        forms_by_concept[lang.id, form.concept.concepticon_gloss].add(form.form)
+
             for language in ds_languages:
-                for form in language.forms:
-                    if form.concept:
-                        ds_formconcepts[language.id, form.form].add(
-                            form.concept.concepticon_gloss)
-
-            for concept_ids in ds_formconcepts.values():
-                colexification_count.update(
-                    (bodyp, obj)
-                    for bodyp, obj in itertools.combinations(concept_ids, r=2)
-                    if bodyp in bodyparts and obj in objects)
-
-            for language in tqdm(ds_languages, desc='computing colex'):
-                for feature in features:
-                    v = feature(language)
-                    if not v:
-                        continue
-                    features_found.add(feature.id)
-                    if feature.categories:
-                        assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-                    values.append(dict(
-                        ID='{}-{}'.format(language.id, feature.id),
-                        Language_ID=language.id,
-                        Parameter_ID=feature.id,
-                        Value=v,
-                        Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
-                    ))
-
-            for language in tqdm(ds_languages, desc='count concepts, forms, etc.'):
                 for attr in attr_features:
                     values.append(dict(
                         ID='{}-{}'.format(language.id, attr),
@@ -255,6 +234,38 @@ class Dataset(BaseDataset):
             languages.update(
                 (lang.id, _make_cldf_lang(lang, collection))
                 for lang in ds_languages)
+
+        colexifications = collections.defaultdict(set)
+        for (lang_id, gloss), _forms in forms_by_concept.items():
+            for form in _forms:
+                colexifications[lang_id, form].add(gloss)
+
+        colex_counter = collections.Counter(
+            (bodyp, obj)
+            for glosses in colexifications.values()
+            for bodyp in glosses
+            for obj in glosses
+            if bodyp in bodyparts and obj in objects)
+
+        print('len(colex_counter) =', len(colex_counter))
+        for ((bodyp, obj), count) in colex_counter.most_common(100):
+            print(count, bodyp, '+', obj)
+
+        # for language in tqdm(ds_languages, desc='computing colex'):
+        #     for feature in features:
+        #         v = feature(language)
+        #         if not v:
+        #             continue
+        #         features_found.add(feature.id)
+        #         if feature.categories:
+        #             assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
+        #         values.append(dict(
+        #             ID='{}-{}'.format(language.id, feature.id),
+        #             Language_ID=language.id,
+        #             Parameter_ID=feature.id,
+        #             Value=v,
+        #             Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
+        #         ))
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
