@@ -180,12 +180,10 @@ class Dataset(BaseDataset):
 
         condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
         collection = 'ClicsCore'
-        attr_features = ['concepts', 'forms', 'senses']
 
         the_concepts_we_want = set(itertools.chain(bodyparts, objects))
 
         forms_by_concept = collections.defaultdict(set)
-        values = []
         languages = collections.OrderedDict()
 
         for dataset in self._datasets('ClicsCore'):
@@ -207,15 +205,6 @@ class Dataset(BaseDataset):
                 for form in lang.forms:
                     if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
                         forms_by_concept[lang.id, form.concept.concepticon_gloss].add(form.form)
-
-            for language in ds_languages:
-                for attr in attr_features:
-                    values.append(dict(
-                        ID='{}-{}'.format(language.id, attr),
-                        Language_ID=language.id,
-                        Parameter_ID=attr,
-                        Value=len(getattr(language, attr))
-                    ))
 
             languages.update(
                 (lang.id, _make_cldf_lang(lang, collection))
@@ -271,7 +260,7 @@ class Dataset(BaseDataset):
                 return 'true'
             else:
                 return 'false'
-        values.extend(
+        values = [
             {
                 'ID': '{}-{}'.format(lang_id, feat['ID']),
                 'Language_ID': lang_id,
@@ -281,7 +270,7 @@ class Dataset(BaseDataset):
                     _colex_value(lang_id, feat['Bodypart'], feat['Object'])),
             }
             for lang_id in languages
-            for feat in features.values())
+            for feat in features.values()]
 
         # Write CLDF data
 
@@ -296,15 +285,5 @@ class Dataset(BaseDataset):
 
             writer.objects['ParameterTable'] = list(features.values())
             writer.objects['CodeTable'] = codes
-
-            # XXX: doe we actually need the `concepts`, `forms`, and `senses` params?
-            for fid, fname, fdesc in [
-                ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
-                ('forms', 'Number of forms', ''),
-                ('senses', 'Number of senses', ''),
-            ]:
-                writer.objects['ParameterTable'].append(
-                    dict(ID=fid, Name=fname, Description=fdesc))
-
             writer.objects['LanguageTable'] = languages.values()
             writer.objects['ValueTable'] = values
