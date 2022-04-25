@@ -271,6 +271,7 @@ class Dataset(BaseDataset):
             }
             for lang_id in languages
             for feat in features.values()]
+        values = [v for v in values if not v['Code_ID'].endswith('-null')]
 
         languages_with_data = {
             val['Language_ID']
