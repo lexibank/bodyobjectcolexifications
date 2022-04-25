@@ -272,6 +272,19 @@ class Dataset(BaseDataset):
             for lang_id in languages
             for feat in features.values()]
 
+        languages_with_data = {
+            val['Language_ID']
+            for val in values
+            if not val['Code_ID'].endswith('-null')}
+        languages = collections.OrderedDict(
+            (lang_id, lang)
+            for lang_id, lang in languages.items()
+            if lang_id in languages_with_data)
+        values = [
+            val
+            for val in values
+            if val['Language_ID'] in languages_with_data]
+
         # Write CLDF data
 
         with self.cldf_writer(args) as writer:
