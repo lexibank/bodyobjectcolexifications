@@ -292,6 +292,11 @@ class Dataset(BaseDataset):
         with self.cldf_writer(args) as writer:
             self._schema(writer)
 
+            features.sort(key=lambda f: f['ID')
+            codes.sort(key=lambda c: c['ID'])
+            languages.sort(key=lambda l: l['ID'])
+            values.sort(key=lambda v: v['ID'])
+
             writer.objects['ParameterTable'] = features
             writer.objects['CodeTable'] = codes
             writer.objects['LanguageTable'] = languages
