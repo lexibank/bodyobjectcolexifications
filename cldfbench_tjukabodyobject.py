@@ -44,12 +44,7 @@ class Dataset(BaseDataset):
 
     def cldf_specs(self):
         return CLDFSpec(
-            metadata_fname='lexicon-metadata.json',
-            data_fnames=dict(
-                ParameterTable='lexicon-features.csv',
-                ValueTable='lexicon-values.csv',
-                CodeTable='lexicon-codes.csv',
-            ),
+            metadata_fname='cldf-metadata.json',
             dir=self.cldf_dir, module="StructureDataset")
 
     @property
@@ -142,6 +137,13 @@ class Dataset(BaseDataset):
             {'name': 'Incollections'},
             'Subgroup',
             'Family')
+        writer.cldf.add_component(
+            'ParameterTable',
+            'Bodypart',
+            'Object',
+            {"name": "Feature_Spec", "datatype": "json"},
+        )
+        writer.cldf.add_component('CodeTable')
         t = writer.cldf.add_table(
             'collections.csv',
             'ID',
@@ -290,12 +292,6 @@ class Dataset(BaseDataset):
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
-            writer.cldf.add_columns(
-                'ParameterTable',
-                'Bodypart',
-                'Object',
-                {"name": "Feature_Spec", "datatype": "json"},
-            )
 
             writer.objects['ParameterTable'] = list(features.values())
             writer.objects['CodeTable'] = codes
