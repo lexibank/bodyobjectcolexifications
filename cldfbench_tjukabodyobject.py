@@ -21,6 +21,28 @@ CONDITIONS = {
 }
 
 
+def _make_cldf_collection(collection, contributions):
+    langs = 0
+    glottocodes = 0
+    concepts = 0
+    forms = 0
+    for contrib in contributions:
+        langs += contrib['Doculects']
+        glottocodes += contrib['Glottocodes']
+        concepts += contrib['Concepts']
+        forms += contrib['Forms']
+
+    return {
+        'ID': collection,
+        'Name': collection,
+        'Description': COLLECTIONS[collection],
+        'Varieties': langs,
+        'Glottocodes': forms,
+        'Concepts': concepts,
+        'Forms': forms,
+    }
+
+
 def _make_cldf_lang(lang, collection):
     return {
         "ID": lang.id,
@@ -121,7 +143,7 @@ class Dataset(BaseDataset):
             dataset = pycldf.Dataset.from_metadata(
                 self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
             metadata = self.dataset_meta[dataset_id]
-            yield (dataset, metadata) if with_metadata else dataset
+            yield (dataset, metadata) if with_metadata else (dataset_id, dataset)
 
     def _schema(self, writer):
         writer.cldf.add_component(
@@ -149,20 +171,20 @@ class Dataset(BaseDataset):
             'ID',
             'Name',
             'Description',
-            'Varieties',
-            'Glottocodes',
-            'Concepts',
-            'Forms',
+            {'name': 'Varieties', 'datatype': 'integer'},
+            {'name': 'Glottocodes', 'datatype': 'integer'},
+            {'name': 'Concepts', 'datatype': 'integer'},
+            {'name': 'Forms', 'datatype': 'integer'},
         )
         t.tableSchema.primaryKey = ['ID']
         writer.cldf.add_component(
             'ContributionTable',
             {'name': 'Collection_IDs', 'separator': ' '},
-            'Glottocodes',
-            'Doculects',
-            'Concepts',
-            'Senses',
-            'Forms',
+            {'name': 'Glottocodes', 'datatype': 'integer'},
+            {'name': 'Doculects', 'datatype': 'integer'},
+            {'name': 'Concepts', 'datatype': 'integer'},
+            {'name': 'Senses', 'datatype': 'integer'},
+            {'name': 'Forms', 'datatype': 'integer'},
         )
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
 
@@ -187,9 +209,25 @@ class Dataset(BaseDataset):
 
         forms_by_concept = collections.defaultdict(set)
         languages = []
+        contributions = []
 
-        for dataset in self._datasets('ClicsCore'):
+        for dataset_id, dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
+
+            contributions.append({
+                'ID': dataset_id,
+                'Name': dataset.properties['dc:title'],
+                'Citation': dataset.properties['dc:bibliographicCitation'],
+                'Collection_IDs': [collection],
+                'Glottocodes': len({
+                    l.glottocode
+                    for l in wordlist.languages
+                    if l.glottocode}),
+                'Doculects': len(wordlist.languages),
+                'Concepts': len(wordlist.concepts),
+                'Senses': len(wordlist.senses),
+                'Forms': len(wordlist.forms),
+            })
 
             def _valid_language(lang):
                 if not lang.name or lang.name == 'None':
@@ -211,6 +249,8 @@ class Dataset(BaseDataset):
             languages.extend(
                 _make_cldf_lang(lang, collection)
                 for lang in ds_languages)
+
+        cldf_colls = [_make_cldf_collection(collection, contributions)]
 
         # Process data
 
@@ -300,3 +340,5 @@ class Dataset(BaseDataset):
         args.writer.objects['CodeTable'] = codes
         args.writer.objects['LanguageTable'] = languages
         args.writer.objects['ValueTable'] = values
+        args.writer.objects['ContributionTable'] = contributions
+        args.writer.objects['collections.csv'] = cldf_colls
