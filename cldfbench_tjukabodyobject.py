@@ -186,7 +186,7 @@ class Dataset(BaseDataset):
         the_concepts_we_want = set(itertools.chain(bodyparts, objects))
 
         forms_by_concept = collections.defaultdict(set)
-        languages = collections.OrderedDict()
+        languages = []
 
         for dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
@@ -208,8 +208,8 @@ class Dataset(BaseDataset):
                     if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
                         forms_by_concept[lang.id, form.concept.concepticon_gloss].add(form.form)
 
-            languages.update(
-                (lang.id, _make_cldf_lang(lang, collection))
+            languages.extend(
+                _make_cldf_lang(lang, collection)
                 for lang in ds_languages)
 
         # Process data
@@ -241,7 +241,6 @@ class Dataset(BaseDataset):
                 'Object': obj,
             }
             for (bodyp, obj), _ in colex_counter.most_common(100)]
-        features = collections.OrderedDict((f['ID'], f) for f in features)
 
         codes = [
             {
@@ -249,7 +248,7 @@ class Dataset(BaseDataset):
                 'Parameter_ID': f['ID'],
                 'Name': name,
             }
-            for f in features.values()
+            for f in features
             for val, name in (
                 ('true', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
                 ('false', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])),
@@ -264,25 +263,25 @@ class Dataset(BaseDataset):
                 return 'false'
         values = [
             {
-                'ID': '{}-{}'.format(lang_id, feat['ID']),
-                'Language_ID': lang_id,
+                'ID': '{}-{}'.format(lang['ID'], feat['ID']),
+                'Language_ID': lang['ID'],
                 'Parameter_ID': feat['ID'],
                 'Code_ID': '{}-{}'.format(
                     feat['ID'],
-                    _colex_value(lang_id, feat['Bodypart'], feat['Object'])),
+                    _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
             }
-            for lang_id in languages
-            for feat in features.values()]
+            for lang in languages
+            for feat in features]
         values = [v for v in values if not v['Code_ID'].endswith('-null')]
 
         languages_with_data = {
             val['Language_ID']
             for val in values
             if not val['Code_ID'].endswith('-null')}
-        languages = collections.OrderedDict(
-            (lang_id, lang)
-            for lang_id, lang in languages.items()
-            if lang_id in languages_with_data)
+        languages = [
+            lang
+            for lang in languages
+            if lang['ID'] in languages_with_data]
         values = [
             val
             for val in values
@@ -293,7 +292,7 @@ class Dataset(BaseDataset):
         with self.cldf_writer(args) as writer:
             self._schema(writer)
 
-            writer.objects['ParameterTable'] = list(features.values())
+            writer.objects['ParameterTable'] = features
             writer.objects['CodeTable'] = codes
-            writer.objects['LanguageTable'] = languages.values()
+            writer.objects['LanguageTable'] = languages
             writer.objects['ValueTable'] = values
