@@ -142,7 +142,7 @@ class Dataset(BaseDataset):
         for dataset_id in dataset_ids:
             dataset = pycldf.Dataset.from_metadata(
                 self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
-            yield dataset_id, dataset
+            yield dataset
 
     def _schema(self, writer):
         writer.cldf.add_component(
@@ -210,7 +210,7 @@ class Dataset(BaseDataset):
         languages = []
         contributions = []
 
-        for dataset_id, dataset in self._datasets('ClicsCore'):
+        for dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
             dataset_id = wordlist.datasets[0].metadata_dict['rdf:ID']
 
