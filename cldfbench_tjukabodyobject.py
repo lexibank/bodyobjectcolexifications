@@ -212,6 +212,7 @@ class Dataset(BaseDataset):
 
         for dataset_id, dataset in self._datasets('ClicsCore'):
             wordlist = Wordlist(datasets=[dataset])
+            dataset_id = wordlist.datasets[0].metadata_dict['rdf:ID']
 
             contributions.append({
                 'ID': dataset_id,
