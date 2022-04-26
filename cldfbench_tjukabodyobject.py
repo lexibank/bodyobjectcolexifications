@@ -1,16 +1,13 @@
-import pathlib
 import collections
+import itertools
+import pathlib
 
 import pycldf
 from cldfbench import CLDFSpec
 from cldfbench import Dataset as BaseDataset
 from cltoolkit import Wordlist
-from cltoolkit.features import FeatureCollection, Feature
-from cltoolkit.features.lexicon import Colexification
 from cldfzenodo import oai_lexibank
 from git import Repo, GitCommandError
-from tqdm import tqdm
-from csvw.dsv import reader
 from csvw.utils import slug
 
 COLLECTIONS = {
@@ -22,6 +19,23 @@ COLLECTIONS = {
 CONDITIONS = {
     "ClicsCore": lambda x: len(x.concepts) >= 250,
 }
+
+
+def _make_cldf_lang(lang, collection):
+    return {
+        "ID": lang.id,
+        "Name": lang.name,
+        "Glottocode": lang.glottocode,
+        "Dataset": lang.dataset,
+        "Latitude": lang.latitude,
+        "Longitude": lang.longitude,
+        "Subgroup": lang.subgroup,
+        "Family": lang.family,
+        "Forms": len(lang.forms or []),
+        "FormsWithSounds": len(lang.forms_with_sounds or []),
+        "Concepts": len(lang.concepts),
+        "Incollections": collection,
+    }
 
 
 class Dataset(BaseDataset):
@@ -114,7 +128,7 @@ class Dataset(BaseDataset):
             metadata = self.dataset_meta[dataset_id]
             yield (dataset, metadata) if with_metadata else dataset
 
-    def _schema(self, writer, with_stats=False, collstats=None):
+    def _schema(self, writer):
         writer.cldf.add_component(
             'LanguageTable',
             {
@@ -150,32 +164,9 @@ class Dataset(BaseDataset):
         )
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
 
-        if not with_stats:
-            return
-        for ds, md in tqdm(self._datasets(with_metadata=True), desc='Computing summary stats'):
-            langs = list(ds.iter_rows('LanguageTable', 'glottocode'))
-            gcs = set(lg['glottocode'] for lg in langs if lg['glottocode'])
-            senses = list(ds.iter_rows('ParameterTable', 'concepticonReference'))
-            csids = set(sense['concepticonReference'] for sense in senses if sense['concepticonReference'])
-            contrib = dict(
-                ID=md['ID'],
-                Name=ds.properties['dc:title'],
-                Citation=ds.properties['dc:bibliographicCitation'],
-                Collection_IDs=[key for key in COLLECTIONS if md.get(key, '').strip() == 'x'],
-                Glottocodes=len(gcs),
-                Doculects=len(langs),
-                Concepts=len(csids),
-                Senses=len(senses),
-                Forms=len(list(ds['FormTable'])),
-            )
-            writer.objects['ContributionTable'].append(contrib)
-        if collstats:
-            for d in collstats.values():
-                d['Glottocodes'] = len(d['Glottocodes'])
-                d['Concepts'] = len(d['Concepts'])
-                writer.objects['collections.csv'].append(d)
+    def cmd_makecldf(self, args):
+        # Read data
 
-    def _colexification_features(self):
         concept_list = self.etc_dir.read_csv(
             'Tjuka-2022-784.tsv', dicts=True, delimiter='\t')
         bodyparts = [
@@ -186,153 +177,127 @@ class Dataset(BaseDataset):
             row['CONCEPTICON_GLOSS']
             for row in concept_list
             if row['GROUP'] == 'object']
-        return FeatureCollection(
-            Feature(
-                id='{}And{}'.format(
-                    slug(bodypart).capitalize(),
-                    slug(obj).capitalize()),
-                name="colexification of {} and {}".format(bodypart, obj),
-                function=Colexification(bodypart, obj))
-            for bodypart in bodyparts
-            for obj in objects)
 
-    def cmd_makecldf(self, args):
-        dsinfo = {
-            row["ID"]: row
-            for row in reader(
-                self.etc_dir / 'lexibank.csv', dicts=True, delimiter=",")}
-        visited = set()
-        collstats = collections.OrderedDict()
-        for cid, (desc, name) in COLLECTIONS.items():
-            collstats[cid] = dict(
-                ID=cid,
-                Name=name,
-                Description=desc,
-                Varieties=0,
-                Glottocodes=set(),
-                Concepts=set(),
-                Forms=0,
-            )
+        condition = CONDITIONS["ClicsCore"]  # lambda l: len(l.concepts) >= 250
+        collection = 'ClicsCore'
+
+        the_concepts_we_want = set(itertools.chain(bodyparts, objects))
+
+        forms_by_concept = collections.defaultdict(set)
         languages = collections.OrderedDict()
 
-        def _add_features(writer, features):
-            for feature in features:
-                writer.objects['ParameterTable'].append(dict(
-                    ID=feature.id,
-                    Name=feature.name,
-                    Description=feature.doc,
-                    Feature_Spec=feature.to_json(),
-                ))
-                if feature.categories:
-                    for k, v in feature.categories.items():
-                        writer.objects['CodeTable'].append(dict(
-                            Parameter_ID=feature.id,
-                            ID='{}-{}'.format(feature.id, k),
-                            Name=v,
-                        ))
+        for dataset in self._datasets('ClicsCore'):
+            wordlist = Wordlist(datasets=[dataset])
 
-        features_found = set()
+            def _valid_language(lang):
+                if not lang.name or lang.name == 'None':
+                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(lang))
+                    return False
+                elif not lang.latitude or not condition(lang):
+                    return False
+                else:
+                    return True
 
-        def _add_language(
-            writer, language, features, attr_features, collection='',
-            visited=None
-        ):
-            visited = visited if visited is not None else set()
-            l = languages.get(language.id)
-            if not l:
-                l = {
-                    "ID": language.id,
-                    "Name": language.name,
-                    "Glottocode": language.glottocode,
-                    "Dataset": language.dataset,
-                    "Latitude": language.latitude,
-                    "Longitude": language.longitude,
-                    "Subgroup": language.subgroup,
-                    "Family": language.family,
-                    "Forms": len(language.forms or []),
-                    "FormsWithSounds": len(language.forms_with_sounds or []),
-                    "Concepts": len(language.concepts),
-                    "Incollections": collection,
-                }
+            ds_languages = [
+                l for l in wordlist.languages if _valid_language(l)]
+
+            for lang in ds_languages:
+                for form in lang.forms:
+                    if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
+                        forms_by_concept[lang.id, form.concept.concepticon_gloss].add(form.form)
+
+            languages.update(
+                (lang.id, _make_cldf_lang(lang, collection))
+                for lang in ds_languages)
+
+        # Process data
+
+        colexifications = collections.defaultdict(set)
+        for (lang_id, gloss), _forms in forms_by_concept.items():
+            for form in _forms:
+                colexifications[lang_id, form].add(gloss)
+
+        colex_counter = collections.Counter(
+            (bodyp, obj)
+            for glosses in colexifications.values()
+            for bodyp in glosses
+            for obj in glosses
+            if bodyp in bodyparts and obj in objects)
+
+        # TODO maybe adding concepticon ids to the feature table might be useful
+        features = [
+            {
+                'ID': '{}And{}'.format(
+                    slug(bodyp).capitalize(),
+                    slug(obj).capitalize()),
+                'Name': 'Colexification of {} and {}'.format(bodyp, obj),
+                'Description':
+                    'Computes if the concepts {} and {} are expressed'
+                    ' with the same form in a language'
+                    ' (i.e. they are colexified)'.format(bodyp, obj),
+                'Bodypart': bodyp,
+                'Object': obj,
+            }
+            for (bodyp, obj), _ in colex_counter.most_common(100)]
+        features = collections.OrderedDict((f['ID'], f) for f in features)
+
+        codes = [
+            {
+                'ID': '{}-{}'.format(f['ID'], val),
+                'Parameter_ID': f['ID'],
+                'Name': name,
+            }
+            for f in features.values()
+            for val, name in (
+                ('true', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
+                ('false', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])),
+                ('null', 'missing data'))]
+
+        def _colex_value(lang_id, bodyp, obj):
+            if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
+                return 'null'
+            elif forms_by_concept[lang_id, bodyp] & forms_by_concept[lang_id, obj]:
+                return 'true'
             else:
-                l['Incollections'] = l['Incollections'] + collection
-            if language.id not in visited:
-                cid = 'ClicsCore'
-                try:
-                    if dsinfo[language.dataset][cid] == 'x' and CONDITIONS[cid](language):
-                        collstats[cid]["Glottocodes"].add(language.glottocode)
-                        collstats[cid]["Varieties"] += 1
-                        collstats[cid]["Forms"] += len(language.forms)
-                        collstats[cid]["Concepts"].update(
-                            concept.id for concept in language.concepts)
-                except:
-                    print("problems with {0}".format(language.dataset))
-                visited.add(language.id)
-            languages[language.id] = l
-            writer.objects['LanguageTable'].append(l)
-            for attr in attr_features:
-                writer.objects['ValueTable'].append(dict(
-                    ID='{}-{}'.format(language.id, attr),
-                    Language_ID=language.id,
-                    Parameter_ID=attr,
-                    Value=len(getattr(language, attr))
-                ))
-            for feature in features:
-                v = feature(language)
-                if not v:
-                    continue
-                features_found.add(feature.id)
-                if feature.categories:
-                    assert v in feature.categories, '{}: "{}"'.format(feature.id, v)
-                writer.objects['ValueTable'].append(dict(
-                    ID='{}-{}'.format(language.id, feature.id),
-                    Language_ID=language.id,
-                    Parameter_ID=feature.id,
-                    Value=v,
-                    Code_ID='{}-{}'.format(feature.id, v) if feature.categories else None,
-                ))
+                return 'false'
+        values = [
+            {
+                'ID': '{}-{}'.format(lang_id, feat['ID']),
+                'Language_ID': lang_id,
+                'Parameter_ID': feat['ID'],
+                'Code_ID': '{}-{}'.format(
+                    feat['ID'],
+                    _colex_value(lang_id, feat['Bodypart'], feat['Object'])),
+            }
+            for lang_id in languages
+            for feat in features.values()]
+        values = [v for v in values if not v['Code_ID'].endswith('-null')]
 
-        def _add_languages(
-            writer, wordlist, condition, features, attr_features, collection='',
-            visited=None
-        ):
-            visited = visited if visited is not None else set()
-            for language in tqdm(wordlist.languages, desc='computing features'):
-                if language.name is None or language.name == "None":
-                    args.log.warning('{0.dataset}: {0.id}: {0.name}'.format(language))
-                    continue
-                if language.latitude and condition(language):
-                    _add_language(
-                        writer, language, features, attr_features,
-                        collection=collection, visited=visited)
-                    yield language
+        languages_with_data = {
+            val['Language_ID']
+            for val in values
+            if not val['Code_ID'].endswith('-null')}
+        languages = collections.OrderedDict(
+            (lang_id, lang)
+            for lang_id, lang in languages.items()
+            if lang_id in languages_with_data)
+        values = [
+            val
+            for val in values
+            if val['Language_ID'] in languages_with_data]
+
+        # Write CLDF data
 
         with self.cldf_writer(args) as writer:
             self._schema(writer)
             writer.cldf.add_columns(
                 'ParameterTable',
+                'Bodypart',
+                'Object',
                 {"name": "Feature_Spec", "datatype": "json"},
             )
-            features = self._colexification_features()
 
-            for fid, fname, fdesc in [
-                ('concepts', 'Number of concepts', 'Number of senses linked to Concepticon'),
-                ('forms', 'Number of forms', ''),
-                ('senses', 'Number of senses', ''),
-            ]:
-                writer.objects['ParameterTable'].append(
-                    dict(ID=fid, Name=fname, Description=fdesc))
-
-            for dataset in self._datasets('ClicsCore'):
-                _ = list(_add_languages(
-                    writer,
-                    Wordlist(datasets=[dataset]),
-                    CONDITIONS["ClicsCore"],  # lambda l: len(l.concepts) >= 250,
-                    features,
-                    ['concepts', 'forms', 'senses'],
-                    collection='ClicsCore',
-                    visited=visited,
-                ))
-            _add_features(
-                writer,
-                (f for f in features if f.id in features_found))
+            writer.objects['ParameterTable'] = list(features.values())
+            writer.objects['CodeTable'] = codes
+            writer.objects['LanguageTable'] = languages.values()
+            writer.objects['ValueTable'] = values
