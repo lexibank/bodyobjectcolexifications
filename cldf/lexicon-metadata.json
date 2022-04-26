@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/lexibank/tjukabodyobject",
             "rdf:type": "prov:Entity",
-            "dc:created": "v0.2-22-g242f319",
+            "dc:created": "v0.2-65-g0f66d87",
             "dc:title": "Repository"
         },
         {
