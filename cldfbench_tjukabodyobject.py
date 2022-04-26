@@ -124,7 +124,7 @@ class Dataset(BaseDataset):
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
 
-    def _datasets(self, set_=None, with_metadata=False):
+    def _datasets(self, set_=None):
         """
         Load all datasets from a defined group of datasets.
         """
@@ -142,8 +142,7 @@ class Dataset(BaseDataset):
         for dataset_id in dataset_ids:
             dataset = pycldf.Dataset.from_metadata(
                 self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
-            metadata = self.dataset_meta[dataset_id]
-            yield (dataset, metadata) if with_metadata else (dataset_id, dataset)
+            yield dataset_id, dataset
 
     def _schema(self, writer):
         writer.cldf.add_component(
