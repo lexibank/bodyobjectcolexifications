@@ -320,6 +320,11 @@ class Dataset(BaseDataset):
             for lang in languages
             for feat in features]
 
+        code_values = {code['ID']: code['Name'] for code in codes}
+        for value in values:
+            if value.get('Code_ID') is not None:
+                value['Value'] = code_values[value['Code_ID']]
+
         languages_with_data = {val['Language_ID'] for val in values}
         languages = [
             lang
