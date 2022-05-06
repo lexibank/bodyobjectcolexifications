@@ -60,6 +60,13 @@ def _make_cldf_lang(lang, collection):
     }
 
 
+def _code_id(feat_id, val):
+    if val is not None:
+        return '{}-{}'.format(feat_id, val)
+    else:
+        return None
+
+
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "tjukabodyobject"
@@ -284,7 +291,7 @@ class Dataset(BaseDataset):
 
         codes = [
             {
-                'ID': '{}-{}'.format(f['ID'], val),
+                'ID': _code_id(f, val),
                 'Parameter_ID': f['ID'],
                 'Name': val,
                 'Description': desc,
@@ -301,11 +308,6 @@ class Dataset(BaseDataset):
                 return 'true'
             else:
                 return 'false'
-        def _code_id(feat_id, val):
-            if val is not None:
-                return '{}-{}'.format(feat_id, val)
-            else:
-                return None
         values = [
             {
                 'ID': '{}-{}'.format(lang['ID'], feat['ID']),
