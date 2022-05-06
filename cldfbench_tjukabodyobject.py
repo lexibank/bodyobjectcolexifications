@@ -325,15 +325,20 @@ class Dataset(BaseDataset):
             if value.get('Code_ID') is not None:
                 value['Value'] = code_values[value['Code_ID']]
 
-        languages_with_data = {val['Language_ID'] for val in values}
+        languages_with_data = collections.Counter(
+            val['Language_ID']
+            for val in values
+            if val.get('Value') in ('True', 'False'))
         languages = [
             lang
             for lang in languages
-            if lang['ID'] in languages_with_data]
+            if lang['ID'] in languages_with_data
+            and languages_with_data[lang['ID']] >= 10]
         values = [
             val
             for val in values
-            if val['Language_ID'] in languages_with_data]
+            if val['Language_ID'] in languages_with_data
+            and languages_with_data[val['Language_ID']] >= 10]
 
         # Write CLDF data
 
