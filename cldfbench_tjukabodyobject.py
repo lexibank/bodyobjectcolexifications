@@ -291,7 +291,7 @@ class Dataset(BaseDataset):
 
         codes = [
             {
-                'ID': _code_id(f, val),
+                'ID': _code_id(f['ID'], val),
                 'Parameter_ID': f['ID'],
                 'Name': val,
                 'Description': desc,
