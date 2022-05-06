@@ -305,9 +305,9 @@ class Dataset(BaseDataset):
             if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
                 return None
             elif forms_by_concept[lang_id, bodyp] & forms_by_concept[lang_id, obj]:
-                return 'true'
+                return 'True'
             else:
-                return 'false'
+                return 'False'
         values = [
             {
                 'ID': '{}-{}'.format(lang['ID'], feat['ID']),
