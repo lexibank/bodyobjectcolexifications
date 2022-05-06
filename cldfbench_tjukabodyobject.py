@@ -332,13 +332,11 @@ class Dataset(BaseDataset):
         languages = [
             lang
             for lang in languages
-            if lang['ID'] in languages_with_data
-            and languages_with_data[lang['ID']] >= 20]
+            if languages_with_data.get(lang['ID'], 0) >= 20]
         values = [
             val
             for val in values
-            if val['Language_ID'] in languages_with_data
-            and languages_with_data[val['Language_ID']] >= 20]
+            if languages_with_data.get(val['Language_ID'], 0) >= 20]
 
         # Write CLDF data
 
