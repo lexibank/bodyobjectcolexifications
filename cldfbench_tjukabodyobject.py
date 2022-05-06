@@ -60,6 +60,13 @@ def _make_cldf_lang(lang, collection):
     }
 
 
+def _code_id(feat_id, val):
+    if val is not None:
+        return '{}-{}'.format(feat_id, val)
+    else:
+        return None
+
+
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "tjukabodyobject"
@@ -284,40 +291,41 @@ class Dataset(BaseDataset):
 
         codes = [
             {
-                'ID': '{}-{}'.format(f['ID'], val),
+                'ID': _code_id(f['ID'], val),
                 'Parameter_ID': f['ID'],
-                'Name': name,
+                'Name': val,
+                'Description': desc,
             }
             for f in features
-            for val, name in (
-                ('true', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
-                ('false', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])),
-                ('null', 'missing data'))]
+            for val, desc in (
+                ('True', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
+                ('False', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])))]
 
         def _colex_value(lang_id, bodyp, obj):
             if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
-                return 'null'
+                return None
             elif forms_by_concept[lang_id, bodyp] & forms_by_concept[lang_id, obj]:
-                return 'true'
+                return 'True'
             else:
-                return 'false'
+                return 'False'
         values = [
             {
                 'ID': '{}-{}'.format(lang['ID'], feat['ID']),
                 'Language_ID': lang['ID'],
                 'Parameter_ID': feat['ID'],
-                'Code_ID': '{}-{}'.format(
+                'Code_ID': _code_id(
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
             }
             for lang in languages
             for feat in features]
-        values = [v for v in values if not v['Code_ID'].endswith('-null')]
 
-        languages_with_data = {
-            val['Language_ID']
-            for val in values
-            if not val['Code_ID'].endswith('-null')}
+        code_values = {code['ID']: code['Name'] for code in codes}
+        for value in values:
+            if value.get('Code_ID') is not None:
+                value['Value'] = code_values[value['Code_ID']]
+
+        languages_with_data = {val['Language_ID'] for val in values}
         languages = [
             lang
             for lang in languages
