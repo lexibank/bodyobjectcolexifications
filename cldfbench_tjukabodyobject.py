@@ -299,7 +299,9 @@ class Dataset(BaseDataset):
             for f in features
             for val, desc in (
                 ('True', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
-                ('False', 'does not colexify {} and {}'.format(f['Bodypart'], f['Object'])))]
+                ('False', 'does not colexify {} and {}'.format(f['Bodypart'],
+                    f['Object'])),
+                ('None', "missing value"))]
 
         def _colex_value(lang_id, bodyp, obj):
             if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
