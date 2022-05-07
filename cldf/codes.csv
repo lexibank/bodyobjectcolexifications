@@ -1,201 +1,301 @@
 ID,Parameter_ID,Name,Description
 AnkleAndKnot-False,AnkleAndKnot,False,does not colexify ANKLE and KNOT
+AnkleAndKnot-None,AnkleAndKnot,None,missing value
 AnkleAndKnot-True,AnkleAndKnot,True,colexifies ANKLE and KNOT
 ArmAndBranch-False,ArmAndBranch,False,does not colexify ARM and BRANCH
+ArmAndBranch-None,ArmAndBranch,None,missing value
 ArmAndBranch-True,ArmAndBranch,True,colexifies ARM and BRANCH
 ArmAndValley-False,ArmAndValley,False,does not colexify ARM and VALLEY
+ArmAndValley-None,ArmAndValley,None,missing value
 ArmAndValley-True,ArmAndValley,True,colexifies ARM and VALLEY
 BackAndBark-False,BackAndBark,False,does not colexify BACK and BARK
+BackAndBark-None,BackAndBark,None,missing value
 BackAndBark-True,BackAndBark,True,colexifies BACK and BARK
 BackAndRoof-False,BackAndRoof,False,does not colexify BACK and ROOF
+BackAndRoof-None,BackAndRoof,None,missing value
 BackAndRoof-True,BackAndRoof,True,colexifies BACK and ROOF
 BellyAndPen-False,BellyAndPen,False,does not colexify BELLY and PEN
+BellyAndPen-None,BellyAndPen,None,missing value
 BellyAndPen-True,BellyAndPen,True,colexifies BELLY and PEN
 BloodvesselAndRoot-False,BloodvesselAndRoot,False,does not colexify BLOOD VESSEL and ROOT
+BloodvesselAndRoot-None,BloodvesselAndRoot,None,missing value
 BloodvesselAndRoot-True,BloodvesselAndRoot,True,colexifies BLOOD VESSEL and ROOT
 BloodvesselAndThread-False,BloodvesselAndThread,False,does not colexify BLOOD VESSEL and THREAD
+BloodvesselAndThread-None,BloodvesselAndThread,None,missing value
 BloodvesselAndThread-True,BloodvesselAndThread,True,colexifies BLOOD VESSEL and THREAD
 BodyAndLeather-False,BodyAndLeather,False,does not colexify BODY and LEATHER
+BodyAndLeather-None,BodyAndLeather,None,missing value
 BodyAndLeather-True,BodyAndLeather,True,colexifies BODY and LEATHER
 BodyAndShell-False,BodyAndShell,False,does not colexify BODY and SHELL
+BodyAndShell-None,BodyAndShell,None,missing value
 BodyAndShell-True,BodyAndShell,True,colexifies BODY and SHELL
 BodyAndTreetrunk-False,BodyAndTreetrunk,False,does not colexify BODY and TREE TRUNK
+BodyAndTreetrunk-None,BodyAndTreetrunk,None,missing value
 BodyAndTreetrunk-True,BodyAndTreetrunk,True,colexifies BODY and TREE TRUNK
 BoneAndBowl-False,BoneAndBowl,False,does not colexify BONE and BOWL
+BoneAndBowl-None,BoneAndBowl,None,missing value
 BoneAndBowl-True,BoneAndBowl,True,colexifies BONE and BOWL
 BoneAndPlantstem-False,BoneAndPlantstem,False,does not colexify BONE and PLANT STEM
+BoneAndPlantstem-None,BoneAndPlantstem,None,missing value
 BoneAndPlantstem-True,BoneAndPlantstem,True,colexifies BONE and PLANT STEM
 BoneAndPlate-False,BoneAndPlate,False,does not colexify BONE and PLATE
+BoneAndPlate-None,BoneAndPlate,None,missing value
 BoneAndPlate-True,BoneAndPlate,True,colexifies BONE and PLATE
 BoneAndRope-False,BoneAndRope,False,does not colexify BONE and ROPE
+BoneAndRope-None,BoneAndRope,None,missing value
 BoneAndRope-True,BoneAndRope,True,colexifies BONE and ROPE
 BoneAndShell-False,BoneAndShell,False,does not colexify BONE and SHELL
+BoneAndShell-None,BoneAndShell,None,missing value
 BoneAndShell-True,BoneAndShell,True,colexifies BONE and SHELL
 BoneAndStick-False,BoneAndStick,False,does not colexify BONE and STICK
+BoneAndStick-None,BoneAndStick,None,missing value
 BoneAndStick-True,BoneAndStick,True,colexifies BONE and STICK
 BoneAndTree-False,BoneAndTree,False,does not colexify BONE and TREE
+BoneAndTree-None,BoneAndTree,None,missing value
 BoneAndTree-True,BoneAndTree,True,colexifies BONE and TREE
 ButtocksAndBottom-False,ButtocksAndBottom,False,does not colexify BUTTOCKS and BOTTOM
+ButtocksAndBottom-None,ButtocksAndBottom,None,missing value
 ButtocksAndBottom-True,ButtocksAndBottom,True,colexifies BUTTOCKS and BOTTOM
 EarAndEarring-False,EarAndEarring,False,does not colexify EAR and EARRING
+EarAndEarring-None,EarAndEarring,None,missing value
 EarAndEarring-True,EarAndEarring,True,colexifies EAR and EARRING
 EarAndLeaf-False,EarAndLeaf,False,does not colexify EAR and LEAF
+EarAndLeaf-None,EarAndLeaf,None,missing value
 EarAndLeaf-True,EarAndLeaf,True,colexifies EAR and LEAF
 ElbowAndCorner-False,ElbowAndCorner,False,does not colexify ELBOW and CORNER
+ElbowAndCorner-None,ElbowAndCorner,None,missing value
 ElbowAndCorner-True,ElbowAndCorner,True,colexifies ELBOW and CORNER
 EyeAndFire-False,EyeAndFire,False,does not colexify EYE and FIRE
+EyeAndFire-None,EyeAndFire,None,missing value
 EyeAndFire-True,EyeAndFire,True,colexifies EYE and FIRE
 EyeAndFruit-False,EyeAndFruit,False,does not colexify EYE and FRUIT
+EyeAndFruit-None,EyeAndFruit,None,missing value
 EyeAndFruit-True,EyeAndFruit,True,colexifies EYE and FRUIT
 EyeAndGrain-False,EyeAndGrain,False,does not colexify EYE and GRAIN
+EyeAndGrain-None,EyeAndGrain,None,missing value
 EyeAndGrain-True,EyeAndGrain,True,colexifies EYE and GRAIN
 EyeAndSeed-False,EyeAndSeed,False,does not colexify EYE and SEED
+EyeAndSeed-None,EyeAndSeed,None,missing value
 EyeAndSeed-True,EyeAndSeed,True,colexifies EYE and SEED
 EyeAndTree-False,EyeAndTree,False,does not colexify EYE and TREE
+EyeAndTree-None,EyeAndTree,None,missing value
 EyeAndTree-True,EyeAndTree,True,colexifies EYE and TREE
 EyeAndWheel-False,EyeAndWheel,False,does not colexify EYE and WHEEL
+EyeAndWheel-None,EyeAndWheel,None,missing value
 EyeAndWheel-True,EyeAndWheel,True,colexifies EYE and WHEEL
 FaceAndEdge-False,FaceAndEdge,False,does not colexify FACE and EDGE
+FaceAndEdge-None,FaceAndEdge,None,missing value
 FaceAndEdge-True,FaceAndEdge,True,colexifies FACE and EDGE
 FaceAndSide-False,FaceAndSide,False,does not colexify FACE and SIDE
+FaceAndSide-None,FaceAndSide,None,missing value
 FaceAndSide-True,FaceAndSide,True,colexifies FACE and SIDE
 FingerAndRing-False,FingerAndRing,False,does not colexify FINGER and RING
+FingerAndRing-None,FingerAndRing,None,missing value
 FingerAndRing-True,FingerAndRing,True,colexifies FINGER and RING
 FingernailAndNailtool-False,FingernailAndNailtool,False,does not colexify FINGERNAIL and NAIL (TOOL)
+FingernailAndNailtool-None,FingernailAndNailtool,None,missing value
 FingernailAndNailtool-True,FingernailAndNailtool,True,colexifies FINGERNAIL and NAIL (TOOL)
 FootAndCorner-False,FootAndCorner,False,does not colexify FOOT and CORNER
+FootAndCorner-None,FootAndCorner,None,missing value
 FootAndCorner-True,FootAndCorner,True,colexifies FOOT and CORNER
 FootAndWheel-False,FootAndWheel,False,does not colexify FOOT and WHEEL
+FootAndWheel-None,FootAndWheel,None,missing value
 FootAndWheel-True,FootAndWheel,True,colexifies FOOT and WHEEL
 ForeheadAndCape-False,ForeheadAndCape,False,does not colexify FOREHEAD and CAPE
+ForeheadAndCape-None,ForeheadAndCape,None,missing value
 ForeheadAndCape-True,ForeheadAndCape,True,colexifies FOREHEAD and CAPE
 ForeheadAndPan-False,ForeheadAndPan,False,does not colexify FOREHEAD and PAN
+ForeheadAndPan-None,ForeheadAndPan,None,missing value
 ForeheadAndPan-True,ForeheadAndPan,True,colexifies FOREHEAD and PAN
 HairAndLeaf-False,HairAndLeaf,False,does not colexify HAIR and LEAF
+HairAndLeaf-None,HairAndLeaf,None,missing value
 HairAndLeaf-True,HairAndLeaf,True,colexifies HAIR and LEAF
 HairheadAndLeaf-False,HairheadAndLeaf,False,does not colexify HAIR (HEAD) and LEAF
+HairheadAndLeaf-None,HairheadAndLeaf,None,missing value
 HairheadAndLeaf-True,HairheadAndLeaf,True,colexifies HAIR (HEAD) and LEAF
 HandAndBranch-False,HandAndBranch,False,does not colexify HAND and BRANCH
+HandAndBranch-None,HandAndBranch,None,missing value
 HandAndBranch-True,HandAndBranch,True,colexifies HAND and BRANCH
 HandAndMountain-False,HandAndMountain,False,does not colexify HAND and MOUNTAIN
+HandAndMountain-None,HandAndMountain,None,missing value
 HandAndMountain-True,HandAndMountain,True,colexifies HAND and MOUNTAIN
 HandAndValley-False,HandAndValley,False,does not colexify HAND and VALLEY
+HandAndValley-None,HandAndValley,None,missing value
 HandAndValley-True,HandAndValley,True,colexifies HAND and VALLEY
 HeadAndCape-False,HeadAndCape,False,does not colexify HEAD and CAPE
+HeadAndCape-None,HeadAndCape,None,missing value
 HeadAndCape-True,HeadAndCape,True,colexifies HEAD and CAPE
 HeadAndRoof-False,HeadAndRoof,False,does not colexify HEAD and ROOF
+HeadAndRoof-None,HeadAndRoof,None,missing value
 HeadAndRoof-True,HeadAndRoof,True,colexifies HEAD and ROOF
 HeadAndSummit-False,HeadAndSummit,False,does not colexify HEAD and SUMMIT
+HeadAndSummit-None,HeadAndSummit,None,missing value
 HeadAndSummit-True,HeadAndSummit,True,colexifies HEAD and SUMMIT
 HeadAndTipofobject-False,HeadAndTipofobject,False,does not colexify HEAD and TIP (OF OBJECT)
+HeadAndTipofobject-None,HeadAndTipofobject,None,missing value
 HeadAndTipofobject-True,HeadAndTipofobject,True,colexifies HEAD and TIP (OF OBJECT)
 HeadAndTop-False,HeadAndTop,False,does not colexify HEAD and TOP
+HeadAndTop-None,HeadAndTop,None,missing value
 HeadAndTop-True,HeadAndTop,True,colexifies HEAD and TOP
 HeartAndFirewood-False,HeartAndFirewood,False,does not colexify HEART and FIREWOOD
+HeartAndFirewood-None,HeartAndFirewood,None,missing value
 HeartAndFirewood-True,HeartAndFirewood,True,colexifies HEART and FIREWOOD
 HeelAndMortar-False,HeelAndMortar,False,does not colexify HEEL and MORTAR
+HeelAndMortar-None,HeelAndMortar,None,missing value
 HeelAndMortar-True,HeelAndMortar,True,colexifies HEEL and MORTAR
 HipAndSide-False,HipAndSide,False,does not colexify HIP and SIDE
+HipAndSide-None,HipAndSide,None,missing value
 HipAndSide-True,HipAndSide,True,colexifies HIP and SIDE
 IntestinesAndBed-False,IntestinesAndBed,False,does not colexify INTESTINES and BED
+IntestinesAndBed-None,IntestinesAndBed,None,missing value
 IntestinesAndBed-True,IntestinesAndBed,True,colexifies INTESTINES and BED
 IntestinesAndSausage-False,IntestinesAndSausage,False,does not colexify INTESTINES and SAUSAGE
+IntestinesAndSausage-None,IntestinesAndSausage,None,missing value
 IntestinesAndSausage-True,IntestinesAndSausage,True,colexifies INTESTINES and SAUSAGE
 LegAndBowl-False,LegAndBowl,False,does not colexify LEG and BOWL
+LegAndBowl-None,LegAndBowl,None,missing value
 LegAndBowl-True,LegAndBowl,True,colexifies LEG and BOWL
 LegAndCup-False,LegAndCup,False,does not colexify LEG and CUP
+LegAndCup-None,LegAndCup,None,missing value
 LegAndCup-True,LegAndCup,True,colexifies LEG and CUP
 LegAndSky-False,LegAndSky,False,does not colexify LEG and SKY
+LegAndSky-None,LegAndSky,None,missing value
 LegAndSky-True,LegAndSky,True,colexifies LEG and SKY
 LegAndTreetrunk-False,LegAndTreetrunk,False,does not colexify LEG and TREE TRUNK
+LegAndTreetrunk-None,LegAndTreetrunk,None,missing value
 LegAndTreetrunk-True,LegAndTreetrunk,True,colexifies LEG and TREE TRUNK
 LipAndEdge-False,LipAndEdge,False,does not colexify LIP and EDGE
+LipAndEdge-None,LipAndEdge,None,missing value
 LipAndEdge-True,LipAndEdge,True,colexifies LIP and EDGE
 LipAndShore-False,LipAndShore,False,does not colexify LIP and SHORE
+LipAndShore-None,LipAndShore,None,missing value
 LipAndShore-True,LipAndShore,True,colexifies LIP and SHORE
 LungAndLake-False,LungAndLake,False,does not colexify LUNG and LAKE
+LungAndLake-None,LungAndLake,None,missing value
 LungAndLake-True,LungAndLake,True,colexifies LUNG and LAKE
 MouthAndDoor-False,MouthAndDoor,False,does not colexify MOUTH and DOOR
+MouthAndDoor-None,MouthAndDoor,None,missing value
 MouthAndDoor-True,MouthAndDoor,True,colexifies MOUTH and DOOR
 MouthAndEdge-False,MouthAndEdge,False,does not colexify MOUTH and EDGE
+MouthAndEdge-None,MouthAndEdge,None,missing value
 MouthAndEdge-True,MouthAndEdge,True,colexifies MOUTH and EDGE
 MouthAndHole-False,MouthAndHole,False,does not colexify MOUTH and HOLE
+MouthAndHole-None,MouthAndHole,None,missing value
 MouthAndHole-True,MouthAndHole,True,colexifies MOUTH and HOLE
 NeckAndCollar-False,NeckAndCollar,False,does not colexify NECK and COLLAR
+NeckAndCollar-None,NeckAndCollar,None,missing value
 NeckAndCollar-True,NeckAndCollar,True,colexifies NECK and COLLAR
 NippleAndSeed-False,NippleAndSeed,False,does not colexify NIPPLE and SEED
+NippleAndSeed-None,NippleAndSeed,None,missing value
 NippleAndSeed-True,NippleAndSeed,True,colexifies NIPPLE and SEED
 NoseAndArrow-False,NoseAndArrow,False,does not colexify NOSE and ARROW
+NoseAndArrow-None,NoseAndArrow,None,missing value
 NoseAndArrow-True,NoseAndArrow,True,colexifies NOSE and ARROW
 NoseAndCape-False,NoseAndCape,False,does not colexify NOSE and CAPE
+NoseAndCape-None,NoseAndCape,None,missing value
 NoseAndCape-True,NoseAndCape,True,colexifies NOSE and CAPE
 NoseAndFlower-False,NoseAndFlower,False,does not colexify NOSE and FLOWER
+NoseAndFlower-None,NoseAndFlower,None,missing value
 NoseAndFlower-True,NoseAndFlower,True,colexifies NOSE and FLOWER
 NoseAndTop-False,NoseAndTop,False,does not colexify NOSE and TOP
+NoseAndTop-None,NoseAndTop,None,missing value
 NoseAndTop-True,NoseAndTop,True,colexifies NOSE and TOP
 NostrilAndHole-False,NostrilAndHole,False,does not colexify NOSTRIL and HOLE
+NostrilAndHole-None,NostrilAndHole,None,missing value
 NostrilAndHole-True,NostrilAndHole,True,colexifies NOSTRIL and HOLE
 PenisAndEgg-False,PenisAndEgg,False,does not colexify PENIS and EGG
+PenisAndEgg-None,PenisAndEgg,None,missing value
 PenisAndEgg-True,PenisAndEgg,True,colexifies PENIS and EGG
 PenisAndSeed-False,PenisAndSeed,False,does not colexify PENIS and SEED
+PenisAndSeed-None,PenisAndSeed,None,missing value
 PenisAndSeed-True,PenisAndSeed,True,colexifies PENIS and SEED
 RibAndShore-False,RibAndShore,False,does not colexify RIB and SHORE
+RibAndShore-None,RibAndShore,None,missing value
 RibAndShore-True,RibAndShore,True,colexifies RIB and SHORE
 RibAndSide-False,RibAndSide,False,does not colexify RIB and SIDE
+RibAndSide-None,RibAndSide,None,missing value
 RibAndSide-True,RibAndSide,True,colexifies RIB and SIDE
 ShoulderbladeAndOar-False,ShoulderbladeAndOar,False,does not colexify SHOULDERBLADE and OAR
+ShoulderbladeAndOar-None,ShoulderbladeAndOar,None,missing value
 ShoulderbladeAndOar-True,ShoulderbladeAndOar,True,colexifies SHOULDERBLADE and OAR
 ShoulderbladeAndPaddle-False,ShoulderbladeAndPaddle,False,does not colexify SHOULDERBLADE and PADDLE
+ShoulderbladeAndPaddle-None,ShoulderbladeAndPaddle,None,missing value
 ShoulderbladeAndPaddle-True,ShoulderbladeAndPaddle,True,colexifies SHOULDERBLADE and PADDLE
 ShoulderbladeAndSpade-False,ShoulderbladeAndSpade,False,does not colexify SHOULDERBLADE and SPADE
+ShoulderbladeAndSpade-None,ShoulderbladeAndSpade,None,missing value
 ShoulderbladeAndSpade-True,ShoulderbladeAndSpade,True,colexifies SHOULDERBLADE and SPADE
 SkinAndBark-False,SkinAndBark,False,does not colexify SKIN and BARK
+SkinAndBark-None,SkinAndBark,None,missing value
 SkinAndBark-True,SkinAndBark,True,colexifies SKIN and BARK
 SkinAndBasket-False,SkinAndBasket,False,does not colexify SKIN and BASKET
+SkinAndBasket-None,SkinAndBasket,None,missing value
 SkinAndBasket-True,SkinAndBasket,True,colexifies SKIN and BASKET
 SkinAndBook-False,SkinAndBook,False,does not colexify SKIN and BOOK
+SkinAndBook-None,SkinAndBook,None,missing value
 SkinAndBook-True,SkinAndBook,True,colexifies SKIN and BOOK
 SkinAndLeather-False,SkinAndLeather,False,does not colexify SKIN and LEATHER
+SkinAndLeather-None,SkinAndLeather,None,missing value
 SkinAndLeather-True,SkinAndLeather,True,colexifies SKIN and LEATHER
 SkinAndLoincloth-False,SkinAndLoincloth,False,does not colexify SKIN and LOINCLOTH
+SkinAndLoincloth-None,SkinAndLoincloth,None,missing value
 SkinAndLoincloth-True,SkinAndLoincloth,True,colexifies SKIN and LOINCLOTH
 SkinAndMushroom-False,SkinAndMushroom,False,does not colexify SKIN and MUSHROOM
+SkinAndMushroom-None,SkinAndMushroom,None,missing value
 SkinAndMushroom-True,SkinAndMushroom,True,colexifies SKIN and MUSHROOM
 SkinAndShell-False,SkinAndShell,False,does not colexify SKIN and SHELL
+SkinAndShell-None,SkinAndShell,None,missing value
 SkinAndShell-True,SkinAndShell,True,colexifies SKIN and SHELL
 SkinAndSkinoffruit-False,SkinAndSkinoffruit,False,does not colexify SKIN and SKIN (OF FRUIT)
+SkinAndSkinoffruit-None,SkinAndSkinoffruit,None,missing value
 SkinAndSkinoffruit-True,SkinAndSkinoffruit,True,colexifies SKIN and SKIN (OF FRUIT)
 SkullAndTop-False,SkullAndTop,False,does not colexify SKULL and TOP
+SkullAndTop-None,SkullAndTop,None,missing value
 SkullAndTop-True,SkullAndTop,True,colexifies SKULL and TOP
 TemplesAndTop-False,TemplesAndTop,False,does not colexify TEMPLES and TOP
+TemplesAndTop-None,TemplesAndTop,None,missing value
 TemplesAndTop-True,TemplesAndTop,True,colexifies TEMPLES and TOP
 TendonAndRoot-False,TendonAndRoot,False,does not colexify TENDON and ROOT
+TendonAndRoot-None,TendonAndRoot,None,missing value
 TendonAndRoot-True,TendonAndRoot,True,colexifies TENDON and ROOT
 TesticlesAndBall-False,TesticlesAndBall,False,does not colexify TESTICLES and BALL
+TesticlesAndBall-None,TesticlesAndBall,None,missing value
 TesticlesAndBall-True,TesticlesAndBall,True,colexifies TESTICLES and BALL
 TesticlesAndCheese-False,TesticlesAndCheese,False,does not colexify TESTICLES and CHEESE
+TesticlesAndCheese-None,TesticlesAndCheese,None,missing value
 TesticlesAndCheese-True,TesticlesAndCheese,True,colexifies TESTICLES and CHEESE
 TesticlesAndEgg-False,TesticlesAndEgg,False,does not colexify TESTICLES and EGG
+TesticlesAndEgg-None,TesticlesAndEgg,None,missing value
 TesticlesAndEgg-True,TesticlesAndEgg,True,colexifies TESTICLES and EGG
 TesticlesAndFruit-False,TesticlesAndFruit,False,does not colexify TESTICLES and FRUIT
+TesticlesAndFruit-None,TesticlesAndFruit,None,missing value
 TesticlesAndFruit-True,TesticlesAndFruit,True,colexifies TESTICLES and FRUIT
 TesticlesAndSeed-False,TesticlesAndSeed,False,does not colexify TESTICLES and SEED
+TesticlesAndSeed-None,TesticlesAndSeed,None,missing value
 TesticlesAndSeed-True,TesticlesAndSeed,True,colexifies TESTICLES and SEED
 ThroatAndCollar-False,ThroatAndCollar,False,does not colexify THROAT and COLLAR
+ThroatAndCollar-None,ThroatAndCollar,None,missing value
 ThroatAndCollar-True,ThroatAndCollar,True,colexifies THROAT and COLLAR
 ThroatAndNecklace-False,ThroatAndNecklace,False,does not colexify THROAT and NECKLACE
+ThroatAndNecklace-None,ThroatAndNecklace,None,missing value
 ThroatAndNecklace-True,ThroatAndNecklace,True,colexifies THROAT and NECKLACE
 TongueAndFlame-False,TongueAndFlame,False,does not colexify TONGUE and FLAME
+TongueAndFlame-None,TongueAndFlame,None,missing value
 TongueAndFlame-True,TongueAndFlame,True,colexifies TONGUE and FLAME
 ToothAndBead-False,ToothAndBead,False,does not colexify TOOTH and BEAD
+ToothAndBead-None,ToothAndBead,None,missing value
 ToothAndBead-True,ToothAndBead,True,colexifies TOOTH and BEAD
 ToothAndLeaf-False,ToothAndLeaf,False,does not colexify TOOTH and LEAF
+ToothAndLeaf-None,ToothAndLeaf,None,missing value
 ToothAndLeaf-True,ToothAndLeaf,True,colexifies TOOTH and LEAF
 ToothAndSproutshoot-False,ToothAndSproutshoot,False,does not colexify TOOTH and SPROUT (SHOOT)
+ToothAndSproutshoot-None,ToothAndSproutshoot,None,missing value
 ToothAndSproutshoot-True,ToothAndSproutshoot,True,colexifies TOOTH and SPROUT (SHOOT)
 VeinAndRoot-False,VeinAndRoot,False,does not colexify VEIN and ROOT
+VeinAndRoot-None,VeinAndRoot,None,missing value
 VeinAndRoot-True,VeinAndRoot,True,colexifies VEIN and ROOT
 WaistAndBelt-False,WaistAndBelt,False,does not colexify WAIST and BELT
+WaistAndBelt-None,WaistAndBelt,None,missing value
 WaistAndBelt-True,WaistAndBelt,True,colexifies WAIST and BELT
 WaistAndSpade-False,WaistAndSpade,False,does not colexify WAIST and SPADE
+WaistAndSpade-None,WaistAndSpade,None,missing value
 WaistAndSpade-True,WaistAndSpade,True,colexifies WAIST and SPADE
