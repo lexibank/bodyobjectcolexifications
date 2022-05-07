@@ -1,4 +1,30 @@
 ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Dataset,Forms,FormsWithSounds,Concepts,Incollections,Subgroup,Family
+abrahammonpa-DammaiDibin,Dammai Dibin,,27.437363,92.531354,miji1239,,abrahammonpa,306,0,299,ClicsCore,Khobwa,Sino-Tibetan
+abrahammonpa-DammaiRurang,Dammai Rurang,,27.368455,92.500637,miji1239,,abrahammonpa,303,0,299,ClicsCore,Khobwa,Sino-Tibetan
+abrahammonpa-HrusoAkaJamiri,Hruso Aka Jamiri,,27.184929,92.599114,hrus1242,,abrahammonpa,305,0,296,ClicsCore,Khobwa,Sino-Tibetan
+abrahammonpa-MijiNafra,Miji Nafra,,27.373776,92.546071,miji1239,,abrahammonpa,299,0,295,ClicsCore,Khobwa,Sino-Tibetan
+abrahammonpa-MonpaBalemu,Monpa Balemu,,26.964717,92.164581,kala1376,,abrahammonpa,311,0,302,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaChangprong,Monpa Changprong,,27.578928,91.876393,dakp1242,,abrahammonpa,316,0,300,ClicsCore,Takpa,Sino-Tibetan
+abrahammonpa-MonpaDirang,Monpa Dirang,,27.34959,92.27914,tsha1245,,abrahammonpa,319,0,301,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaDirangDum,Monpa Dirang Dum,,27.334341,92.293734,tsha1245,,abrahammonpa,301,0,292,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaKalaktang,Monpa Kalaktang,,27.104162,92.113017,kala1376,,abrahammonpa,324,0,301,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaNamsu,Monpa Namsu,,27.359505,92.34921,kala1376,,abrahammonpa,312,0,301,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaSangti,Monpa Sangti,,27.402266,92.314934,tsha1245,,abrahammonpa,307,0,303,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaTawangMonastery,Monpa Tawang Monastery,,27.586829,91.85796,dakp1242,,abrahammonpa,304,0,298,ClicsCore,Takpa,Sino-Tibetan
+abrahammonpa-MonpaTembang,Monpa Tembang,,27.333876,92.40513,tsha1245,,abrahammonpa,308,0,297,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaTomko,Monpa Tomko,,27.16536,92.23077,kala1376,,abrahammonpa,303,0,298,ClicsCore,Tshanglic,Sino-Tibetan
+abrahammonpa-MonpaZimithang,Monpa Zimithang,,27.335901,92.306528,dakp1242,,abrahammonpa,305,0,299,ClicsCore,Takpa,Sino-Tibetan
+abrahammonpa-NamreiBisai,Namrei Bisai,,27.682796,92.700031,miji1239,,abrahammonpa,301,0,295,ClicsCore,Khobwa,Sino-Tibetan
+abrahammonpa-NamreiNabolang,Namrei Nabolang,,27.546333,92.797975,miji1239,,abrahammonpa,322,0,300,ClicsCore,Khobwa,Sino-Tibetan
+allenbai-Eryuan,Eryuan,,26.538056,99.910000,eryu1239,,allenbai,503,0,497,ClicsCore,Bai,Sino-Tibetan
+allenbai-Heqing,Heqing,,26.0991374,99.9416161,heqi1238,,allenbai,502,0,499,ClicsCore,Bai,Sino-Tibetan
+allenbai-Jianchuan,Jianchuan,,26.5536208,100.1396921,jian1239,,allenbai,513,0,499,ClicsCore,Bai,Sino-Tibetan
+allenbai-Lanping,Lanping,,26.5158555,99.2581092,lanp1241,,allenbai,512,0,498,ClicsCore,Bai,Sino-Tibetan
+allenbai-Luobenzhuo,Luobenzhuo,,26.4240223,98.8862088,nuji1238,,allenbai,500,0,498,ClicsCore,Bai,Sino-Tibetan
+allenbai-Qiliqiao,Qiliqiao,,25.6553283,100.1709288,qili1234,,allenbai,507,0,499,ClicsCore,Bai,Sino-Tibetan
+allenbai-Xiangyun,Xiangyun,,25.5313657,100.4478932,xian1250,,allenbai,505,0,498,ClicsCore,Bai,Sino-Tibetan
+allenbai-Yunlong,Yunlong,,25.9223745,99.0352884,yunl1238,,allenbai,503,0,499,ClicsCore,Bai,Sino-Tibetan
+allenbai-Zhoucheng,Zhoucheng,,25.8958633,100.0987848,zhou1234,,allenbai,501,0,497,ClicsCore,Bai,Sino-Tibetan
 bantubvd-1,Kinyamwezi F22,,-5.08559,32.94452,nyam1276,,bantubvd,466,0,387,ClicsCore,,Atlantic-Congo
 bantubvd-10,Yao P.21,,-13.6119,35.2387,yaoo1241,,bantubvd,438,0,393,ClicsCore,,Atlantic-Congo
 bantubvd-2,Bukusu E.31c,,0.68043,34.7719,buku1249,,bantubvd,433,0,383,ClicsCore,,Atlantic-Congo
@@ -9,7 +35,114 @@ bantubvd-6,Asu G.22,,-4.17978,37.8323,asut1235,,bantubvd,492,0,405,ClicsCore,,At
 bantubvd-7,Rumanyo (Gciriku) K.38,,-18.1681,20.6678,diri1252,,bantubvd,436,0,381,ClicsCore,,Atlantic-Congo
 bantubvd-8,Lega D.25,,-3.83196,27.1424,lega1249,,bantubvd,369,0,352,ClicsCore,,Atlantic-Congo
 bantubvd-9,Tswana S.30,,-24.368,24.7587,tswa1253,,bantubvd,419,0,392,ClicsCore,,Atlantic-Congo
+beidasinitic-Beijing,Beijing,,39.9385466,116.1172766,beij1234,,beidasinitic,1038,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Changsha,Changsha,,28.85032,112.943344,chan1326,,beidasinitic,974,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Chaozhou,Chaozhou,,23.666667,116.633333,chao1238,,beidasinitic,1026,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Chengdu,Chengdu,,30.605768,103.970947,chen1267,,beidasinitic,1000,0,735,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Fuzhou,Fuzhou,,26.08904,119.294243,fuzh1239,,beidasinitic,1067,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Guangzhou,Guangzhou,,23.1253503,112.9476548,guan1279,,beidasinitic,1027,0,735,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Hefei,Hefei,,31.873593,117.223663,hefe1234,,beidasinitic,960,0,735,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Jinan,Jinan,,36.690777,116.997299,jina1245,,beidasinitic,979,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Kunming,Kunming,,25.049711,102.72274,kunm1234,,beidasinitic,955,0,735,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Meixian,Meixian,,24.3522958,115.8903375,yuet1238,,beidasinitic,976,0,734,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Nanchang,Nanchang,,28.706609,115.857468,nanc1254,,beidasinitic,996,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Shenyang,Shenyang,,41.8049906,123.1563167,shen1252,,beidasinitic,995,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Suzhou,Suzhou,,31.3280439,120.364116,suzh1234,,beidasinitic,1053,0,735,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Wenzhou,Wenzhou,,28.005496,120.701179,ouji1238,,beidasinitic,1003,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-XiAn,Xi_an,,34.228154,108.960571,xian1253,,beidasinitic,958,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Xiamen,Xiamen,,24.49421,118.08918,xiam1236,,beidasinitic,1078,0,736,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Yangjiang,Yangjiang,,21.7895612,111.966667,yang1307,,beidasinitic,946,0,734,ClicsCore,Sinitic,Sino-Tibetan
+beidasinitic-Yangzhou,Yangzhou,,32.4171449,119.209227,yang1306,,beidasinitic,1028,0,736,ClicsCore,Sinitic,Sino-Tibetan
+bodtkhobwa-Duhumbi,Duhumbi,,27.42,92.23,chug1252,,bodtkhobwa,789,0,520,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Jerigaon,Jerigaon,,27.340629,92.486595,jeri1243,,bodtkhobwa,521,0,414,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Khispi,Khispi,,27.37,92.23,lish1235,,bodtkhobwa,640,0,466,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Khoina,Khoina,,27.334981,92.52994,khoi1253,,bodtkhobwa,534,0,450,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Khoitam,Khoitam,,27.327487,92.439455,khoi1252,,bodtkhobwa,579,0,473,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Rahung,Rahung,,27.310778,92.395028,rahu1234,,bodtkhobwa,571,0,469,ClicsCore,Western Kho-Bwa,Sino-Tibetan
 bodtkhobwa-Rupa,Rupa,,27.203065,92.398757,rupa1234,,bodtkhobwa,619,0,480,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bodtkhobwa-Shergaon,Shergaon,,27.105018,92.272133,sher1261,,bodtkhobwa,467,0,396,ClicsCore,Western Kho-Bwa,Sino-Tibetan
+bowernpny-Adnyamathanha,Adnyamathanha,,-30.1451,138.671,adny1235,,bowernpny,307,0,302,ClicsCore,,Pama-Nyungan
+bowernpny-Alyawarr,Alyawarr,,-21.0427,136.835,alya1239,,bowernpny,295,0,288,ClicsCore,,Pama-Nyungan
+bowernpny-Arabana,Arabana,,-28.705,135.449,arab1267,,bowernpny,317,0,312,ClicsCore,,Pama-Nyungan
+bowernpny-Biri,Biri,,-20.1494,146.67,biri1256,,bowernpny,268,0,260,ClicsCore,,Pama-Nyungan
+bowernpny-Bunganditj,Bunganditj,,-36.5,140.5,bung1264,,bowernpny,279,0,275,ClicsCore,,Pama-Nyungan
+bowernpny-Dhangu,Dhangu,,-11.9493,135.752,dhan1270,,bowernpny,253,0,251,ClicsCore,,Pama-Nyungan
+bowernpny-Dharuk,Dharuk,,-33.52925837,150.3490464,sydn1236,,bowernpny,263,0,259,ClicsCore,,Pama-Nyungan
+bowernpny-Dhuwal,Dhuwal,,-12.7825,136.008,dhuw1249,,bowernpny,296,0,293,ClicsCore,,Pama-Nyungan
+bowernpny-Diyari,Diyari,,-28.1667,138.0,dier1241,,bowernpny,319,0,314,ClicsCore,,Pama-Nyungan
+bowernpny-Djabugay,Djabugay,,-16.596,145.388,dyaa1242,,bowernpny,323,0,316,ClicsCore,,Pama-Nyungan
+bowernpny-Djambarrpuyngu,Djambarrpuyngu,,-12.021,135.59,djam1256,,bowernpny,291,0,288,ClicsCore,,Pama-Nyungan
+bowernpny-Djapu,Djapu,,-12.879764,136.417978,djap1238,,bowernpny,275,0,272,ClicsCore,,Pama-Nyungan
+bowernpny-Djinang,Djinang,,-12.462,134.82,djin1253,,bowernpny,310,0,304,ClicsCore,,Pama-Nyungan
+bowernpny-Gamilaraay,Gamilaraay,,-29.9037,149.543,gami1243,,bowernpny,316,0,309,ClicsCore,,Pama-Nyungan
+bowernpny-Gumatj,Gumatj,,-12.25254,136.83042,guma1253,,bowernpny,260,0,257,ClicsCore,,Pama-Nyungan
+bowernpny-Gumbaynggir,Gumbaynggir,,-29.8189,152.913,kumb1268,,bowernpny,272,0,269,ClicsCore,,Pama-Nyungan
+bowernpny-Gupapuyngu,Gupapuyngu,,-12.2868,135.337,gupa1247,,bowernpny,308,0,304,ClicsCore,,Pama-Nyungan
+bowernpny-Gurindji,Gurindji,,-17.0329,130.379,guri1247,,bowernpny,325,0,318,ClicsCore,,Pama-Nyungan
+bowernpny-GuuguYimidhirr,Guugu-Yimidhirr,,-14.9424,144.831,gugu1255,,bowernpny,262,0,258,ClicsCore,,Pama-Nyungan
+bowernpny-Guyani,Guyani,,-34.739,137.661,guya1249,,bowernpny,282,0,280,ClicsCore,,Pama-Nyungan
+bowernpny-Jaru,Jaru,,-18.3288,128.262,jaru1254,,bowernpny,332,0,325,ClicsCore,,Pama-Nyungan
+bowernpny-Jiwarli,Jiwarli,,-24.10724,116.98858,djiw1241,,bowernpny,296,0,291,ClicsCore,,Pama-Nyungan
+bowernpny-Kalkatungu,Kalkatungu,,-21.0,139.5,kalk1246,,bowernpny,305,0,297,ClicsCore,,Pama-Nyungan
+bowernpny-Kamilaroi,Kamilaroi,,-29.9037,149.543,gami1243,,bowernpny,311,0,305,ClicsCore,,Pama-Nyungan
+bowernpny-Karajarri,Karajarri,,-18.6771,122.334,kara1476,,bowernpny,332,0,324,ClicsCore,,Pama-Nyungan
+bowernpny-Kariyarra,Kariyarra,,-20.445,118.613,kari1304,,bowernpny,262,0,255,ClicsCore,,Pama-Nyungan
+bowernpny-Kartujarra,Kartujarra,,-23.27912,121.73213,kart1247,,bowernpny,294,0,289,ClicsCore,,Pama-Nyungan
+bowernpny-Kaurna,Kaurna,,-34.34966141,138.4800794,kaur1267,,bowernpny,315,0,311,ClicsCore,,Pama-Nyungan
+bowernpny-Kukatj,Kukatj,,-17.8372,141.168,guga1239,,bowernpny,257,0,252,ClicsCore,,Pama-Nyungan
+bowernpny-Kukatja,Kukatja,,-20.3321,127.666,kuka1246,,bowernpny,326,0,319,ClicsCore,,Pama-Nyungan
+bowernpny-Kurtjar,Kurtjar,,-17.1653,141.145,gurd1238,,bowernpny,323,0,317,ClicsCore,,Pama-Nyungan
+bowernpny-KuukuYau,Kuuku-Ya’u,,-12.4947,143.165,kuuk1238,,bowernpny,267,0,262,ClicsCore,,Pama-Nyungan
+bowernpny-Mabuiag,Mabuiag,,-10.6748,142.196,kala1377,,bowernpny,293,0,289,ClicsCore,,Pama-Nyungan
+bowernpny-Margany,Margany,,-26.789,144.892,marg1253,,bowernpny,274,0,269,ClicsCore,,Pama-Nyungan
+bowernpny-MartuWangka,Martu Wangka,,-23.350911655789,123.66842240336,mart1256,,bowernpny,295,0,290,ClicsCore,,Pama-Nyungan
+bowernpny-Mudburra,Mudburra,,-16.7694,132.329,mudb1240,,bowernpny,307,0,300,ClicsCore,,Pama-Nyungan
+bowernpny-Muruwari,Muruwari,,-28.9618,146.546,muru1266,,bowernpny,310,0,304,ClicsCore,,Pama-Nyungan
+bowernpny-Ngaanyatjarra,Ngaanyatjarra,,-25.7514,127.602,ngaa1240,,bowernpny,293,0,288,ClicsCore,,Pama-Nyungan
+bowernpny-Ngarinyman,Ngarinyman,,-15.4661,130.651,ngar1235,,bowernpny,300,0,293,ClicsCore,,Pama-Nyungan
+bowernpny-Ngarla,Ngarla,,-20.20748,119.30579,ngar1296,,bowernpny,260,0,256,ClicsCore,,Pama-Nyungan
+bowernpny-Ngarluma,Ngarluma,,-20.9235,117.203,ngar1287,,bowernpny,330,0,322,ClicsCore,,Pama-Nyungan
+bowernpny-Ngarrindjeri,Ngarrindjeri,,-36.2301,140.158,narr1259,,bowernpny,328,0,321,ClicsCore,,Pama-Nyungan
+bowernpny-Ngiyambaa,Ngiyambaa,,-30.6481,146.18,wang1291,,bowernpny,283,0,278,ClicsCore,,Pama-Nyungan
+bowernpny-Nhanta,Nhanta,,-27.42523643,114.2680442,nhan1238,,bowernpny,277,0,273,ClicsCore,,Pama-Nyungan
+bowernpny-Nyamal,Nyamal,,-21.6092,119.693,nyam1271,,bowernpny,306,0,303,ClicsCore,,Pama-Nyungan
+bowernpny-Nyangumarta,Nyangumarta,,-20.6271,121.391,nyan1301,,bowernpny,317,0,310,ClicsCore,,Pama-Nyungan
+bowernpny-Nyungar,Nyungar,,-33.1199,118.151,nyun1247,,bowernpny,325,0,320,ClicsCore,,Pama-Nyungan
+bowernpny-Paakantyi,Paakantyi,,-32.7021,142.695,darl1243,,bowernpny,321,0,317,ClicsCore,,Pama-Nyungan
+bowernpny-Panyjima,Panyjima,,-22.7816,118.723,pany1241,,bowernpny,280,0,275,ClicsCore,,Pama-Nyungan
+bowernpny-Parnkala,Parnkala,,-33.3036,136.079,bang1339,,bowernpny,310,0,305,ClicsCore,,Pama-Nyungan
+bowernpny-Payungu,Payungu,,-23.3809,114.108,bayu1240,,bowernpny,326,0,320,ClicsCore,,Pama-Nyungan
+bowernpny-PintupiLuritja,Pintupi-Luritja,,-23.2963,130.643,pint1250,,bowernpny,267,0,262,ClicsCore,,Pama-Nyungan
+bowernpny-PittaPitta,Pitta-Pitta,,-22.7952,139.983,pitt1247,,bowernpny,279,0,275,ClicsCore,,Pama-Nyungan
+bowernpny-Ritharrngu,Ritharrngu,,-13.4559,135.259,rita1239,,bowernpny,285,0,279,ClicsCore,,Pama-Nyungan
+bowernpny-Thalanyji,Thalanyji,,-22.196,114.937,dhal1245,,bowernpny,290,0,286,ClicsCore,,Pama-Nyungan
+bowernpny-Tharrgari,Tharrgari,,-24.0601,114.847,dhar1247,,bowernpny,285,0,280,ClicsCore,,Pama-Nyungan
+bowernpny-Umpila,Umpila,,-13.1528,143.467,umpi1239,,bowernpny,276,0,269,ClicsCore,,Pama-Nyungan
+bowernpny-Wajarri,Wajarri,,-28.1761,117.153,waja1257,,bowernpny,283,0,280,ClicsCore,,Pama-Nyungan
+bowernpny-Wakaya,Wakaya,,-20.329,137.623,waga1260,,bowernpny,298,0,291,ClicsCore,,Pama-Nyungan
+bowernpny-Wangkangurru,Wangkangurru,,-25.8148,135.941,wang1290,,bowernpny,271,0,269,ClicsCore,,Pama-Nyungan
+bowernpny-Wangkayutyuru,Wangkayutyuru,,-24.7022,137.433,wang1289,,bowernpny,261,0,254,ClicsCore,,Pama-Nyungan
+bowernpny-Wangkumara,Wangkumara,,-27.10149,143.19619,wong1246,,bowernpny,306,0,300,ClicsCore,,Pama-Nyungan
+bowernpny-Warlmanpa,Warlmanpa,,-18.949,133.862,warl1255,,bowernpny,262,0,256,ClicsCore,,Pama-Nyungan
+bowernpny-Warlpiri,Warlpiri,,-20.1008,131.05,warl1254,,bowernpny,319,0,312,ClicsCore,,Pama-Nyungan
+bowernpny-Warluwarra,Warluwarra,,-22.2909,138.738,warl1256,,bowernpny,260,0,254,ClicsCore,,Pama-Nyungan
+bowernpny-Warnman,Warnman,,-22.7078,122.325,wanm1242,,bowernpny,302,0,297,ClicsCore,,Pama-Nyungan
+bowernpny-Warriyangga,Warriyangga,,-24.353,116.927,wari1262,,bowernpny,273,0,271,ClicsCore,,Pama-Nyungan
+bowernpny-Warumungu,Warumungu,,-20.6479,134.375,waru1265,,bowernpny,307,0,299,ClicsCore,,Pama-Nyungan
+bowernpny-Warungu,Warungu,,-18.2496,144.37,waru1264,,bowernpny,272,0,265,ClicsCore,,Pama-Nyungan
+bowernpny-Wathawurrung,Wathawurrung,,-37.68777565,144.1013148,wath1238,,bowernpny,264,0,261,ClicsCore,,Pama-Nyungan
+bowernpny-WikMungkan,Wik Mungkan,,-13.98051,141.81611,wikm1247,,bowernpny,317,0,310,ClicsCore,,Pama-Nyungan
+bowernpny-Wiradjuri,Wiradjuri,,-34.0742,145.994,wira1262,,bowernpny,323,0,318,ClicsCore,,Pama-Nyungan
+bowernpny-Wirangu,Wirangu,,-32.0,134.0,wira1265,,bowernpny,285,0,282,ClicsCore,,Pama-Nyungan
+bowernpny-Yalarnnga,Yalarnnga,,-21.731,139.511,yala1262,,bowernpny,264,0,261,ClicsCore,,Pama-Nyungan
+bowernpny-Yandruwandha,Yandruwandha,,-28.4744,140.583,yand1253,,bowernpny,326,0,319,ClicsCore,,Pama-Nyungan
+bowernpny-Yannhangu,Yan-nhangu,,-12.0853,134.877,yann1237,,bowernpny,282,0,277,ClicsCore,,Pama-Nyungan
+bowernpny-Yawarrawarrka,Yawarrawarrka,,-26.7334,140.871,yawa1258,,bowernpny,277,0,277,ClicsCore,,Pama-Nyungan
+bowernpny-Yidiny,Yidiny,,-17.1332,145.876,yidi1250,,bowernpny,259,0,255,ClicsCore,,Pama-Nyungan
+bowernpny-Yindjibarndi,Yindjibarndi,,-21.5379,117.001,yind1247,,bowernpny,308,0,300,ClicsCore,,Pama-Nyungan
+bowernpny-YortaYorta,Yorta Yorta,,-35.9,145.01,yort1237,,bowernpny,266,0,263,ClicsCore,,Pama-Nyungan
+bowernpny-Yugambeh,Yugambeh,,-27.803,153.082,yuga1244,,bowernpny,323,0,317,ClicsCore,,Pama-Nyungan
+bowernpny-Yuwaalaraay,Yuwaalaraay,,-29.758184,147.923684,yuwa1242,,bowernpny,321,0,314,ClicsCore,,Pama-Nyungan
 castrosui-AntangWesternSandong,Antang,,25.935942,108.113772,sand1270,,castrosui,592,0,512,ClicsCore,Sui,Tai-Kadai
 castrosui-BanliangYangAn,Banliang,,25.776111,107.870727,anya1244,,castrosui,583,0,508,ClicsCore,Sui,Tai-Kadai
 castrosui-DujiangEasternSandong,Dujiang,,26.009139,108.260898,sand1270,,castrosui,591,0,512,ClicsCore,Sui,Tai-Kadai
@@ -92,6 +225,7 @@ chindialectsurvey-LaisawThuHtayKung-A,Laisaw Thu Htay Kung,,20.38415909,93.25898
 chindialectsurvey-LaituAhongdong-A,Laitu Ahongdong,,20.22525024,93.41887665,,,chindialectsurvey,512,0,433,ClicsCore,Laitu-Sumtu,Sino-Tibetan
 chindialectsurvey-LaituKhuasung-U-12,Laitu (Khuasung),,20.57061005,93.31453705,,,chindialectsurvey,470,0,447,ClicsCore,Uppu,Sino-Tibetan
 chindialectsurvey-LonpawKhoimalaung-U-9,Lonpaw (Khoimalaung),,20.45,94.25,chin1478,,chindialectsurvey,469,0,448,ClicsCore,Uppu,Sino-Tibetan
+chindialectsurvey-MinkyaChi-U-10,Minkya (Chi),,20.45,94.25,chin1478,,chindialectsurvey,447,0,423,ClicsCore,Uppu,Sino-Tibetan
 chindialectsurvey-MroKhimiAreong10KyaGaungvillageMrokhami-A,Mro-Khimi Areong 10Kya Gaung village (Mro-khami),,21.3,92.85,mroc1235,,chindialectsurvey,476,0,449,ClicsCore,Paletwa Daai,Sino-Tibetan
 chindialectsurvey-NggaKantthayung-A,Ng'ga Kant-thayung,,21.2,94.016667,munc1235,,chindialectsurvey,485,0,450,ClicsCore,Matupi Daai,Sino-Tibetan
 chindialectsurvey-RawngtuRamtim-A,Rawngtu Ramtim,,21.6,93.4432,wela1234,,chindialectsurvey,477,0,446,ClicsCore,,Sino-Tibetan
@@ -179,6 +313,7 @@ clics1-FarsiWesternstd,"Farsi, Western-std",,32.9,53.3,west2369,,clics1,1318,0,1
 clics1-Finnishstd,Finnish-std,,64.7628,25.5577,finn1318,,clics1,1695,0,1274,ClicsCore,,Uralic
 clics1-Frenchstd,French-std,,48.0,2.0,stan1290,,clics1,1608,0,1278,ClicsCore,,Indo-European
 clics1-GaelicIrishstd,"Gaelic, Irish-std",,53.2186,-7.61509,iris1253,,clics1,2371,0,1229,ClicsCore,,Indo-European
+clics1-Galicianstd,Galician-std,,42.2446,-7.5343,gali1258,,clics1,620,0,501,ClicsCore,,Indo-European
 clics1-Gawwadastd,Gawwada-std,,5.37869,37.2737,gaww1239,,clics1,1036,0,1013,ClicsCore,,Afro-Asiatic
 clics1-GermanStandardstd,"German, Standard-std",,48.649,12.4676,stan1295,,clics1,1772,0,1270,ClicsCore,,Indo-European
 clics1-Ghodoberistd,Ghodoberi-std,,42.7428,46.2252,ghod1238,,clics1,1416,0,1216,ClicsCore,,Nakh-Daghestanian
@@ -190,6 +325,7 @@ clics1-Gurinjistd,Gurinji-std,,-17.0329,130.379,guri1247,,clics1,917,0,906,Clics
 clics1-HaidaNorthernNorthernNorthern,"Haida, Northern (Northern)-Northern",,54.004532,-132.079257,nort2938,,clics1,1008,0,701,ClicsCore,,Haida
 clics1-Hausastd,Hausa-std,,11.1513,8.7804,haus1257,,clics1,1635,0,1235,ClicsCore,,Afro-Asiatic
 clics1-Hawaiianstd,Hawaiian-std,,19.6297,-155.43,hawa1245,,clics1,2497,0,1028,ClicsCore,,Austronesian
+clics1-Hindistd,Hindi-std,,25.0,77.0,hind1269,,clics1,631,0,537,ClicsCore,,Indo-European
 clics1-Hinukhstd,Hinukh-std,,42.4502,45.8064,hinu1240,,clics1,1344,0,1208,ClicsCore,,Nakh-Daghestanian
 clics1-Hungarianstd,Hungarian-std,,46.9068585714,19.6555271429,hung1274,,clics1,1668,0,1270,ClicsCore,,Uralic
 clics1-Hunzibstd,Hunzib-std,,42.0808,46.1369,hunz1247,,clics1,1411,0,1236,ClicsCore,,Nakh-Daghestanian
@@ -218,6 +354,7 @@ clics1-KomiZyrianstd,Komi-Zyrian-std,,64.0527,54.946,komi1268,,clics1,1738,0,126
 clics1-Kumykstd,Kumyk-std,,43.0,47.0,kumy1244,,clics1,1760,0,1259,ClicsCore,,Turkic
 clics1-Kunzastd,Kunza-std,,-23.0,-69.0,kunz1244,,clics1,874,0,517,ClicsCore,,Kunza
 clics1-Lakstd,Lak-std,,42.1328,47.0809,lakk1252,,clics1,1438,0,1226,ClicsCore,,Nakh-Daghestanian
+clics1-Latinstd,Latin-std,,41.9026,12.4502,lati1261,,clics1,780,0,624,ClicsCore,,Indo-European
 clics1-Latvianstd,Latvian-std,,56.826108,24.309118,latv1249,,clics1,1645,0,1272,ClicsCore,,Indo-European
 clics1-Lenguastd,Lengua-std,,-22.6559,-58.9053,leng1262,,clics1,1089,0,1074,ClicsCore,,Lengua-Mascoy
 clics1-LezgiKubaKuba,Lezgi (Kuba)-Kuba,,41.5157,47.8951,lezg1247,,clics1,1237,0,1193,ClicsCore,,Nakh-Daghestanian
@@ -260,6 +397,7 @@ clics1-Qawasqarstd,Qawasqar-std,,-49.303195,-74.707536,qawa1238,,clics1,622,0,61
 clics1-Qeqchistd,Q’eqchi’-std,,15.3788,-89.2452,kekc1242,,clics1,1812,0,1196,ClicsCore,,Mayan
 clics1-QuichuaImbaburaHighlandstd,"Quichua, Imbabura Highland-std",,0.31776,-78.3729,imba1240,,clics1,1144,0,1140,ClicsCore,,Quechuan
 clics1-Rapastd,Rapa-std,,-27.6304,-144.338,rapa1245,,clics1,1202,0,977,ClicsCore,,Austronesian
+clics1-Romagnolstd,Romagnol-std,,44.2349,11.7189,roma1328,,clics1,627,0,531,ClicsCore,,Indo-European
 clics1-RomaniVlaxstd,"Romani, Vlax-std",,46.09,18.16,vlax1238,,clics1,984,0,815,ClicsCore,,Indo-European
 clics1-Romanianstd,Romanian-std,,46.3913,24.2256,roma1327,,clics1,2018,0,1257,ClicsCore,,Indo-European
 clics1-Rotumanstd,Rotuman-std,,-12.5008,177.066,rotu1241,,clics1,1211,0,1063,ClicsCore,,Austronesian
@@ -304,6 +442,7 @@ clics1-Tuyucastd,Tuyuca-std,,0.39441,-70.043515,tuyu1244,,clics1,1025,0,979,Clic
 clics1-TzotzilZinacantanstd,"Tzotzil, Zinacantán-std",,16.64,-92.74,tzot1264,,clics1,1258,0,948,ClicsCore,,Bookkeeping
 clics1-Udistd,Udi-std,,40.9,47.7236,udii1243,,clics1,1300,0,1107,ClicsCore,,Nakh-Daghestanian
 clics1-Udmurtstd,Udmurt-std,,56.12921,52.63548,udmu1245,,clics1,1489,0,1260,ClicsCore,,Uralic
+clics1-Venetianstd,Venetian-std,,45.503581,12.214167,vene1258,,clics1,625,0,504,ClicsCore,,Indo-European
 clics1-Vietnamesestd,Vietnamese-std,,20.681188,105.774071,viet1252,,clics1,1335,0,1257,ClicsCore,,Austroasiatic
 clics1-Waiwaistd,Waiwai-std,,1.50881,-59.1417,waiw1244,,clics1,984,0,937,ClicsCore,,Cariban
 clics1-Waoranistd,Waorani-std,,-1.12312,-76.683,waor1240,,clics1,1163,0,1127,ClicsCore,,Waorani
@@ -322,11 +461,61 @@ clics1-Yaviterostd,Yavitero-std,,2.924844,-67.438886,yavi1244,,clics1,712,0,685,
 clics1-YiddishEasternstd,"Yiddish, Eastern-std",,51.75,19.42,east2295,,clics1,1734,0,1273,ClicsCore,,Indo-European
 clics1-Yuwanastd,Yuwana-std,,5.63879,-65.4267,yuwa1244,,clics1,958,0,887,ClicsCore,,Hoti
 clics1-Zunistd,Zuni-std,,35.0056,-108.782,zuni1245,,clics1,967,0,869,ClicsCore,,Zuni
+diacl-100,Aikanã,,-11.808008,-61.788401,aika1237,,diacl,283,0,252,ClicsCore,,Aikanã
+diacl-22200,Indonesian,,-6.16417,106.846225,indo1316,,diacl,293,0,277,ClicsCore,,Austronesian
+diacl-33900,Kuikúro-Kalapálo,,-8.944098,-52.131742,kuik1246,,diacl,381,0,350,ClicsCore,,Cariban
+diacl-56000,Xokleng,,-27.16847,-49.321967,xokl1240,,diacl,368,0,338,ClicsCore,,Nuclear-Macro-Je
+diacl-56500,Georgian,,41.619549,44.824791,nucl1302,,diacl,357,0,288,ClicsCore,,Kartvelian
+diacl-56700,Svan,,42.992369,42.523092,svan1243,,diacl,312,0,282,ClicsCore,,Kartvelian
+diacl-57000,Megrelian,,42.373764,41.937332,ming1252,,diacl,322,0,286,ClicsCore,,Kartvelian
+diacl-57800,Batsbi,,42.039273,45.29342,bats1242,,diacl,301,0,272,ClicsCore,,Nakh-Daghestanian
+diacl-58200,Lezgian,,41.553811,48.038979,lezg1247,,diacl,330,0,286,ClicsCore,,Nakh-Daghestanian
+diacl-58800,Abkhaz,,42.999497,41.017252,abkh1244,,diacl,307,0,286,ClicsCore,,Abkhaz-Adyge
+diacl-59500,Kashinawá,,-10.026289,-71.393669,cash1254,,diacl,386,0,313,ClicsCore,,Pano-Tacanan
+diacl-59900,Karitiâna,,-9.407927435,-64.154967443,kari1311,,diacl,319,0,293,ClicsCore,,Tupian
+diacl-60300,Cinta Larga,,-10.646928179,-60.903692689,cint1239,,diacl,301,0,281,ClicsCore,,Tupian
+diacl-60800,Suruí Paitér,,-11.140077654,-61.3329038689999,suru1262,,diacl,267,0,257,ClicsCore,,Tupian
+diacl-65500,Kamayurá,,-11.955425148,-53.300745001,kama1373,,diacl,536,0,368,ClicsCore,,Tupian
+diacl-65700,Amondawa,,-11.044694,-63.049749,amun1246,,diacl,278,0,253,ClicsCore,,Tupian
+halenepal-Chepang,Chepang,,27.7206,84.9017,chep1245,,halenepal,1566,0,492,ClicsCore,Chepang,Sino-Tibetan
+halenepal-Gurung,Gurung,,27.41687,86.28988,guru1261,,halenepal,2006,0,593,ClicsCore,Tamangic,Sino-Tibetan
+halenepal-JirelTibetan,Tibetan (Jirel),,27.6931,86.3201,jire1238,,halenepal,1158,0,380,ClicsCore,Tibetan,Sino-Tibetan
+halenepal-Kaike,Kaike,,28.853,83.1384,kaik1246,,halenepal,998,0,356,ClicsCore,Kaike,Sino-Tibetan
+halenepal-Khaling,Khaling,,27.3912,87.5053,khal1275,,halenepal,1828,0,595,ClicsCore,Kiranti,Sino-Tibetan
+halenepal-Nepali,Nepali,,28.0,85.0,nepa1254,,halenepal,2454,0,709,ClicsCore,Indo-Aryan,Indo-European
+halenepal-Newar,Newar,,27.2614,84.9577,newa1246,,halenepal,2068,0,599,ClicsCore,Newaric,Sino-Tibetan
+halenepal-SahuTamang,Tamang (Sahu),,28.0239,85.0563,west2415,,halenepal,1848,0,584,ClicsCore,Tamangic,Sino-Tibetan
+halenepal-SherpaTibetan,Tibetan (Sherpa),,27.674,86.9994,sher1255,,halenepal,1026,0,346,ClicsCore,Tibetan,Sino-Tibetan
+halenepal-Sunwar,Sunwar,,27.5201,86.2476,sunw1242,,halenepal,1570,0,524,ClicsCore,Kiranti,Sino-Tibetan
+halenepal-Thakali,Thakali,,28.7014,83.6466,thak1245,,halenepal,1810,0,586,ClicsCore,Tamangic,Sino-Tibetan
+hantganbangime-Bangime,Bangime,,14.8,-3.76,bang1363,,hantganbangime,300,0,300,ClicsCore,Bangime,Bangime
+hantganbangime-Bankan_Tey,Bankan_Tey,,15.07,-2.91,bank1259,,hantganbangime,297,0,297,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Ben_Tey,Ben_Tey,,14.85,-2.95,bent1238,,hantganbangime,276,0,276,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Bunoge,Bunoge,,14.65,-3.79,buno1241,,hantganbangime,272,0,272,ClicsCore,Western_Dogon,Dogon
+hantganbangime-Fulfulde,Fulfulde,,14.8,-3.84,maas1239,,hantganbangime,282,0,282,ClicsCore,Fula_Maasina,Atlantic
+hantganbangime-Jamsay,Jamsay,,14.64,-3.1,jams1239,,hantganbangime,286,0,286,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Mombo,Mombo,,14.51,-3.91,momb1254,,hantganbangime,293,0,293,ClicsCore,Western_Dogon,Dogon
+hantganbangime-Najamba,Najamba,,14.9,-3.42,bond1248,,hantganbangime,294,0,294,ClicsCore,Western_Dogon,Dogon
+hantganbangime-Nanga,Nanga,,14.72,-3.02,nang1261,,hantganbangime,299,0,299,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Penange,Penange,,14.39,-4.03,pena1270,,hantganbangime,280,0,280,ClicsCore,Western_Dogon,Dogon
+hantganbangime-Perge_Tegu,Perge_Tegu,,14.85,-3.02,perg1234,,hantganbangime,296,0,296,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Songhai_Senni,Songhai_Senni,,15.28,-1.7,humb1243,,hantganbangime,267,0,267,ClicsCore,Eastern_Songhay,Songhay
+hantganbangime-Tebul_Ure,Tebul_Ure,,14.69,-3.11,tebu1239,,hantganbangime,287,0,287,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Tiranige_Diga,Tiranige_Diga,,14.8,-3.72,tira1258,,hantganbangime,290,0,290,ClicsCore,Western_Dogon,Dogon
+hantganbangime-Togo_Kan,Togo_Kan,,14.16,-3.38,togo1254,,hantganbangime,288,0,288,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Tommo_So,Tommo_So,,14.67,-3.51,tomm1242,,hantganbangime,292,0,292,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Toro_Tegu,Toro_Tegu,,15.01,-2.4,toro1253,,hantganbangime,297,0,297,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Yanda_Dom,Yanda_Dom,,14.63,-3.15,yand1257,,hantganbangime,295,0,295,ClicsCore,Eastern_Dogon,Dogon
+hantganbangime-Yorno_So,Yorno_So,,14.56,-3.24,yorn1234,,hantganbangime,295,0,295,ClicsCore,Eastern_Dogon,Dogon
 hsiuhmongmien-NaMeoTuyenQuang,Na Meo (Tuyen Quang),,21.8486731,105.4383658,,,hsiuhmongmien,315,0,310,ClicsCore,,Hmong-Mien
+hubercolumbian-Achagua,Achagua,,4.38649,-72.2005,acha1250,,hubercolumbian,376,0,260,ClicsCore,,Arawakan
 hubercolumbian-Awa,Awa,,1.21652,-78.3401,awac1239,,hubercolumbian,385,0,323,ClicsCore,,Barbacoan
+hubercolumbian-Bara,Bará,,0.30416,-70.1644,waim1255,,hubercolumbian,388,0,329,ClicsCore,,Tucanoan
 hubercolumbian-Barasana,Barasana,,0.02193,-70.808,bara1380,,hubercolumbian,426,0,342,ClicsCore,,Tucanoan
+hubercolumbian-Bari,Barí,,9.08497,-72.9353,bari1297,,hubercolumbian,280,0,265,ClicsCore,,Chibchan
 hubercolumbian-Bora,Bora,,-2.91467,-68.9093,bora1263,,hubercolumbian,729,0,336,ClicsCore,,Boran
 hubercolumbian-Carapana,Carapana,,0.06168,-69.6465,cara1272,,hubercolumbian,379,0,334,ClicsCore,,Tucanoan
+hubercolumbian-Carijona,Carijona,,1.21894,-72.0664,cari1279,,hubercolumbian,366,0,314,ClicsCore,,Cariban
 hubercolumbian-Catio,Catío,,7.52721,-76.7476,embe1260,,hubercolumbian,406,0,339,ClicsCore,,Chocoan
 hubercolumbian-Chapalaachi,Cha'palaachi,,0.71489,-79.0508,chac1249,,hubercolumbian,352,0,326,ClicsCore,,Barbacoan
 hubercolumbian-Chimila,Chimila,,10.1902,-74.2559,chim1309,,hubercolumbian,376,0,307,ClicsCore,,Chibchan
@@ -335,6 +524,7 @@ hubercolumbian-Cuiba,Cuiba,,6.19829,-69.8197,cuib1242,,hubercolumbian,492,0,337,
 hubercolumbian-Curripaco,Curripaco,,0.69618,-67.5028,curr1243,,hubercolumbian,364,0,340,ClicsCore,,Arawakan
 hubercolumbian-Desano,Desano,,0.58157,-69.4955,desa1247,,hubercolumbian,402,0,329,ClicsCore,,Tucanoan
 hubercolumbian-Dimina,Dí̵mi̵na,,10.9286,-73.4056,mala1522,,hubercolumbian,364,0,318,ClicsCore,,Chibchan
+hubercolumbian-EmberaChami,Embera Chamí,,4.8791,-76.0749,embe1262,,hubercolumbian,407,0,319,ClicsCore,,Chocoan
 hubercolumbian-EmberaDarien,Embera Darién,,7.12761,-77.574,nort2972,,hubercolumbian,365,0,307,ClicsCore,,Chocoan
 hubercolumbian-EmberaTado,Embera Tadó,,5.23658,-77.1533,embe1261,,hubercolumbian,396,0,318,ClicsCore,,Chocoan
 hubercolumbian-EpenaBasurudo,Epena Basurudó,,4.25877,-77.3566,epen1239,,hubercolumbian,344,0,304,ClicsCore,,Chocoan
@@ -345,6 +535,7 @@ hubercolumbian-Guayabero,Guayabero,,2.8969,-71.844,guay1257,,hubercolumbian,440,
 hubercolumbian-Ika,Ika,,10.7018,-73.6363,arhu1242,,hubercolumbian,361,0,317,ClicsCore,,Chibchan
 hubercolumbian-Inga,Inga,,1.00313,-76.8606,inga1252,,hubercolumbian,364,0,319,ClicsCore,,Quechuan
 hubercolumbian-Jitnu,Jitnu,,6.34582,-71.2671,maca1259,,hubercolumbian,366,0,320,ClicsCore,,Guahiboan
+hubercolumbian-Jupda,Jupda,,0.58622,-69.8359,hupd1244,,hubercolumbian,306,0,265,ClicsCore,,Nadahup
 hubercolumbian-Kakua,Kakua,,0.88778,-69.5659,cacu1241,,hubercolumbian,431,0,341,ClicsCore,,Kakua-Nukak
 hubercolumbian-Kamsa,Kamsá,,1.14537,-76.8931,cams1241,,hubercolumbian,382,0,322,ClicsCore,,Camsá
 hubercolumbian-Kogui,Kogui,,10.9485,-73.8043,cogu1240,,hubercolumbian,392,0,334,ClicsCore,,Chibchan
@@ -354,17 +545,20 @@ hubercolumbian-Mirana,Miraña,,-2.91467,-68.9093,bora1263,,hubercolumbian,460,0,
 hubercolumbian-Muinane,Muinane,,-0.8652,-72.4249,muin1242,,hubercolumbian,557,0,342,ClicsCore,,Boran
 hubercolumbian-Nukak,Nukak,,2.65939,-71.4629,nuka1242,,hubercolumbian,327,0,307,ClicsCore,,Kakua-Nukak
 hubercolumbian-Ocaina,Ocaina,,-2.159,-72.1422,ocai1244,,hubercolumbian,488,0,311,ClicsCore,,Huitotoan
+hubercolumbian-Orejon,Orejón,,-2.86315,-72.4926,orej1242,,hubercolumbian,290,0,259,ClicsCore,,Tucanoan
 hubercolumbian-Paez,Páez,,2.61516,-76.3125,paez1247,,hubercolumbian,420,0,322,ClicsCore,,Páez
 hubercolumbian-Piapoco,Piapoco,,4.37718,-68.5953,piap1246,,hubercolumbian,447,0,318,ClicsCore,,Arawakan
 hubercolumbian-Piratapuyo,Piratapuyo,,0.50714,-69.5032,pira1254,,hubercolumbian,392,0,341,ClicsCore,,Tucanoan
 hubercolumbian-Playero,Playero,,6.90948,-71.0036,play1240,,hubercolumbian,411,0,328,ClicsCore,,Guahiboan
 hubercolumbian-Puinave,Puinave,,3.92974,-67.6886,puin1248,,hubercolumbian,350,0,310,ClicsCore,,Puinave
 hubercolumbian-Resigaro,Resígaro,,-2.48139,-71.3578,resi1247,,hubercolumbian,351,0,327,ClicsCore,,Arawakan
+hubercolumbian-Saliba,Sáliba,,5.30115,-69.3843,sali1298,,hubercolumbian,359,0,289,ClicsCore,,Jodi-Saliban
 hubercolumbian-Secoya,Secoya,,-0.459785,-75.5547,seco1241,,hubercolumbian,370,0,322,ClicsCore,,Tucanoan
 hubercolumbian-Siona,Siona,,0.31733,-76.0237,sion1247,,hubercolumbian,355,0,300,ClicsCore,,Tucanoan
 hubercolumbian-Siriano,Siriano,,0.436515,-70.184,siri1274,,hubercolumbian,385,0,339,ClicsCore,,Tucanoan
 hubercolumbian-Tanimuca,Tanimuca,,-0.59023,-70.3853,tani1257,,hubercolumbian,397,0,339,ClicsCore,,Tucanoan
 hubercolumbian-Tatuyo,Tatuyo,,0.55582,-70.5327,tatu1247,,hubercolumbian,372,0,330,ClicsCore,,Tucanoan
+hubercolumbian-Totoro,Totoró,,2.55149,-76.6379,toto1306,,hubercolumbian,298,0,273,ClicsCore,,Barbacoan
 hubercolumbian-TsafiquiPila,Tsafiqui Pila,,-0.21181,-79.2347,colo1256,,hubercolumbian,364,0,327,ClicsCore,,Barbacoan
 hubercolumbian-Tucano,Tucano,,0.579755,-69.5763,tuca1252,,hubercolumbian,388,0,337,ClicsCore,,Tucanoan
 hubercolumbian-TuneboCentral,Tunebo Central,,6.8867,-72.097,cent2150,,hubercolumbian,341,0,300,ClicsCore,,Chibchan
@@ -377,14 +571,115 @@ hubercolumbian-WitotoMurui,Witoto Murui,,-1.13669,-73.8331,muru1274,,hubercolumb
 hubercolumbian-WitotoNipode,Witoto Ni̵pode,,-2.34495,-70.9559,nupo1240,,hubercolumbian,438,0,344,ClicsCore,,Huitotoan
 hubercolumbian-Wounaan,Wounaan,,8.5,-78.0,woun1238,,hubercolumbian,454,0,339,ClicsCore,,Chocoan
 hubercolumbian-Yucuna,Yucuna,,-0.76075,-71.0033,yucu1253,,hubercolumbian,411,0,336,ClicsCore,,Arawakan
+hubercolumbian-Yukpa,Yukpa,,9.67534,-73.0557,yukp1241,,hubercolumbian,349,0,271,ClicsCore,,Cariban
 hubercolumbian-Yuruti,Yurutí,,0.735585,-69.6955,yuru1263,,hubercolumbian,382,0,335,ClicsCore,,Tucanoan
+huntergatherer-1,Cupeño,,33.3148,-116.515,cupe1243,,huntergatherer,398,0,272,ClicsCore,,Uto-Aztecan
+huntergatherer-10,Comanche,,34.0,-101.0,coma1245,,huntergatherer,453,0,270,ClicsCore,,Uto-Aztecan
+huntergatherer-100,Candoshi-Shapra,,-4.23835,-76.9347,cand1248,,huntergatherer,328,0,262,ClicsCore,,Candoshi-Shapra
+huntergatherer-101,Cofán,,0.276675,-77.0643,cofa1242,,huntergatherer,434,0,292,ClicsCore,,Cofán
+huntergatherer-103,Waorani,,-1.12312,-76.683,waor1240,,huntergatherer,368,0,299,ClicsCore,,Waorani
+huntergatherer-106,Páez,,2.61516,-76.31254,paez1247,,huntergatherer,380,0,301,ClicsCore,,Páez
+huntergatherer-107,Puinave,,3.92974,-67.6886,puin1248,,huntergatherer,330,0,253,ClicsCore,,Puinave
 huntergatherer-108,Pumé,,7.10677,-67.5996,pume1238,,huntergatherer,360,0,278,ClicsCore,,Pumé
+huntergatherer-11,Northern Paiute,,40.0799,-119.536,nort2954,,huntergatherer,436,0,271,ClicsCore,,Uto-Aztecan
+huntergatherer-110,Tikuna,,-3.66289,-69.8723,ticu1245,,huntergatherer,475,0,276,ClicsCore,,Ticuna-Yuri
+huntergatherer-112,Urarina,,-4.44006,-75.4211,urar1246,,huntergatherer,319,0,260,ClicsCore,,Urarina
 huntergatherer-114,Aguaruna,,-5.30044,-77.9218,agua1253,,huntergatherer,446,0,322,ClicsCore,,Chicham
+huntergatherer-115,Ashuar,,-2.82646,-77.2641,achu1248,,huntergatherer,587,0,321,ClicsCore,,Chicham
+huntergatherer-116,Huambisa,,-3.99109,-77.9797,huam1247,,huntergatherer,386,0,304,ClicsCore,,Chicham
 huntergatherer-119,Dâw,,-0.1177,-67.2934,daww1239,,huntergatherer,450,0,317,ClicsCore,,Naduhup
 huntergatherer-120,Hup,,0.58622,-69.8359,hupd1244,,huntergatherer,461,0,326,ClicsCore,,Naduhup
+huntergatherer-124,Matses,,-5.73914,-72.6281,mats1244,,huntergatherer,492,0,311,ClicsCore,,Pano-Tacanan
 huntergatherer-125,Yagua,,-3.42913,-72.2186,yagu1244,,huntergatherer,499,0,329,ClicsCore,,Peba-Yagua
+huntergatherer-127,Napo Lowland Quichua,,-0.072525,-76.3889,napo1242,,huntergatherer,374,0,282,ClicsCore,,Quechuan
+huntergatherer-128,Quechua Ayacuchano,,-13.84714,-74.32246,ayac1239,,huntergatherer,347,0,270,ClicsCore,,Quechuan
+huntergatherer-129,Southern Pastaza Quechua,,-3.32733,-76.527,sout2990,,huntergatherer,307,0,254,ClicsCore,,Quechuan
+huntergatherer-13,Tümpisa Shoshone,,36.0007,-117.901,pana1305,,huntergatherer,461,0,278,ClicsCore,,Uto-Aztecan
+huntergatherer-130,Piaroa,,4.41805,-67.7574,piar1243,,huntergatherer,384,0,298,ClicsCore,,Saliban
+huntergatherer-133,Carapana,,0.06168,-69.6465,cara1272,,huntergatherer,419,0,291,ClicsCore,,Tucanoan
+huntergatherer-134,Cubeo,,1.32382,-70.1939,cube1242,,huntergatherer,805,0,323,ClicsCore,,Tucanoan
+huntergatherer-135,Desano,,0.58157,-69.4955,desa1247,,huntergatherer,363,0,295,ClicsCore,,Tucanoan
+huntergatherer-136,Makuna,,-0.14459,-70.0749,macu1260,,huntergatherer,439,0,287,ClicsCore,,Tucanoan
+huntergatherer-139,Tanimuca,,-0.59023,-70.3853,tani1257,,huntergatherer,346,0,271,ClicsCore,,Tucanoan
 huntergatherer-141,Tukano,,0.579755,-69.5763,tuca1252,,huntergatherer,422,0,302,ClicsCore,,Tucanoan
+huntergatherer-142,Tuyuka,,0.39441,-70.043515,tuyu1244,,huntergatherer,309,0,263,ClicsCore,,Tucanoan
+huntergatherer-144,Kotiria,,1.07554,-69.5705,guan1269,,huntergatherer,451,0,303,ClicsCore,,Tucanoan
+huntergatherer-146,Koreguaje,,0.92316,-75.3475,kore1283,,huntergatherer,373,0,300,ClicsCore,,Tucanoan
+huntergatherer-147,Maihiki,,-2.86315,-72.4926,orej1242,,huntergatherer,405,0,298,ClicsCore,,Tucanoan
+huntergatherer-148,Secoya,,-0.459785,-75.5547,seco1241,,huntergatherer,337,0,260,ClicsCore,,Tucanoan
+huntergatherer-149,Siona,,0.31733,-76.0237,sion1247,,huntergatherer,435,0,288,ClicsCore,,Tucanoan
+huntergatherer-152,Nheengatu,,1.04503,-66.9646,nhen1239,,huntergatherer,486,0,297,ClicsCore,,Tupian
+huntergatherer-156,Murui Witoto,,-1.13669,-73.8331,muru1274,,huntergatherer,508,0,309,ClicsCore,,Huitotoan
+huntergatherer-158,Ocaina,,-2.159,-72.1422,ocai1244,,huntergatherer,561,0,314,ClicsCore,,Huitotoan
+huntergatherer-159,Ninam,,4.03894,-62.7801,nina1238,,huntergatherer,451,0,263,ClicsCore,,Yanomamic
+huntergatherer-162,Yanomami,,2.48999,-62.8522,yano1262,,huntergatherer,674,0,317,ClicsCore,,Yanomamic
+huntergatherer-163,Iquito,,-3.31233,-73.97046,iqui1243,,huntergatherer,484,0,290,ClicsCore,,Zaparoan
+huntergatherer-164,Bardi,,-16.6274,122.906,bard1255,,huntergatherer,435,0,267,ClicsCore,,Nyulnyulan
+huntergatherer-167,Yawuru,,-18.004,122.693,yawu1244,,huntergatherer,421,0,251,ClicsCore,,Nyulnyulan
+huntergatherer-18,Kitanemuk,,33.9479,-116.772,serr1255,,huntergatherer,416,0,279,ClicsCore,,Uto-Aztecan
+huntergatherer-19,Maidu,,40.4102,-120.645,nort2952,,huntergatherer,541,0,274,ClicsCore,,Maiduan
+huntergatherer-190,Karajarri,,-18.6771,122.334,kara1476,,huntergatherer,361,0,254,ClicsCore,,Pama-Nyungan
+huntergatherer-195,Gurindji,,-17.0329,130.379,guri1247,,huntergatherer,394,0,259,ClicsCore,,Pama-Nyungan
+huntergatherer-2,Cahuilla,,33.5324,-116.691,cahu1264,,huntergatherer,399,0,268,ClicsCore,,Uto-Aztecan
+huntergatherer-21,Nisenan,,38.047,-120.393,nise1244,,huntergatherer,427,0,253,ClicsCore,,Maiduan
+huntergatherer-22,Northern Sierra Miwok,,38.4179,-120.588,nort2968,,huntergatherer,414,0,275,ClicsCore,,Miwok-Costanoan
+huntergatherer-23,Plains Miwok,,38.39772,-121.653344,plai1259,,huntergatherer,443,0,266,ClicsCore,,Miwok-Costanoan
+huntergatherer-25,Southern Sierra Miwok,,38.2363,-120.507,sout2985,,huntergatherer,424,0,271,ClicsCore,,Miwok-Costanoan
+huntergatherer-26,Tübatulabal,,35.327,-117.163,tuba1278,,huntergatherer,437,0,258,ClicsCore,,Uto-Aztecan
+huntergatherer-27,Washo,,38.8184,-119.64,wash1253,,huntergatherer,522,0,268,ClicsCore,,Washo
+huntergatherer-28,Wintu,,39.7176,-122.445,wint1259,,huntergatherer,435,0,279,ClicsCore,,Wintuan
+huntergatherer-3,Luiseño,,33.3184,-116.939,luis1253,,huntergatherer,470,0,280,ClicsCore,,Uto-Aztecan
+huntergatherer-30,Yuki,,39.8389,-123.296,yuki1243,,huntergatherer,658,0,268,ClicsCore,,Yuki-Wappo
+huntergatherer-31,Yavapai,,35.6302,-113.385,hava1248,,huntergatherer,600,0,253,ClicsCore,,Cochimi-Yuman
+huntergatherer-32,Iipay 'Aa,,32.331,-116.604,kumi1248,,huntergatherer,411,0,268,ClicsCore,,Cochimi-Yuman
+huntergatherer-33,Cocopa,,32.376,-114.848,coco1261,,huntergatherer,533,0,269,ClicsCore,,Cochimi-Yuman
+huntergatherer-34,Kiliwa,,30.5471,-115.123,kili1268,,huntergatherer,419,0,262,ClicsCore,,Cochimi-Yuman
+huntergatherer-349,Waurá,,-13.296,-53.6971,waur1244,,huntergatherer,374,0,258,ClicsCore,,Arawakan
+huntergatherer-35,Mojave,,34.8866,-114.599,moha1256,,huntergatherer,469,0,275,ClicsCore,,Cochimi-Yuman
+huntergatherer-351,Apalai,,1.49792,-54.7457,apal1257,,huntergatherer,364,0,267,ClicsCore,,Cariban
+huntergatherer-352,Wayana,,2.77537,-54.4429,waya1269,,huntergatherer,368,0,278,ClicsCore,,Cariban
+huntergatherer-36,Wappo,,38.25,-122.5,wapp1239,,huntergatherer,558,0,276,ClicsCore,,Yuki-Wappo
+huntergatherer-363,Sáliva,,5.30115,-69.3843,sali1298,,huntergatherer,334,0,262,ClicsCore,,Saliban
+huntergatherer-364,Wayampi,,1.73817,-52.6887,waya1270,,huntergatherer,408,0,287,ClicsCore,,Tupian
+huntergatherer-368,Sirionó,,-15.5298,-63.9688,siri1273,,huntergatherer,520,0,287,ClicsCore,,Tupian
+huntergatherer-37,Seri (Comcaac),,28.9877,-112.384,seri1257,,huntergatherer,426,0,275,ClicsCore,,Seri
+huntergatherer-371,Wari,,-10.69948,-64.56152,wari1268,,huntergatherer,372,0,276,ClicsCore,,Chapacuran
+huntergatherer-375,Cavineña,,-13.3544,-66.6277,cavi1250,,huntergatherer,598,0,307,ClicsCore,,Pano-Tacanan
+huntergatherer-379,Kwazá,,-11.6667,-61.1833,kwaz1243,,huntergatherer,558,0,278,ClicsCore,,Kwaza
+huntergatherer-38,Lake Miwok,,39.0021,-122.621,lake1258,,huntergatherer,624,0,274,ClicsCore,,Miwok-Costanoan
+huntergatherer-381,Movima,,-13.8115,-65.6348,movi1243,,huntergatherer,328,0,291,ClicsCore,,Movima
+huntergatherer-387,Djeoromitxi,,-12.038,-64.6694,djeo1235,,huntergatherer,388,0,295,ClicsCore,,Nuclear-Macro-Je
+huntergatherer-39,Chumash Barbareno,,34.462,-119.699,barb1263,,huntergatherer,414,0,259,ClicsCore,,Chumashan
+huntergatherer-4,Serrano,,33.9479,-116.772,serr1255,,huntergatherer,444,0,263,ClicsCore,,Uto-Aztecan
+huntergatherer-40,Chumash Ventureno,,34.1761,-119.035,vent1242,,huntergatherer,447,0,264,ClicsCore,,Chumashan
+huntergatherer-405,Lokono,,5.64295,-56.9243,araw1276,,huntergatherer,355,0,297,ClicsCore,,Arawakan
+huntergatherer-46,Big Smokey Valley Shoshone,,41.0,-116.0,shos1248,,huntergatherer,548,0,255,ClicsCore,,Uto-Aztecan
+huntergatherer-47,Salinan A,,37.6646,-121.718,sali1253,,huntergatherer,638,0,256,ClicsCore,,Salinan
+huntergatherer-48,Achagua,,4.38649,-72.2005,acha1250,,huntergatherer,376,0,274,ClicsCore,,Arawakan
+huntergatherer-5,Kawaiisu,,36.0538,-118.679,kawa1283,,huntergatherer,403,0,267,ClicsCore,,Uto-Aztecan
+huntergatherer-52,Baniwa,,2.17859,-67.7704,bani1255,,huntergatherer,497,0,306,ClicsCore,,Arawakan
+huntergatherer-57,Paresi ,,-14.5929,-57.4059,pare1272,,huntergatherer,418,0,283,ClicsCore,,Arawakan
+huntergatherer-58,Piapoco ,,4.37718,-68.5953,piap1246,,huntergatherer,440,0,300,ClicsCore,,Arawakan
+huntergatherer-6,Western Mono,,37.1935,-119.347,mono1275,,huntergatherer,596,0,272,ClicsCore,,Uto-Aztecan
+huntergatherer-60,Tariana,,0.440205,-68.9042,tari1256,,huntergatherer,451,0,265,ClicsCore,,Arawakan
+huntergatherer-61,Wapishana,,2.58744,-59.8021,wapi1253,,huntergatherer,335,0,287,ClicsCore,,Arawakan
+huntergatherer-62,Warekena ,,1.80835,-66.922505,guar1293,,huntergatherer,364,0,263,ClicsCore,,Arawakan
+huntergatherer-64,Yavitero,,2.924844,-67.438886,yavi1244,,huntergatherer,371,0,281,ClicsCore,,Arawakan
+huntergatherer-65,Yukuna ,,-0.76075,-71.0033,yucu1253,,huntergatherer,492,0,305,ClicsCore,,Arawakan
 huntergatherer-68,Bora,,-2.000259,-72.257066,bora1263,,huntergatherer,654,0,319,ClicsCore,,Boran
+huntergatherer-69,Muinane ,,-0.8652,-72.4249,muin1242,,huntergatherer,551,0,306,ClicsCore,,Boran
+huntergatherer-7,Chemehuevi,,35.356093,-116.438436,chem1251,,huntergatherer,532,0,254,ClicsCore,,Uto-Aztecan
+huntergatherer-70,Akawaio,,6.16277,-60.862,akaw1239,,huntergatherer,372,0,284,ClicsCore,,Cariban
+huntergatherer-72,Carijona,,1.21894,-72.0664,cari1279,,huntergatherer,335,0,271,ClicsCore,,Cariban
+huntergatherer-73,Eñepa,,6.95035,-65.8483,enap1235,,huntergatherer,605,0,317,ClicsCore,,Cariban
+huntergatherer-75,Makushi ,,4.31861,-60.2209,macu1259,,huntergatherer,326,0,275,ClicsCore,,Cariban
+huntergatherer-77,Pemon,,4.97031,-61.4033,pemo1248,,huntergatherer,825,0,301,ClicsCore,,Cariban
+huntergatherer-78,Wai Wai,,1.50881,-59.1417,waiw1244,,huntergatherer,378,0,299,ClicsCore,,Cariban
+huntergatherer-81,Yukpa,,9.67534,-73.0557,yukp1241,,huntergatherer,836,0,274,ClicsCore,,Cariban
+huntergatherer-9,Southern Ute,,38.0,-109.0,utee1244,,huntergatherer,484,0,265,ClicsCore,,Uto-Aztecan
+huntergatherer-90,Northern Emberá,,7.12761,-77.574,nort2972,,huntergatherer,377,0,277,ClicsCore,,Chocoan
+huntergatherer-91,Kaingang,,-27.7671,-52.5394,kain1272,,huntergatherer,408,0,289,ClicsCore,,Nuclear-Macro-Je
+huntergatherer-98,Central Aymara,,-17.0,-68.5,cent2142,,huntergatherer,304,0,250,ClicsCore,,Aymaran
 ids-107,Avar,,41.7047,46.558,avar1256,,ids,1534,0,1295,ClicsCore,,Nakh-Daghestanian
 ids-126,Erzya Mordvin,,52.8548,45.3901,erzy1239,,ids,1376,0,1276,ClicsCore,,Uralic
 ids-127,Estonian,,58.55,25.82,esto1258,,ids,1687,0,1304,ClicsCore,,Uralic
@@ -444,12 +739,14 @@ ids-205,Albanian (Tosk variety),,41.0,20.0,tosk1239,,ids,1977,0,1254,ClicsCore,,
 ids-206,Armenian (Eastern variety),,40.0,45.0,nucl1235,,ids,1864,0,1297,ClicsCore,,Indo-European
 ids-207,Armenian (Western variety),,40.1897,44.4839,homs1234,,ids,1835,0,1297,ClicsCore,,Indo-European
 ids-208,Hittite,,40.0,35.0,hitt1242,,ids,1108,0,679,ClicsCore,,Indo-European
+ids-209,Tocharian A,,42.98,89.18,tokh1242,,ids,609,0,538,ClicsCore,,Indo-European
 ids-210,Tocharian B,,41.65,82.9,tokh1243,,ids,902,0,767,ClicsCore,,Indo-European
 ids-211,Sanskrit,,20.0,77.0,sans1269,,ids,2684,0,1231,ClicsCore,,Indo-European
 ids-212,Romani,,46.09,18.16,vlax1238,,ids,1720,0,1262,ClicsCore,,Indo-European
 ids-213,Avestan,,34.217,62.112,aves1237,,ids,841,0,560,ClicsCore,,Indo-European
 ids-214,Persian,,32.9,53.3,west2369,,ids,1618,0,1171,ClicsCore,,Indo-European
 ids-215,Ancient Aramaic,,32.84,37.0,olda1245,,ids,1925,0,1191,ClicsCore,,Afro-Asiatic
+ids-216,Elamite,,31.1833,48.2333,elam1244,,ids,787,0,340,ClicsCore,,Elamite
 ids-217,Negerhollands,,18.3416,-64.8922,nege1244,,ids,1228,0,867,ClicsCore,,Indo-European
 ids-218,Jamaican Creole (Limonese Creole dialect),,18.13,-77.2612,jama1262,,ids,1676,0,1270,ClicsCore,,Indo-European
 ids-219,Basque,,43.2787,-1.31622,basq1248,,ids,1523,0,1213,ClicsCore,,Basque
@@ -464,6 +761,7 @@ ids-227,Northern Haida,,54.004532,-132.079257,nort2938,,ids,1023,0,714,ClicsCore
 ids-228,Tlingit,,59.4447,-135.29,tlin1245,,ids,1333,0,756,ClicsCore,,Athabaskan-Eyak-Tlingit
 ids-229,Tsimshian,,52.59103,-128.544545,nucl1649,,ids,806,0,532,ClicsCore,,Tsimshian
 ids-230,Nuu-chah-nulth,,49.67,-126.67,nuuc1236,,ids,877,0,438,ClicsCore,,Wakashan
+ids-231,Bella Coola,,52.3448,-126.689,bell1243,,ids,594,0,403,ClicsCore,,Salishan
 ids-232,Upper Chehalis,,46.7981,-123.169,uppe1439,,ids,346,0,304,ClicsCore,,Salishan
 ids-235,Hawaiian,,19.6297,-155.43,hawa1245,,ids,2586,0,1067,ClicsCore,,Austronesian
 ids-236,Maori,,-38.2881,176.541,maor1246,,ids,2174,0,1078,ClicsCore,,Austronesian
@@ -651,6 +949,7 @@ ids-81,Avar (Kusur dialect),,41.7047,46.558,avar1256,,ids,1401,0,1296,ClicsCore,
 ids-810,Pusing,,21.3474,101.916,bitt1240,,ids,1336,0,1257,ClicsCore,,Austroasiatic
 ids-811,Paliu,,24.7013,104.955,boly1239,,ids,1077,0,969,ClicsCore,,Austroasiatic
 ids-814,Mlabri,,18.5533,101.163,mlab1235,,ids,929,0,919,ClicsCore,,Austroasiatic
+ids-816,Vietnamese,,20.681188,105.774071,viet1252,,ids,774,0,480,ClicsCore,,Austroasiatic
 ids-820,Phong,,19.9622,104.088,phon1246,,ids,1183,0,1146,ClicsCore,,Austroasiatic
 ids-825,Kha Poong,,18.25,105.0,khap1242,,ids,1345,0,1119,ClicsCore,,Austroasiatic
 ids-827,Ahlao (Thavung),,17.7655,104.229,aheu1239,,ids,868,0,824,ClicsCore,,Austroasiatic
@@ -662,14 +961,211 @@ ids-834,Chong,,12.5218,102.514,chon1284,,ids,1214,0,1169,ClicsCore,,Austroasiati
 ids-838,Iduh,,19.3497,104.106,oduu1239,,ids,1013,0,971,ClicsCore,,Austroasiatic
 ids-839,Mang Ch,,21.4305,102.133,mang1378,,ids,1336,0,1256,ClicsCore,,Austroasiatic
 ids-840,Mang VN,,21.4305,102.133,mang1378,,ids,884,0,673,ClicsCore,,Austroasiatic
+johanssonsoundsymbolic-Achumawi,Achumawi,,41.0979,-121.191,achu1247,,johanssonsoundsymbolic,322,0,263,ClicsCore,,Palaihnihan
+johanssonsoundsymbolic-Adyghe,Adyghe,,44.0,39.33,adyg1241,,johanssonsoundsymbolic,308,0,256,ClicsCore,,Abkhaz-Adyge
+johanssonsoundsymbolic-Aguaruna,Aguaruna,,-5.30044,-77.9218,agua1253,,johanssonsoundsymbolic,340,0,280,ClicsCore,,Jivaroan
+johanssonsoundsymbolic-Ahtena,Ahtena,,61.7068,-144.889,ahte1237,,johanssonsoundsymbolic,331,0,276,ClicsCore,,Athapaskan-Eyak-Tlingit
+johanssonsoundsymbolic-Ainu,Ainu,,43.633654,142.46167,ainu1240,,johanssonsoundsymbolic,333,0,274,ClicsCore,,Ainu (Japan)
+johanssonsoundsymbolic-Alabama,Alabama,,30.76738,-94.62848,alab1237,,johanssonsoundsymbolic,344,0,284,ClicsCore,,Muskogean
+johanssonsoundsymbolic-Amarakaeri,Amarakaeri,,-12.4931,-70.5533,amar1274,,johanssonsoundsymbolic,317,0,258,ClicsCore,,Harakmbut
+johanssonsoundsymbolic-Arabela,Arabela,,-1.96126,-75.0612,arab1268,,johanssonsoundsymbolic,309,0,258,ClicsCore,,Zaparoan
+johanssonsoundsymbolic-Arapaho,Arapaho,,43.3879,-108.81,arap1274,,johanssonsoundsymbolic,343,0,283,ClicsCore,,Algic
+johanssonsoundsymbolic-Atakapa,Atakapa,,30.9121,-93.0827,atak1252,,johanssonsoundsymbolic,321,0,263,ClicsCore,,Atakapa
+johanssonsoundsymbolic-Aymara,Aymara,,-17.0,-68.5,cent2142,,johanssonsoundsymbolic,337,0,277,ClicsCore,,Aymara
+johanssonsoundsymbolic-Ayoreo,Ayoreo,,-19.220055,-60.217495,ayor1240,,johanssonsoundsymbolic,325,0,268,ClicsCore,,Zamucoan
+johanssonsoundsymbolic-Bambassi,Bambassi,,9.82554,34.6522,bamb1262,,johanssonsoundsymbolic,302,0,251,ClicsCore,,Mao
+johanssonsoundsymbolic-Bangime,Bangime,,14.8116,-3.77092,bang1363,,johanssonsoundsymbolic,291,0,254,ClicsCore,,Bangime
+johanssonsoundsymbolic-BankanTeyDogon,Bankan Tey Dogon,,15.06,-2.92,bank1259,,johanssonsoundsymbolic,317,0,265,ClicsCore,,Dogon
+johanssonsoundsymbolic-Basque,Basque,,43.2787,-1.31622,basq1248,,johanssonsoundsymbolic,340,0,280,ClicsCore,,Basque
+johanssonsoundsymbolic-Berik,Berik,,-2.26904,138.866,beri1254,,johanssonsoundsymbolic,313,0,254,ClicsCore,,Tor-Orya
+johanssonsoundsymbolic-Berta,Berta,,10.6474,34.7042,bert1248,,johanssonsoundsymbolic,302,0,252,ClicsCore,,Berta
+johanssonsoundsymbolic-Bezhta,Bezhta,,42.1206,46.0332,bezh1248,,johanssonsoundsymbolic,297,0,270,ClicsCore,,Nakh-Daghestanian
+johanssonsoundsymbolic-Burushaski,Burushaski,,36.2161,74.8236,buru1296,,johanssonsoundsymbolic,327,0,267,ClicsCore,,Burushaski
+johanssonsoundsymbolic-Cavinena,Cavineña,,-13.3544,-66.6277,cavi1250,,johanssonsoundsymbolic,334,0,275,ClicsCore,,Tacanan
+johanssonsoundsymbolic-Chachi,Chachi,,0.71489,-79.0508,chac1249,,johanssonsoundsymbolic,337,0,278,ClicsCore,,Barbacoan
+johanssonsoundsymbolic-Chatino,Chatino,,16.08,-97.3069,zaca1242,,johanssonsoundsymbolic,326,0,269,ClicsCore,,Otomanguean
+johanssonsoundsymbolic-Chipaya,Chipaya,,-18.73951,-67.89633,chip1262,,johanssonsoundsymbolic,296,0,263,ClicsCore,,Uru-Chipaya
+johanssonsoundsymbolic-Cofan,Cofán,,0.276675,-77.0643,cofa1242,,johanssonsoundsymbolic,336,0,278,ClicsCore,,Cofán
+johanssonsoundsymbolic-Copainalazoque,Copainalá Zoque,,17.2157,-93.3183,copa1236,,johanssonsoundsymbolic,318,0,259,ClicsCore,,Mixe-Zoque
+johanssonsoundsymbolic-Dime,Dime,,6.20951,36.3329,dime1235,,johanssonsoundsymbolic,287,0,250,ClicsCore,,South Omotic
+johanssonsoundsymbolic-Djingili,Djingili,,-17.165,133.659,djin1251,,johanssonsoundsymbolic,295,0,251,ClicsCore,,Mirndi
+johanssonsoundsymbolic-Enapaworomaipu,E'napa Woromaipu,,6.95035,-65.8483,enap1235,,johanssonsoundsymbolic,327,0,276,ClicsCore,,Cariban
+johanssonsoundsymbolic-Estonian,Estonian,,58.55,25.82,esto1258,,johanssonsoundsymbolic,340,0,280,ClicsCore,,Uralic
+johanssonsoundsymbolic-Georgian,Georgian,,41.850397,43.78613,nucl1302,,johanssonsoundsymbolic,343,0,283,ClicsCore,,Kartvelian
+johanssonsoundsymbolic-Grasskoiari,Grass Koiari,,-9.51218,147.437,gras1249,,johanssonsoundsymbolic,320,0,260,ClicsCore,,Koiarian
+johanssonsoundsymbolic-GreatAndamanese,Great Andamanese,,11.67,92.74,mixe1288,,johanssonsoundsymbolic,297,0,254,ClicsCore,,Great Andamanese
+johanssonsoundsymbolic-Guahibo,Guahibo,,5.81736,-68.9839,guah1255,,johanssonsoundsymbolic,331,0,272,ClicsCore,,Guahibo
+johanssonsoundsymbolic-Guarani,Guaraní,,-25.60551,-57.08816,para1311,,johanssonsoundsymbolic,343,0,284,ClicsCore,,Tupian
+johanssonsoundsymbolic-Guhusamane,Guhu-Samane,,-7.99922,147.228,guhu1244,,johanssonsoundsymbolic,327,0,275,ClicsCore,,Nuclear Trans New Guinea
+johanssonsoundsymbolic-Haidanorthern,Haida (Northern),,54.004532,-132.079257,nort2938,,johanssonsoundsymbolic,332,0,273,ClicsCore,,Haida
+johanssonsoundsymbolic-Halkomelem,Halkomelem,,49.250402,-122.443668,halk1245,,johanssonsoundsymbolic,338,0,278,ClicsCore,,Salishan
+johanssonsoundsymbolic-HighlandOaxacaChontal,Highland Oaxaca Chontal,,16.1849,-95.7301,high1242,,johanssonsoundsymbolic,282,0,256,ClicsCore,,Tequistlatecan
+johanssonsoundsymbolic-Huave,Huave,,16.2129,-95.0077,sanm1287,,johanssonsoundsymbolic,323,0,264,ClicsCore,,Huavean
+johanssonsoundsymbolic-Hupde,Hupdë,,0.58622,-69.8359,hupd1244,,johanssonsoundsymbolic,324,0,265,ClicsCore,,Nadahup
+johanssonsoundsymbolic-ImbaburaQuechua,Imbabura Quechua,,0.31776,-78.3729,imba1240,,johanssonsoundsymbolic,307,0,279,ClicsCore,,Quechuan
+johanssonsoundsymbolic-Ineseno,Ineseño,,34.6169,-120.08,ines1240,,johanssonsoundsymbolic,329,0,269,ClicsCore,,Chumashan
+johanssonsoundsymbolic-Jamamadi,Jamamadí,,-7.62223,-66.5662,jama1261,,johanssonsoundsymbolic,316,0,257,ClicsCore,,Arawan
+johanssonsoundsymbolic-Japanese,Japanese,,35.0,135.0,nucl1643,,johanssonsoundsymbolic,341,0,281,ClicsCore,,Japonic
+johanssonsoundsymbolic-Juhoan,Ju'hoan,,-19.688,20.7673,juho1239,,johanssonsoundsymbolic,333,0,273,ClicsCore,,Kxa
+johanssonsoundsymbolic-Kaingang,Kaingang,,-27.7671,-52.5394,kain1272,,johanssonsoundsymbolic,324,0,264,ClicsCore,,Nuclear-Macro-Je
+johanssonsoundsymbolic-Kanuri,Kanuri,,11.8,13.13,cent2050,,johanssonsoundsymbolic,343,0,283,ClicsCore,,Saharan
+johanssonsoundsymbolic-Karok,Karok,,41.8228,-123.315,karo1304,,johanssonsoundsymbolic,333,0,273,ClicsCore,,Karok
+johanssonsoundsymbolic-Katcha,Katcha,,10.8423,29.4914,katc1249,,johanssonsoundsymbolic,332,0,272,ClicsCore,,Kadugli-Krongo
+johanssonsoundsymbolic-Kekchi,Kekchí,,15.3788,-89.2452,kekc1242,,johanssonsoundsymbolic,335,0,276,ClicsCore,,Mayan
+johanssonsoundsymbolic-Ket,Ket,,63.7551,87.5466,kett1243,,johanssonsoundsymbolic,337,0,278,ClicsCore,,Yeniseian
+johanssonsoundsymbolic-Klamath,Klamath,,42.5861,-121.704,klam1254,,johanssonsoundsymbolic,311,0,263,ClicsCore,,Klamath-Modoc
+johanssonsoundsymbolic-Korean,Korean,,37.5,128.0,kore1280,,johanssonsoundsymbolic,333,0,273,ClicsCore,,Koreanic
+johanssonsoundsymbolic-Kwaza,Kwaza,,-11.6667,-61.1833,kwaz1243,,johanssonsoundsymbolic,315,0,256,ClicsCore,,Kwaza
+johanssonsoundsymbolic-Lakota,Lakota,,46.3699,-103.95,lako1247,,johanssonsoundsymbolic,341,0,281,ClicsCore,,Siouan
+johanssonsoundsymbolic-Maasai,Maasai,,-3.1419,36.4573,masa1300,,johanssonsoundsymbolic,323,0,271,ClicsCore,,Nilotic
+johanssonsoundsymbolic-Mailu,Mailu,,-10.3657,149.521,mail1248,,johanssonsoundsymbolic,288,0,256,ClicsCore,,Mailuan
+johanssonsoundsymbolic-Mali,Mali,,-4.71826,152.214,mali1284,,johanssonsoundsymbolic,302,0,266,ClicsCore,,Baining
+johanssonsoundsymbolic-Manange,Manange,,28.6416,84.0515,mana1288,,johanssonsoundsymbolic,333,0,274,ClicsCore,,Sino-Tibetan
+johanssonsoundsymbolic-Mandinka,Mandinka,,12.8165233333,-15.6539466667,mand1436,,johanssonsoundsymbolic,337,0,277,ClicsCore,,Mande
+johanssonsoundsymbolic-Mapudungun,Mapudungun,,-38.7392,-71.277,mapu1245,,johanssonsoundsymbolic,337,0,277,ClicsCore,,Araucanian
+johanssonsoundsymbolic-Maybrat,Maybrat,,-1.3679,132.591,maib1239,,johanssonsoundsymbolic,334,0,274,ClicsCore,,Maybrat
+johanssonsoundsymbolic-Miskito,Miskito,,15.1576,-84.2942,misk1235,,johanssonsoundsymbolic,331,0,271,ClicsCore,,Misumalpan
+johanssonsoundsymbolic-Mocovi,Mocoví,,-28.097,-60.4145,moco1246,,johanssonsoundsymbolic,333,0,273,ClicsCore,,Guaicuruan
+johanssonsoundsymbolic-Mojave,Mojave,,34.8866,-114.599,moha1256,,johanssonsoundsymbolic,332,0,272,ClicsCore,,Cochimi-Yuman
+johanssonsoundsymbolic-Mongolian,Mongolian,,48.324,106.289,halh1238,,johanssonsoundsymbolic,335,0,275,ClicsCore,,Mongolic
+johanssonsoundsymbolic-Moseten,Mosetén,,-14.64448,-67.83756,mose1249,,johanssonsoundsymbolic,322,0,278,ClicsCore,,Mosetén-Chimané
+johanssonsoundsymbolic-Movima,Movima,,-13.8115,-65.6348,movi1243,,johanssonsoundsymbolic,326,0,268,ClicsCore,,Movima
+johanssonsoundsymbolic-Muinane,Muinane,,-0.8652,-72.4249,muin1242,,johanssonsoundsymbolic,322,0,263,ClicsCore,,Boran
+johanssonsoundsymbolic-Muruihuitoto,Murui Huitoto,,-1.13669,-73.8331,muru1274,,johanssonsoundsymbolic,324,0,273,ClicsCore,,Huitotoan
+johanssonsoundsymbolic-Natchez,Natchez,,31.75,-91.33,natc1249,,johanssonsoundsymbolic,308,0,257,ClicsCore,,Natchez
+johanssonsoundsymbolic-Nezperce,Nez Perce,,46.3073,-116.408,nezp1238,,johanssonsoundsymbolic,343,0,283,ClicsCore,,Sahaptian
+johanssonsoundsymbolic-Ngarinyin,Ngarinyin,,-16.4006,126.433,ngar1284,,johanssonsoundsymbolic,304,0,255,ClicsCore,,Worrorran
+johanssonsoundsymbolic-Ngarluma,Ngarluma,,-20.9235,117.203,ngar1287,,johanssonsoundsymbolic,303,0,258,ClicsCore,,Pama-Nyungan
+johanssonsoundsymbolic-Ninam,Ninam,,4.03894,-62.7801,nina1238,,johanssonsoundsymbolic,309,0,252,ClicsCore,,Yanomam
+johanssonsoundsymbolic-Nivacle,Nivaclé,,-22.8557,-61.7606,niva1238,,johanssonsoundsymbolic,335,0,275,ClicsCore,,Matacoan
+johanssonsoundsymbolic-NorthAlaskanInupiatun,North Alaskan Inupiatun,,69.582,-143.77,nort2943,,johanssonsoundsymbolic,315,0,256,ClicsCore,,Eskimo-Aleut
+johanssonsoundsymbolic-NorthernSierraMiwok,Northern Sierra Miwok,,38.4179,-120.588,nort2968,,johanssonsoundsymbolic,330,0,271,ClicsCore,,Miwok-Costanoan
+johanssonsoundsymbolic-Nunggubuyu,Nunggubuyu,,-14.2623,135.753,nung1290,,johanssonsoundsymbolic,302,0,251,ClicsCore,,Gunwinyguan
+johanssonsoundsymbolic-Oneida,Oneida,,43.438742,-75.708106,onei1249,,johanssonsoundsymbolic,311,0,252,ClicsCore,,Iroquoian
+johanssonsoundsymbolic-Oroqen,Oroqen,,50.6319,125.017,oroq1238,,johanssonsoundsymbolic,327,0,269,ClicsCore,,Tungusic
+johanssonsoundsymbolic-Paez,Páez,,2.61516,-76.31254,paez1247,,johanssonsoundsymbolic,318,0,275,ClicsCore,,Páez
+johanssonsoundsymbolic-PanoanKatukina,Panoan Katukína,,-7.97456,-71.56151,pano1254,,johanssonsoundsymbolic,316,0,259,ClicsCore,,Panoan
+johanssonsoundsymbolic-Pawnee,Pawnee,,36.2862,-96.8937,pawn1254,,johanssonsoundsymbolic,309,0,262,ClicsCore,,Caddoan
+johanssonsoundsymbolic-Puinave,Puinave,,3.92974,-67.6886,puin1248,,johanssonsoundsymbolic,322,0,265,ClicsCore,,Puinave
+johanssonsoundsymbolic-Pume,Pumé,,7.10677,-67.5996,pume1238,,johanssonsoundsymbolic,316,0,267,ClicsCore,,Pumé
+johanssonsoundsymbolic-Quileute,Quileute,,47.9106,-124.603,quil1240,,johanssonsoundsymbolic,318,0,260,ClicsCore,,Chimakuan
+johanssonsoundsymbolic-Rotokas,Rotokas,,-5.94339,155.154,roto1249,,johanssonsoundsymbolic,327,0,267,ClicsCore,,North Bougainville
+johanssonsoundsymbolic-Rumu,Rumu,,-7.17149,144.179,rumu1243,,johanssonsoundsymbolic,291,0,255,ClicsCore,,Turama-Kikori
+johanssonsoundsymbolic-Sahu,Sahu,,1.00742,127.493,sahu1245,,johanssonsoundsymbolic,289,0,264,ClicsCore,,North Halmahera
+johanssonsoundsymbolic-Sanapanaangaite,Sanapaná (Angaité),,-22.11454,-58.90698,sana1281,,johanssonsoundsymbolic,314,0,258,ClicsCore,,Lengua-Mascoy
+johanssonsoundsymbolic-Seediq,Seediq,,23.9032,121.358,taro1264,,johanssonsoundsymbolic,340,0,280,ClicsCore,,Austronesian
+johanssonsoundsymbolic-Seri,Seri,,28.9877,-112.384,seri1257,,johanssonsoundsymbolic,339,0,279,ClicsCore,,Seri
+johanssonsoundsymbolic-Southeastijo,Southeast Ijo,,4.44235,6.32192,sout2774,,johanssonsoundsymbolic,325,0,265,ClicsCore,,Ijoid
+johanssonsoundsymbolic-Swahili,Swahili,,-8.25605,37.624,swah1253,,johanssonsoundsymbolic,338,0,278,ClicsCore,,Atlantic-Congo
+johanssonsoundsymbolic-Swedish,Swedish,,59.800634,17.389526,swed1254,,johanssonsoundsymbolic,344,0,284,ClicsCore,,Indo-European
+johanssonsoundsymbolic-Tarifit,Tarifit,,34.916974,-3.430616,tari1263,,johanssonsoundsymbolic,323,0,264,ClicsCore,,Afro-Asiatic
+johanssonsoundsymbolic-Terei,Terei,,-6.70051,155.745,tere1278,,johanssonsoundsymbolic,307,0,261,ClicsCore,,South Bougainville
+johanssonsoundsymbolic-ThaiDialectKorat,Thai (Dialect Korat),,14.192,100.671,thai1261,,johanssonsoundsymbolic,334,0,275,ClicsCore,,Tai-Kadai
+johanssonsoundsymbolic-Tima,Tima,,11.7176,29.1632,tima1241,,johanssonsoundsymbolic,292,0,251,ClicsCore,,Katla-Tima
+johanssonsoundsymbolic-Tiwi,Tiwi,,-11.6308,130.949,tiwi1244,,johanssonsoundsymbolic,321,0,265,ClicsCore,,Tiwi
+johanssonsoundsymbolic-Toaripi,Toaripi,,-8.07231,146.206,toar1246,,johanssonsoundsymbolic,321,0,266,ClicsCore,,Nuclear Eleman
+johanssonsoundsymbolic-Tsimshian,Tsimshian,,52.59103,-128.544545,nucl1649,,johanssonsoundsymbolic,338,0,278,ClicsCore,,Tsimshian
+johanssonsoundsymbolic-Tunica,Tunica,,30.9888,-92.5403,tuni1252,,johanssonsoundsymbolic,313,0,255,ClicsCore,,Tunica
+johanssonsoundsymbolic-Turkish,Turkish,,39.8667,32.8667,nucl1301,,johanssonsoundsymbolic,342,0,282,ClicsCore,,Turkic
+johanssonsoundsymbolic-Tuyuca,Tuyuca,,0.39441,-70.043515,tuyu1244,,johanssonsoundsymbolic,338,0,279,ClicsCore,,Tucanoan
+johanssonsoundsymbolic-Uncunwee,Uncunwee,,11.6432,29.8122,ghul1238,,johanssonsoundsymbolic,325,0,268,ClicsCore,,Nubian
+johanssonsoundsymbolic-Vietnamese,Vietnamese,,20.681188,105.774071,viet1252,,johanssonsoundsymbolic,342,0,282,ClicsCore,,Austroasiatic
+johanssonsoundsymbolic-Waorani,Waorani,,-1.12312,-76.683,waor1240,,johanssonsoundsymbolic,330,0,272,ClicsCore,,Waorani
+johanssonsoundsymbolic-Wappo,Wappo,,38.25,-122.5,wapp1239,,johanssonsoundsymbolic,316,0,258,ClicsCore,,Yuki-Wappo
+johanssonsoundsymbolic-Warao,Warao,,7.50851,-59.3528,wara1303,,johanssonsoundsymbolic,316,0,257,ClicsCore,,Warao
+johanssonsoundsymbolic-Wayuu,Wayuu,,11.395566,-72.199791,wayu1243,,johanssonsoundsymbolic,336,0,277,ClicsCore,,Arawakan
+johanssonsoundsymbolic-WhiteHmong,White Hmong,,21.5461,103.164,hmon1333,,johanssonsoundsymbolic,332,0,273,ClicsCore,,Hmong-Mien
+johanssonsoundsymbolic-Wintu,Wintu,,39.7176,-122.445,wint1259,,johanssonsoundsymbolic,337,0,277,ClicsCore,,Wintuan
+johanssonsoundsymbolic-Xicotepecdejuareztotonac,Xicotepec de Juárez Totonac,,20.6532,-97.7463,xico1235,,johanssonsoundsymbolic,304,0,257,ClicsCore,,Totonacan
+johanssonsoundsymbolic-Yagua,Yagua,,-3.42913,-72.2186,yagu1244,,johanssonsoundsymbolic,333,0,281,ClicsCore,,Peba-Yagua
+johanssonsoundsymbolic-Yaqui,Yaqui,,29.9446,-110.681,yaqu1251,,johanssonsoundsymbolic,340,0,281,ClicsCore,,Uto-Aztecan
+johanssonsoundsymbolic-Yareba,Yareba,,-9.50651,148.605,yare1248,,johanssonsoundsymbolic,317,0,257,ClicsCore,,Yareban
+johanssonsoundsymbolic-Yawa,Yawa,,-1.77196,136.263,nucl1454,,johanssonsoundsymbolic,333,0,274,ClicsCore,,Yawa
+johanssonsoundsymbolic-Yuwana,Yuwana,,5.63879,-65.4267,yuwa1244,,johanssonsoundsymbolic,298,0,257,ClicsCore,,Yuwana
+johanssonsoundsymbolic-Zuni,Zuni,,35.0056,-108.782,zuni1245,,johanssonsoundsymbolic,323,0,263,ClicsCore,,Zuni
+kraftchadic-Angas,Angas,,9.32042,9.46146,ngas1240,,kraftchadic,423,0,415,ClicsCore,,Afro-Asiatic
+kraftchadic-Ankwe,Ankwe,,8.74455,9.72453,goem1240,,kraftchadic,432,0,427,ClicsCore,,Afro-Asiatic
+kraftchadic-Bacama,Bacama,,9.53072,12.0416,baca1246,,kraftchadic,437,0,421,ClicsCore,,Afro-Asiatic
+kraftchadic-Bade,Bade,,12.789,10.6557,bade1248,,kraftchadic,420,0,411,ClicsCore,,Afro-Asiatic
+kraftchadic-Banana,Banana,,10.0606,15.4748,masa1322,,kraftchadic,443,0,425,ClicsCore,,Afro-Asiatic
+kraftchadic-Bananamouseye,Banana (Mouseye),,9.81612,15.4115,muse1242,,kraftchadic,449,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Boka,Boka,,10.188,12.936,boga1251,,kraftchadic,437,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Bolewa,Bole(wa),,11.4839,11.2322,nucl1695,,kraftchadic,404,0,400,ClicsCore,,Afro-Asiatic
+kraftchadic-Buli,Buli,,10.0258,9.53362,polc1243,,kraftchadic,414,0,409,ClicsCore,,Afro-Asiatic
+kraftchadic-Bura,Bura,,10.4822,12.3007,bura1292,,kraftchadic,444,0,423,ClicsCore,,Afro-Asiatic
+kraftchadic-Burma,Burma,,9.49679,10.11454,bogh1241,,kraftchadic,371,0,368,ClicsCore,,Afro-Asiatic
+kraftchadic-Cibak,Cibak,,10.8977,12.902,ciba1236,,kraftchadic,441,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Cip,Cip,,9.20477,9.33752,mish1244,,kraftchadic,420,0,415,ClicsCore,,Afro-Asiatic
+kraftchadic-Daba,Daba,,10.3521,13.6318,nucl1683,,kraftchadic,429,0,424,ClicsCore,,Afro-Asiatic
+kraftchadic-Dera,Dera,,10.072,12.0256,dera1248,,kraftchadic,455,0,415,ClicsCore,,Afro-Asiatic
+kraftchadic-Dira,Dira,,11.1701,9.32363,diri1259,,kraftchadic,415,0,395,ClicsCore,,Afro-Asiatic
+kraftchadic-Dwot,Dwot,,9.9325,9.51838,dass1243,,kraftchadic,422,0,410,ClicsCore,,Afro-Asiatic
+kraftchadic-Faligili,Fali Gili,,10.3535,13.6131,bana1305,,kraftchadic,446,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Falijilbu,Fali Jilbu,,10.4689,13.5233,zizi1238,,kraftchadic,419,0,411,ClicsCore,,Afro-Asiatic
+kraftchadic-Falikiria,Fali Kiria,,10.48,13.36,kiry1234,,kraftchadic,449,0,427,ClicsCore,,Afro-Asiatic
+kraftchadic-Falimucella,Fali Mucella,,10.2138,13.403,gude1246,,kraftchadic,440,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Faliwagira,Fali Ɓwagira,,10.5419,13.4087,fali1285,,kraftchadic,412,0,405,ClicsCore,,Afro-Asiatic
+kraftchadic-Gaanda,Ga?anda,,10.2955,12.6479,gaan1243,,kraftchadic,434,0,427,ClicsCore,,Afro-Asiatic
+kraftchadic-Gabin,Gábin,,10.2955,12.6479,gaan1243,,kraftchadic,438,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Gava,Gava,,11.1057,13.7893,gudu1252,,kraftchadic,450,0,423,ClicsCore,,Afro-Asiatic
+kraftchadic-Geji,Geji,,10.3478,9.64965,geji1246,,kraftchadic,421,0,416,ClicsCore,,Afro-Asiatic
+kraftchadic-Gera,Gera,,10.4331,10.12,gera1246,,kraftchadic,392,0,388,ClicsCore,,Afro-Asiatic
+kraftchadic-Glvda,Gələvda,,11.1334,13.8652,glav1244,,kraftchadic,445,0,426,ClicsCore,,Afro-Asiatic
+kraftchadic-Gude,Gude,,10.2138,13.403,gude1246,,kraftchadic,438,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Gudu,Gudu,,10.1206,12.5359,gudu1250,,kraftchadic,434,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Hausa,Hausa,,11.1513,8.7804,haus1257,,kraftchadic,440,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Higibaza,Higi Baza,,10.646,13.5136,kamw1239,,kraftchadic,444,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Higifutu,Higi Futu,,10.646,13.5136,kamw1239,,kraftchadic,452,0,424,ClicsCore,,Afro-Asiatic
+kraftchadic-Higighye,Higi Ghye,,10.4814,13.526,hyaa1239,,kraftchadic,429,0,406,ClicsCore,,Afro-Asiatic
+kraftchadic-Higikamale,Higi Kamale,,10.677,13.569,psik1239,,kraftchadic,443,0,425,ClicsCore,,Afro-Asiatic
+kraftchadic-Higinkafa,Higi Nkafa,,10.646,13.5136,kamw1239,,kraftchadic,488,0,427,ClicsCore,,Afro-Asiatic
+kraftchadic-Hildi,Hildi,,10.53854,12.99521,marg1266,,kraftchadic,458,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Hwona,Hwona,,10.3633,12.7683,hwan1240,,kraftchadic,446,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Jaku,Jaku,,10.4847,9.59527,labi1245,,kraftchadic,425,0,420,ClicsCore,,Atlantic-Congo
+kraftchadic-Jari,Jari,,11.6839,-2.48569,daga1272,,kraftchadic,365,0,363,ClicsCore,,Atlantic-Congo
+kraftchadic-Karekare,Karekare,,12.5176,10.8732,kare1348,,kraftchadic,397,0,393,ClicsCore,,Afro-Asiatic
+kraftchadic-Kilba,Kilba,,10.3544,13.139,huba1236,,kraftchadic,437,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Lame,Lame,,10.7229,8.78768,lame1257,,kraftchadic,437,0,427,ClicsCore,,Atlantic-Congo
+kraftchadic-Lamepeve,Lame (Peve),,9.16111,14.441,peve1243,,kraftchadic,433,0,426,ClicsCore,,Afro-Asiatic
+kraftchadic-Mandara,Mandara,,11.3169,13.8996,wand1278,,kraftchadic,433,0,427,ClicsCore,,Afro-Asiatic
+kraftchadic-Margi,Margi,,10.93854,13.0521,marg1265,,kraftchadic,449,0,426,ClicsCore,,Afro-Asiatic
+kraftchadic-Massa,Massa,,10.0606,15.4748,masa1322,,kraftchadic,450,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Matakam,Matakam,,10.943,13.8181,mafa1239,,kraftchadic,408,0,402,ClicsCore,,Afro-Asiatic
+kraftchadic-Mismezime,Misme (Zime),,9.28888,15.7018,mesm1239,,kraftchadic,439,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Miya,Miya,,10.9234,9.71505,miya1266,,kraftchadic,400,0,396,ClicsCore,,Afro-Asiatic
+kraftchadic-Mwulyen,Mwulyen,,9.68091,12.677,bata1314,,kraftchadic,434,0,429,ClicsCore,,Afro-Asiatic
+kraftchadic-Nakatsa,Nakatsa,,11.1319,13.8187,cine1238,,kraftchadic,435,0,423,ClicsCore,,Afro-Asiatic
+kraftchadic-Ngamo,Ngamo,,12.0048,11.2108,ngam1282,,kraftchadic,426,0,421,ClicsCore,,Afro-Asiatic
+kraftchadic-Ngizim,Ngizim,,12.1051,11.0178,ngiz1242,,kraftchadic,426,0,399,ClicsCore,,Afro-Asiatic
+kraftchadic-Ngwaxi,Ngwaxi,,10.6058,12.9234,nggw1242,,kraftchadic,428,0,422,ClicsCore,,Afro-Asiatic
+kraftchadic-Njanye,Njanye,,10.0666,13.3343,nzan1240,,kraftchadic,420,0,414,ClicsCore,,Afro-Asiatic
+kraftchadic-Pero,Pero,,9.62092,11.044,pero1241,,kraftchadic,406,0,386,ClicsCore,,Afro-Asiatic
+kraftchadic-Piimdi,Piðimdi,,11.0376,11.80953,tera1251,,kraftchadic,427,0,422,ClicsCore,,Afro-Asiatic
+kraftchadic-Plci,Pəlci,,10.0258,9.53362,polc1243,,kraftchadic,415,0,410,ClicsCore,,Afro-Asiatic
+kraftchadic-Seya,Seya,,9.69441,9.71748,saya1246,,kraftchadic,409,0,397,ClicsCore,,Afro-Asiatic
+kraftchadic-Sura,Sura,,9.47205,8.96522,mwag1236,,kraftchadic,425,0,414,ClicsCore,,Afro-Asiatic
+kraftchadic-Tangale,Tangale,,9.75444,11.3228,nucl1696,,kraftchadic,414,0,401,ClicsCore,,Afro-Asiatic
+kraftchadic-Wamdiu,Wamdiu,,10.53854,12.99521,marg1266,,kraftchadic,441,0,426,ClicsCore,,Afro-Asiatic
+kraftchadic-Westmargi,West Margi,,10.83854,12.99521,puta1243,,kraftchadic,697,0,428,ClicsCore,,Afro-Asiatic
+kraftchadic-Yingilum,Yingilum,,9.9249,13.6567,nort2770,,kraftchadic,440,0,427,ClicsCore,,Atlantic-Congo
+kraftchadic-Zvana,Zə̀ɣvana,,11.05751,13.77847,dghw1239,,kraftchadic,445,0,427,ClicsCore,,Afro-Asiatic
 lindseyende-ende1235,Ende (Papua New Guinea),,-8.957786,142.240799,ende1235,,lindseyende,1129,0,1128,ClicsCore,,Pahoturi
 listsamplesize-dutch,Dutch,,52.0,5.0,dutc1256,,listsamplesize,579,0,549,ClicsCore,,Indo-European
 listsamplesize-english,English,,53.0,-1.0,stan1293,,listsamplesize,577,0,549,ClicsCore,,Indo-European
 listsamplesize-french,French,,48.0,2.0,stan1290,,listsamplesize,631,0,548,ClicsCore,,Indo-European
 listsamplesize-german,German,,48.649,12.4676,stan1295,,listsamplesize,642,0,549,ClicsCore,,Indo-European
+logos-Galicianstd,Galician-std,,42.2446,-7.5343,gali1258,,logos,620,0,501,ClicsCore,,Indo-European
+logos-Hindistd,Hindi-std,,25.0,77.0,hind1269,,logos,631,0,537,ClicsCore,,Indo-European
+logos-Latinstd,Latin-std,,41.9026,12.4502,lati1261,,logos,780,0,624,ClicsCore,,Indo-European
+logos-Romagnolstd,Romagnol-std,,44.2349,11.7189,roma1328,,logos,627,0,531,ClicsCore,,Indo-European
+logos-Venetianstd,Venetian-std,,45.503581,12.214167,vene1258,,logos,625,0,504,ClicsCore,,Indo-European
 mannburmish-Achang,Achang,,24.25,97.8333,acha1249,,mannburmish,361,0,359,ClicsCore,Burmish,Sino-Tibetan
 mannburmish-Lashi,Lashi,,24.45,98.6,lash1243,,mannburmish,375,0,372,ClicsCore,Burmish,Sino-Tibetan
+mannburmish-Maru,Maru,,24.45,98.6,maru1249,,mannburmish,334,0,332,ClicsCore,Burmish,Sino-Tibetan
+mannburmish-WrittenBurmese,Written_Burmese,,21.16,94.90,oldb1235,,mannburmish,314,0,313,ClicsCore,Burmish,Sino-Tibetan
+mannburmish-Zaiwa,Zaiwa,,24.45,98.6,zaiw1241,,mannburmish,335,0,332,ClicsCore,Burmish,Sino-Tibetan
 marrisonnaga-Chang,Chang,,26.2667,94.0833,chan1313,,marrisonnaga,944,0,776,ClicsCore,Konyak,Sino-Tibetan
+marrisonnaga-Chokri,Chokri,,25.6833,94.2667,chok1243,,marrisonnaga,522,0,476,ClicsCore,Angami,Sino-Tibetan
 marrisonnaga-ChungliAo,Ao Chungli,,26.3167,94.5167,aona1235,,marrisonnaga,989,0,810,ClicsCore,Ao,Sino-Tibetan
 marrisonnaga-Dimasa,Dimasa,,25.42,93.18,dima1251,,marrisonnaga,919,0,770,ClicsCore,Boro,Sino-Tibetan
 marrisonnaga-Jingpho,Jingpho,,25.461826,97.329866,jing1260,,marrisonnaga,1043,0,763,ClicsCore,Kachin,Sino-Tibetan
@@ -682,6 +1178,9 @@ marrisonnaga-Lotha,Lotha,,26.1,94.2667,loth1237,,marrisonnaga,1075,0,803,ClicsCo
 marrisonnaga-Lushai,Lushai,,22.60535,92.629457,lush1249,,marrisonnaga,1114,0,814,ClicsCore,Kuki Chin-Central,Sino-Tibetan
 marrisonnaga-Manipuri,Manipuri,,24.44,93.34,mani1292,,marrisonnaga,975,0,801,ClicsCore,Other Tibeto-Burman,Sino-Tibetan
 marrisonnaga-Mao,Mao,,25.4667,94.1167,maon1238,,marrisonnaga,718,0,630,ClicsCore,Angami,Sino-Tibetan
+marrisonnaga-Maram,Maram,,25.4333,94.15,mara1379,,marrisonnaga,352,0,334,ClicsCore,Zemeic,Sino-Tibetan
+marrisonnaga-Maring,Maring,,24.05,94.0333,mari1416,,marrisonnaga,421,0,356,ClicsCore,Maringic,Sino-Tibetan
+marrisonnaga-Meluri,Meluri,,25.0667,94.6333,poch1243,,marrisonnaga,319,0,257,ClicsCore,Pochuri,Sino-Tibetan
 marrisonnaga-Mikir,Mikir,,25.735084,93.050494,karb1241,,marrisonnaga,1359,0,818,ClicsCore,Other Tibeto-Burman,Sino-Tibetan
 marrisonnaga-MongsenAo,Ao Mongsen,,26.4167,94.4,mong1332,,marrisonnaga,924,0,734,ClicsCore,Ao,Sino-Tibetan
 marrisonnaga-Mzieme,Mzieme,,25.5167,93.75,mzie1235,,marrisonnaga,582,0,506,ClicsCore,Zemeic,Sino-Tibetan
@@ -689,6 +1188,7 @@ marrisonnaga-Nocte,Nocte,,27.1167,95.4833,noct1238,,marrisonnaga,395,0,370,Clics
 marrisonnaga-Nruanghmei,Nruanghmei,,25.0,93.05,rong1266,,marrisonnaga,814,0,708,ClicsCore,Zemeic,Sino-Tibetan
 marrisonnaga-Ntenyi,Ntenyi,,25.9833,94.0333,nort2725,,marrisonnaga,640,0,504,ClicsCore,Rengma,Sino-Tibetan
 marrisonnaga-Phom,Phom,,26.6167,94.05,phom1236,,marrisonnaga,683,0,578,ClicsCore,Konyak,Sino-Tibetan
+marrisonnaga-Puiron,Puiron,,25.1,93.79,rong1266,,marrisonnaga,385,0,353,ClicsCore,Zemeic,Sino-Tibetan
 marrisonnaga-Rengma,Rengma,,25.0667,94.6333,sout2732,,marrisonnaga,807,0,679,ClicsCore,Rengma,Sino-Tibetan
 marrisonnaga-Sangtam,Sangtam,,25.0667,94.8667,sang1321,,marrisonnaga,860,0,726,ClicsCore,Sangtam,Sino-Tibetan
 marrisonnaga-Sema,Sema,,25.85,94.2667,sumi1235,,marrisonnaga,925,0,783,ClicsCore,Angami,Sino-Tibetan
@@ -696,7 +1196,12 @@ marrisonnaga-Tangkhul,Tangkhul,,25.1167,94.3667,sino1246,,marrisonnaga,950,0,793
 marrisonnaga-Wancho,Wancho,,26.9667,95.8167,wanc1238,,marrisonnaga,467,0,405,ClicsCore,Konyak,Sino-Tibetan
 marrisonnaga-WrittenBurmese,Burmese (Written),,21.624974,97.126742,oldb1235,,marrisonnaga,989,0,809,ClicsCore,Burmese,Sino-Tibetan
 marrisonnaga-WrittenTibetan,Tibetan (Written),,30.027852,91.158704,clas1254,,marrisonnaga,1144,0,783,ClicsCore,Tibetan,Sino-Tibetan
+marrisonnaga-Yimchungru,Yimchungrü,,25.7167,94.9167,yimc1241,,marrisonnaga,536,0,469,ClicsCore,Yimchingric,Sino-Tibetan
 marrisonnaga-Zeme,Zeme,,25.1833,93.2,zeme1240,,marrisonnaga,835,0,704,ClicsCore,Zemeic,Sino-Tibetan
+mitterhoferbena-Ikuna,Ikuna,,-9.13708,34.9083,ikun1241,,mitterhoferbena,286,0,280,ClicsCore,,Atlantic-Congo
+mitterhoferbena-Itipula,Itipula,,-9.34988,35.21523,itip1234,,mitterhoferbena,296,0,289,ClicsCore,,Atlantic-Congo
+mitterhoferbena-Kanamalenga,Kanamalenga,,-8.91872,34.63776,kana1293,,mitterhoferbena,301,0,296,ClicsCore,,Atlantic-Congo
+mitterhoferbena-Liwengi,Liwengi,,-9.58491,35.12116,liwe1234,,mitterhoferbena,302,0,293,ClicsCore,,Atlantic-Congo
 naganorgyalrongic-GanziDanbarGyalrong,rGyalrong (Ganzi Danba Badi Munashan),,31.060903,101.855001,situ1238,,naganorgyalrongic,716,0,618,ClicsCore,Rgyalrong,Sino-Tibetan
 naganorgyalrongic-JinchuanErkairGyalrong,rGyalrong (Jinchuan Erkai),,31.464691,101.341027,shan1274,,naganorgyalrongic,925,0,727,ClicsCore,Rgyalrong,Sino-Tibetan
 naganorgyalrongic-JinchuanGuaninqiaorGyalrong,rGyalrong (Jinchuan Guaninqiao Wobzi),,31.639053,101.445432,eree1240,,naganorgyalrongic,871,0,722,ClicsCore,Rgyalrong,Sino-Tibetan
@@ -814,7 +1319,29 @@ northeuralex-xal,Kalmyk,,46.57,45.32,kalm1243,,northeuralex,1139,0,952,ClicsCore
 northeuralex-ykg,Northern Yukaghir,,69.00,155.00,nort2745,,northeuralex,929,0,812,ClicsCore,,Yukaghir
 northeuralex-yrk,Tundra Nenets,,66.18,71.02,nene1249,,northeuralex,1181,0,952,ClicsCore,,Uralic
 northeuralex-yux,Southern Yukaghir,,65.75,150.83,sout2750,,northeuralex,913,0,665,ClicsCore,,Yukaghir
+polyglottaafricana-Asu,Asu,,10.0849,5.42081,asun1235,,polyglottaafricana,301,0,251,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Baatonum,Baatonum,,9.63186,2.99607,baat1238,,polyglottaafricana,295,0,251,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Bambara,Bambara,,12.9,-7.65,bamb1269,,polyglottaafricana,302,0,252,ClicsCore,,Mande
+polyglottaafricana-Dewoin,Dewoin,,6.56113,-10.9076,dewo1238,,polyglottaafricana,286,0,250,ClicsCore,,Kru
+polyglottaafricana-FonGbe,Fon-Gbe,,7.15484,1.66495,fonn1241,,polyglottaafricana,291,0,251,ClicsCore,,Atlantic-Congo
+polyglottaafricana-FutaJalon,Pular (Fuuta Jalon),,12.1826,-12.7338,pula1262,,polyglottaafricana,282,0,250,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Gwari,Gwari,,8.46411,7.10757,gbar1246,,polyglottaafricana,644,0,250,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Hausa,Hausa,,11.1513,8.7804,haus1257,,polyglottaafricana,573,0,251,ClicsCore,,Afro-Asiatic
+polyglottaafricana-Jalonke,Jalonke,,9.97186,-11.2836,yalu1240,,polyglottaafricana,291,0,252,ClicsCore,,Mande
+polyglottaafricana-Kanembu,Kanembu,,13.8749,14.8437,kane1243,,polyglottaafricana,555,0,250,ClicsCore,,Saharan
+polyglottaafricana-Kikongo,Kikongo,,-5.57722,14.4771,koon1244,,polyglottaafricana,812,0,250,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Klao,Klao,,5.05,-8.85,klao1243,,polyglottaafricana,297,0,250,ClicsCore,,Kru
+polyglottaafricana-KoyraChiini,Songhay (Koyra Chiini),,16.192,-3.73962,koyr1240,,polyglottaafricana,324,0,252,ClicsCore,,Songhay
+polyglottaafricana-Mandinka,Mandinka,,12.8165233333,-15.6539466667,mand1436,,polyglottaafricana,856,0,252,ClicsCore,,Mande
+polyglottaafricana-ManinkaKankan,Maninka-Kankan,,9.33048,-10.5394,east2426,,polyglottaafricana,284,0,252,ClicsCore,,Mande
+polyglottaafricana-NupeTako,Nupe-Tako,,9.18404,5.40031,nupe1254,,polyglottaafricana,574,0,250,ClicsCore,,Atlantic-Congo
+polyglottaafricana-SouthernGrebo,Southern Grebo,,4.47607,-7.56872,sout2826,,polyglottaafricana,303,0,251,ClicsCore,,Kru
+polyglottaafricana-Susu,Susu,,10.4046,-13.3628,susu1250,,polyglottaafricana,842,0,251,ClicsCore,,Mande
+polyglottaafricana-Wolof,Wolof,,15.2534,-15.383,nucl1347,,polyglottaafricana,288,0,251,ClicsCore,,Atlantic-Congo
+polyglottaafricana-XwelaGbe,Xwela-Gbe,,6.41342,2.02985,xwel1235,,polyglottaafricana,283,0,250,ClicsCore,,Atlantic-Congo
+polyglottaafricana-Yoruba,Yoruba,,7.15345,3.67225,yoru1245,,polyglottaafricana,2952,0,252,ClicsCore,,Atlantic-Congo
 robinsonap-abui,Abui,,-8.31058,124.588,abui1241,,robinsonap,428,0,384,ClicsCore,,Timor-Alor-Pantar
+robinsonap-adang,Adang,,-8.18958,124.448,adan1251,,robinsonap,383,0,360,ClicsCore,,Timor-Alor-Pantar
 robinsonap-blagar,Blagar,,-8.31787,124.251,blag1240,,robinsonap,414,0,385,ClicsCore,,Timor-Alor-Pantar
 robinsonap-kaera,Kaera,,-8.3287,124.0177,kaer1234,,robinsonap,384,0,362,ClicsCore,,Timor-Alor-Pantar
 robinsonap-kamang,Kamang,,-8.26897,124.792,kama1365,,robinsonap,380,0,364,ClicsCore,,Timor-Alor-Pantar
@@ -824,6 +1351,9 @@ robinsonap-sawila,Sawila,,-8.29105,125.078,sawi1256,,robinsonap,349,0,302,ClicsC
 robinsonap-teiwa,Teiwa,,-8.37662,124.174,teiw1235,,robinsonap,387,0,371,ClicsCore,,Timor-Alor-Pantar
 robinsonap-wersing,Wersing,,-8.33936,124.932,wers1238,,robinsonap,396,0,379,ClicsCore,,Timor-Alor-Pantar
 robinsonap-westernpantar,Western Pantar,,-8.52787,124.057,lamm1241,,robinsonap,423,0,386,ClicsCore,,Timor-Alor-Pantar
+sagartst-Batang,Tibetan_Batang,,30.00795,99.111944,kham1282,,sagartst,272,0,250,ClicsCore,Tibetan,Sino-Tibetan
+sagartst-Jingpho,Jingpho_Jingpho,,25.461826,97.329866,jing1260,,sagartst,260,0,250,ClicsCore,Jingpho,Sino-Tibetan
+sagartst-Lhasa,Tibetan_Lhasa,,29.653441,91.171493,utsa1239,,sagartst,292,0,250,ClicsCore,Tibetan,Sino-Tibetan
 satterthwaitetb-Biyo,Biyue,,22.511,101.652,biyo1243,,satterthwaitetb,362,0,359,ClicsCore,,Sino-Tibetan
 satterthwaitetb-Hani,Hani,,22.67753,102.851673333,hani1248,,satterthwaitetb,383,0,381,ClicsCore,,Sino-Tibetan
 satterthwaitetb-Jinghpaw,Jinghpo,,25.4634,97.3278,kach1280,,satterthwaitetb,402,0,400,ClicsCore,,Sino-Tibetan
@@ -841,6 +1371,8 @@ sohartmannchin-Chinbon,Chinbon,,20.0776,94.0506,chin1478,,sohartmannchin,281,0,2
 sohartmannchin-Daai,Daai,,20.7347,93.7853,daai1236,,sohartmannchin,292,0,275,ClicsCore,Chin,Sino-Tibetan
 sohartmannchin-Khumi,Khumi,,22.87125,92.9894633333,khum1248,,sohartmannchin,280,0,276,ClicsCore,Chin,Sino-Tibetan
 sohartmannchin-Matu,Matu,,23.312,92.83,ngal1291,,sohartmannchin,278,0,275,ClicsCore,Chin,Sino-Tibetan
+sohartmannchin-Ngmuun,Ngmüün,,20.289,94.3929,munc1235,,sohartmannchin,265,0,264,ClicsCore,Chin,Sino-Tibetan
+sohartmannchin-Nyhmoye,Nyhmoye,,20.0776,94.0506,chin1478,,sohartmannchin,261,0,260,ClicsCore,Chin,Sino-Tibetan
 sohartmannchin-Wakung,Wakung,,19.71,93.995,mroc1235,,sohartmannchin,282,0,278,ClicsCore,Chin,Sino-Tibetan
 suntb-Achang,Achang (Longchuan),,24.466605,97.89503,acha1249,,suntb,965,0,869,ClicsCore,Burmish,Sino-Tibetan
 suntb-Atsi,Atsi [Zaiwa],,24.17,98.36,zaiw1241,,suntb,1036,0,917,ClicsCore,Burmish,Sino-Tibetan
@@ -853,6 +1385,7 @@ suntb-RangoonBurmese,Burmese (Spoken Rangoon),,16.867489,96.191442,mand1476,,sun
 suntb-Trung,Trung [Dulong],,27.749017,98.691868,drun1238,,suntb,1003,0,907,ClicsCore,Nungic,Sino-Tibetan
 suntb-XideYi,Yi (Xide),,25.04,100.51,yish1238,,suntb,1025,0,930,ClicsCore,Nesu,Sino-Tibetan
 tls-Bena,Bena,,-9.26671,35.0364,bena1262,,tls,1069,0,650,ClicsCore,,Atlantic-Congo
+tls-Bende,Bende,,-6.22082,30.5926,bend1258,,tls,466,0,358,ClicsCore,,Atlantic-Congo
 tls-Bondei1,Bondei1,,-5.10749,38.5079,bond1247,,tls,1025,0,645,ClicsCore,,Atlantic-Congo
 tls-Bondei2,Bondei2,,-5.10749,38.5079,bond1247,,tls,1083,0,661,ClicsCore,,Atlantic-Congo
 tls-Bungu,Bungu,,-8.32587,32.8801,bung1265,,tls,1032,0,646,ClicsCore,,Atlantic-Congo
@@ -907,6 +1440,7 @@ tls-Mkwaya,Mkwaya,,-1.80737,33.71,kway1241,,tls,1052,0,639,ClicsCore,,Atlantic-C
 tls-Mpoto,Mpoto,,-11.13767,34.71269,mpot1240,,tls,954,0,589,ClicsCore,,Atlantic-Congo
 tls-Mwera,Mwera,,-9.75639,38.8762,mwer1248,,tls,958,0,595,ClicsCore,,Atlantic-Congo
 tls-Mwera1,Mwera1,,-9.75639,38.8762,mwer1248,,tls,1065,0,633,ClicsCore,,Atlantic-Congo
+tls-NPare,N_pare,,-4.17978,37.8323,asut1235,,tls,1097,0,519,ClicsCore,,Atlantic-Congo
 tls-Namwanga,Namwanga,,-9.11261,32.3163,nyam1275,,tls,1133,0,657,ClicsCore,,Atlantic-Congo
 tls-Nata,Nata,,-1.94989,34.5361,ikom1245,,tls,968,0,629,ClicsCore,,Atlantic-Congo
 tls-Ndali,Ndali,,-9.88948,33.6118,ndal1241,,tls,1122,0,635,ClicsCore,,Atlantic-Congo
@@ -945,6 +1479,7 @@ tls-Suba,Suba,,-0.95719,34.1033,suba1238,,tls,1156,0,643,ClicsCore,,Atlantic-Con
 tls-Sukuma,Sukuma,,-3.16082,32.8765,suku1261,,tls,1019,0,606,ClicsCore,,Atlantic-Congo
 tls-Sumbwa,Sumbwa,,-3.47335,31.9457,sumb1240,,tls,930,0,597,ClicsCore,,Atlantic-Congo
 tls-Tharaka,Tharaka,,-0.13221,38.073,thar1283,,tls,979,0,631,ClicsCore,,Atlantic-Congo
+tls-Tuveta,Tuveta,,-3.41822,37.7061,tave1240,,tls,763,0,385,ClicsCore,,Atlantic-Congo
 tls-Vunjo,Vunjo,,-3.42531,37.5847,vunj1238,,tls,1158,0,642,ClicsCore,,Atlantic-Congo
 tls-Wanda,Wanda,,-8.34522,32.4375,wand1264,,tls,1149,0,654,ClicsCore,,Atlantic-Congo
 tls-Wanji,Wanji,,-9.00683,34.0757,vwan1235,,tls,945,0,618,ClicsCore,,Atlantic-Congo
@@ -954,8 +1489,113 @@ tls-Zanaki,Zanaki,,-2.26367,34.0542,zana1238,,tls,1101,0,631,ClicsCore,,Atlantic
 tls-Zaramo,Zaramo,,-6.87705,38.9258,zara1247,,tls,1050,0,658,ClicsCore,,Atlantic-Congo
 tls-Zigua,Zigua,,-5.61864,38.4114,zigu1242,,tls,1096,0,652,ClicsCore,,Atlantic-Congo
 tls-Zinza,Zinza,,-2.64132,32.1755,zinz1238,,tls,1242,0,651,ClicsCore,,Atlantic-Congo
+transnewguineaorg-amaimon,Amaimon,,-5.18742,145.368,amai1246,,transnewguineaorg,333,0,263,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-amele,Amele,,-5.29126,145.687,amel1241,,transnewguineaorg,386,0,271,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-anam,Anam,,-4.68869,145.051,anam1247,,transnewguineaorg,353,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-anamgura,Anamgura,,-4.63762,144.991,anam1248,,transnewguineaorg,348,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-anjam,Anjam,,-5.45899,145.717,anja1238,,transnewguineaorg,340,0,263,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-apali,Apali,,-5.1727,145.023,apal1256,,transnewguineaorg,423,0,277,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-arandai-weriagar,Arandai (Weriagar Dialect),,-2.08016,132.983,aran1237,,transnewguineaorg,301,0,258,ClicsCore,,South Bird's Head Family
+transnewguineaorg-arawum,Arawum,,-5.52787,145.903,araw1272,,transnewguineaorg,334,0,263,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-asas,Asas,,-5.69345,145.549,asas1240,,transnewguineaorg,334,0,262,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-atemble,Atemble,,-5.08137,144.806,atem1241,,transnewguineaorg,367,0,273,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-awyu-south,"Awyu, South (Syiagha Dialect)",,-7.36301,139.538,sout2941,,transnewguineaorg,501,0,251,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bagupi,Bagupi,,-5.07778,145.632,bagu1252,,transnewguineaorg,350,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-baimak,Baimak,,-5.18943,145.606,baim1245,,transnewguineaorg,364,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bargam,Bargam,,-4.8723,145.756,barg1252,,transnewguineaorg,379,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bau,Bau,,-5.26465,145.611,bauu1244,,transnewguineaorg,372,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bepour,Bepour,,-4.5985,145.442,bepo1240,,transnewguineaorg,337,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bilakura,Bilakura,,-4.93116,145.559,bila1257,,transnewguineaorg,345,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-biyom,Biyom,,-5.79929,145.348,biyo1244,,transnewguineaorg,325,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-bongu,Bongu,,-5.50519,145.806,bong1291,,transnewguineaorg,477,0,306,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-brem,Brem,,-4.67372,145.562,brem1238,,transnewguineaorg,351,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-danaru,Danaru,,-5.53634,145.457,dana1254,,transnewguineaorg,338,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-gal,Gal,,-5.16351,145.623,gall1278,,transnewguineaorg,342,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-ganglau,Ganglau,,-5.57945,146.1305,gang1270,,transnewguineaorg,336,0,266,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-garus,Garus,,-4.9222,145.683,garu1246,,transnewguineaorg,352,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-gavak,Gavak,,-4.8296,145.676,dimi1244,,transnewguineaorg,373,0,266,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-girawa,Girawa,,-5.35342,145.423,gira1247,,transnewguineaorg,389,0,265,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-gumalu,Gumalu,,-5.22189,145.618,guma1255,,transnewguineaorg,349,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-isebe,Isebe,,-5.20719,145.691,iseb1246,,transnewguineaorg,350,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-jilim,Jilim,,-5.56611,145.706,jili1241,,transnewguineaorg,331,0,261,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-kare,Kare,,-5.07674,145.499,kare1341,,transnewguineaorg,375,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-kein,Kein,,-5.3373,145.483,kein1239,,transnewguineaorg,352,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-kobol,Kobol,,-4.79614,145.284,kobo1248,,transnewguineaorg,347,0,267,ClicsCore,,Nuclear Trans New Guinea
 transnewguineaorg-korafe,Yegha (Korafe Dialect),,-9.07,149.267,kora1294,,transnewguineaorg,517,0,260,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-korak,Korak,,-4.5998,145.514,kora1296,,transnewguineaorg,347,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-kowaki,Kowaki,,-4.63032,145.412,kowa1245,,transnewguineaorg,316,0,255,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-maia-pila,Maia (Pila Dialect),,-4.50212,145.096,maia1254,,transnewguineaorg,361,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-maia-saki,Maia (Saki Dialect),,-4.50212,145.096,maia1254,,transnewguineaorg,357,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mala,Mala,,-4.35889,145.04,mala1494,,transnewguineaorg,347,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-malas,Malas,,-4.76685,145.621,mala1495,,transnewguineaorg,328,0,261,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-male,Male,,-5.49975,145.757,male1291,,transnewguineaorg,320,0,263,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-matepi,Matepi,,-5.13857,145.617,mate1260,,transnewguineaorg,359,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mauwake,Mauwake,,-4.52416,145.394,mauw1238,,transnewguineaorg,341,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mawak,Mawak,,-4.61817,145.283,mawa1266,,transnewguineaorg,345,0,261,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mawan,Mawan,,-5.2219,145.589,mawa1267,,transnewguineaorg,362,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-miani,Miani,,-4.42116,145.276,mian1254,,transnewguineaorg,341,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-moere,Moere,,-4.62246,145.458,moer1240,,transnewguineaorg,304,0,254,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-moresada,Moresada,,-4.57497,144.988,more1258,,transnewguineaorg,329,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mosimo,Mosimo,,-4.95226,145.605,mosi1248,,transnewguineaorg,354,0,271,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-mum,Mum,,-4.83462,145.059,mumm1238,,transnewguineaorg,419,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-munit,Munit,,-5.24329,145.548,muni1257,,transnewguineaorg,379,0,271,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-murupi,Murupi,,-5.0245,145.606,muru1273,,transnewguineaorg,381,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-musak,Musak,,-5.37407,145.197,musa1266,,transnewguineaorg,343,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-musar,Musar,,-4.70258,145.413,musa1265,,transnewguineaorg,343,0,265,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-nake,Nake,,-5.09087,145.655,nake1240,,transnewguineaorg,369,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-nend,Nend,,-5.04271,144.886,nend1239,,transnewguineaorg,385,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-nobonob,Nobonob,,-5.06952,145.712,nobo1238,,transnewguineaorg,401,0,269,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-ogea,Ogea,,-5.37766,145.71,ogea1238,,transnewguineaorg,346,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-pal,Pal,,-4.756,145.24,pall1244,,transnewguineaorg,324,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-pamosu,Pamosu,,-4.69874,145.288,pamo1253,,transnewguineaorg,319,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-panim,Panim,,-5.21388,145.752,pani1258,,transnewguineaorg,355,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-parawen,Parawen,,-5.0112,145.418,para1307,,transnewguineaorg,345,0,258,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-paynamar,Paynamar,,-4.94303,144.879,payn1244,,transnewguineaorg,335,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-rapting,Rapting,,-4.99351,145.671,rapt1240,,transnewguineaorg,367,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-rempi,Rempi,,-5.02487,145.782,remp1241,,transnewguineaorg,363,0,270,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-saep,Saep,,-5.64812,146.078,saep1240,,transnewguineaorg,339,0,265,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sam,Sam,,-5.55572,145.813,samm1244,,transnewguineaorg,316,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-samosa,Samosa,,-5.01391,145.537,samo1306,,transnewguineaorg,344,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-saruga,Saruga,,-5.08824,145.578,saru1243,,transnewguineaorg,356,0,273,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sausi,Sausi,,-5.6873,145.492,saus1246,,transnewguineaorg,361,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sihan,Sihan,,-5.28029,145.574,siha1245,,transnewguineaorg,369,0,272,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sileibi,Sileibi,,-4.98243,145.225,sile1255,,transnewguineaorg,356,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-silopi,Silopi,,-5.12302,145.586,silo1240,,transnewguineaorg,353,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sinsauru,Sinsauru,,-5.64336,145.599,sins1241,,transnewguineaorg,352,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-siroi,Siroi,,-5.52893,145.994,siro1249,,transnewguineaorg,332,0,265,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sop,Sop,,-5.49605,145.361,sopp1247,,transnewguineaorg,376,0,266,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-sumau,Sumau,,-5.48556,145.474,suma1270,,transnewguineaorg,349,0,265,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-tauya,Tauya,,-5.74255,145.366,tauy1241,,transnewguineaorg,339,0,260,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-uare,Uare,,-9.69571,147.687,uare1241,,transnewguineaorg,421,0,264,ClicsCore,,Kwalean
+transnewguineaorg-ukuriguma,Ukuriguma,,-4.94407,145.514,ukur1240,,transnewguineaorg,354,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-urigina,Urigina,,-5.58982,145.507,urig1240,,transnewguineaorg,354,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-usan,Usan,,-4.84265,145.362,usan1239,,transnewguineaorg,345,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-utarmbung,Utarmbung,,-4.82756,144.924,utar1238,,transnewguineaorg,338,0,262,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-utu,Utu,,-5.16422,145.544,utuu1240,,transnewguineaorg,358,0,271,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-uya,Uya,,-5.32246,145.47,uyaa1238,,transnewguineaorg,350,0,267,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-uyajitaya,Uyajitaya,,-5.43119,145.642,dudu1240,,transnewguineaorg,351,0,262,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-wadaginam,Wadaginam,,-4.52754,144.972,wada1263,,transnewguineaorg,326,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-wagi,Wagi,,-5.17834,145.726,wagi1249,,transnewguineaorg,402,0,282,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-wamas,Wamas,,-4.97757,145.541,wama1247,,transnewguineaorg,362,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-wambon,Wambon,,-5.44334,140.48,wamb1259,,transnewguineaorg,564,0,295,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-wanambre,Wanambre,,-4.78822,145.419,wana1269,,transnewguineaorg,337,0,259,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-waskia,Waskia,,-4.57978,145.979,wask1241,,transnewguineaorg,352,0,263,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-watiwa,Watiwa,,-5.82002,145.655,dump1243,,transnewguineaorg,322,0,257,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-waube,Waube,,-5.53799,145.629,kwat1244,,transnewguineaorg,347,0,266,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-yaben,Yaben,,-4.90868,145.361,yabe1255,,transnewguineaorg,344,0,266,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-yabong,Yabong,,-5.61718,146.2065,yabo1240,,transnewguineaorg,343,0,264,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-yarawata,Yarawata,,-4.93943,145.454,yara1250,,transnewguineaorg,362,0,268,ClicsCore,,Nuclear Trans New Guinea
+transnewguineaorg-yoidik,Yoidik,,-4.94044,145.758,yoid1240,,transnewguineaorg,349,0,270,ClicsCore,,Nuclear Trans New Guinea
 visserkalamang-kara1499,Kalamang,,-3.47037,132.678,kara1499,,visserkalamang,1179,0,854,ClicsCore,,West Bomberai
+wangbai-Dashi,Dashi,,26.3530106,100.1930442,,,wangbai,425,0,388,ClicsCore,Bai,Sino-Tibetan
+wangbai-Ega,Ega,,26.4858945,98.8528962,egab1234,,wangbai,438,0,388,ClicsCore,Bai,Sino-Tibetan
+wangbai-Enqi,Enqi,,26.4738155,99.1189832,enqi1234,,wangbai,457,0,400,ClicsCore,Bai,Sino-Tibetan
+wangbai-Gongxing,Gongxing,,27.0852794,99.1652452,,,wangbai,442,0,393,ClicsCore,Bai,Sino-Tibetan
+wangbai-Jinman,Jinman,,26.4154856,99.1285952,nuji1238,,wangbai,434,0,386,ClicsCore,Bai,Sino-Tibetan
+wangbai-Jinxing,Jinxing,,24.9259218,103.1237482,,,wangbai,439,0,394,ClicsCore,Bai,Sino-Tibetan
+wangbai-Mazhelong,Mazhelong,,24.1677209,104.1950232,,,wangbai,448,0,398,ClicsCore,Bai,Sino-Tibetan
+wangbai-Tuoluo,Tuoluo,,23.3833337,102.1839821,tuol1234,,wangbai,449,0,404,ClicsCore,Bai,Sino-Tibetan
+wangbai-Zhoucheng,Zhoucheng,,25.8958826,100.0988062,zhou1234,,wangbai,428,0,387,ClicsCore,Bai,Sino-Tibetan
 wold-Archi,Archi,,42,46.8333,arch1244,,wold,1254,0,1249,ClicsCore,,Nakh-Daghestanian
 wold-Bezhta,Bezhta,,42.0833,46.1667,bezh1248,,wold,1473,0,1275,ClicsCore,,Nakh-Daghestanian
 wold-CeqWong,Ceq Wong,,3.8807,102.456,chew1245,,wold,956,0,877,ClicsCore,,Austroasiatic
@@ -1008,12 +1648,14 @@ yangyi-AzhaazaPelkey2011,Azha,,23.54166649,104.1861823,azha1235,,yangyi,721,0,65
 yangyi-CChajiang,C-Chajiang,,24.72213,100.1408171056,xish1235,,yangyi,934,0,811,ClicsCore,Yi,Sino-Tibetan
 yangyi-CEYongan,CE-Yong'an,,25.470251,100.2688649899,dong1286,,yangyi,945,0,828,ClicsCore,Yi,Sino-Tibetan
 yangyi-CLeba,C-Leba,,25.0689002,99.7199450062,xish1235,,yangyi,867,0,758,ClicsCore,Yi,Sino-Tibetan
+yangyi-CLolo,C Lolo,,25.22012656,100.9674095,nanh1240,,yangyi,288,0,265,ClicsCore,Yi,Sino-Tibetan
 yangyi-CLongjie,C-Longjie,,25.2061973,100.0334557739,xish1235,,yangyi,936,0,817,ClicsCore,Yi,Sino-Tibetan
 yangyi-CQingsheng,C-Qingsheng,,24.76262417,100.6381824686,xish1235,,yangyi,889,0,775,ClicsCore,Yi,Sino-Tibetan
 yangyi-CQingyun,C-Qingyun,,25.28985136,100.04557626,xish1235,,yangyi,937,0,818,ClicsCore,Yi,Sino-Tibetan
 yangyi-CWachang,C-Wachang,,25.41664,99.9661329659,xish1235,,yangyi,903,0,787,ClicsCore,Yi,Sino-Tibetan
 yangyi-EDiaocao,E-Diaocao,,25.538453,100.255308,,,yangyi,945,0,817,ClicsCore,Yi,Sino-Tibetan
 yangyi-EHoushan,E-Houshan,,25.3751828,100.4392542886,,,yangyi,923,0,812,ClicsCore,Yi,Sino-Tibetan
+yangyi-ELolo,E Lolo,,24.70512501,101.92075,shua1253,,yangyi,283,0,261,ClicsCore,Yi,Sino-Tibetan
 yangyi-ETaoshu,E-Taoshu,,25.568387,100.0581570205,,,yangyi,921,0,804,ClicsCore,Yi,Sino-Tibetan
 yangyi-Eka,Eka,,23.4771337,99.9422299604,ekaa1234,,yangyi,957,0,833,ClicsCore,Yi,Sino-Tibetan
 yangyi-Ghomozo,Ghomozo,,26.07588114,99.91832807,,,yangyi,948,0,828,ClicsCore,Yi,Sino-Tibetan
@@ -1032,10 +1674,12 @@ yangyi-Lavu,Lavu,,26.67867748,100.7497253,talu1238,,yangyi,699,0,645,ClicsCore,Y
 yangyi-LawuXinpingShuitangJiuha,Lawu,,24.1338571,101.4986393,lawu1238,,yangyi,828,0,731,ClicsCore,Yi,Sino-Tibetan
 yangyi-Lidim,Lidim (Tianba),,28.96606783,102.7717472,,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-Limi,Limi,,24.2046473,99.70780531,limi1243,,yangyi,969,0,843,ClicsCore,Yi,Sino-Tibetan
+yangyi-Lipo,Lipo,,25.967744,101.469582,lipo1242,,yangyi,286,0,263,ClicsCore,Yi,Sino-Tibetan
 yangyi-Lisu,Lisu,,26.75196842,98.88478072,nort3298,,yangyi,725,0,668,ClicsCore,Yi,Sino-Tibetan
 yangyi-LopeAwuChen2010,Lope (Awu),,24.25668563,103.6428899,,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-LuowuNisu,Luowu Nisu,,24.55990379,101.7955965,luqu1238,,yangyi,732,0,684,ClicsCore,Yi,Sino-Tibetan
 yangyi-Mongi,Mongi,,23.39918383,105.2343413,mond1267,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
+yangyi-NNisu,N Nisu,,24.13820926,101.6461907,xinp1238,,yangyi,718,0,659,ClicsCore,Yi,Sino-Tibetan
 yangyi-Narsu,Narsu (NW Nisu),,24.25746171,102.0476517,esha1238,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-Naso,Naso,,26.89835528,102.9271427,wume1235,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-Nasu,Nasu,,25.52497193,102.4030928,luqu1238,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
@@ -1050,6 +1694,7 @@ yangyi-Pholaypg,Up: Phola,,23.456381,102.286862,phol1237,,yangyi,698,0,632,Clics
 yangyi-Phuzaypz,Phuza,,23.253698,103.332621,phuz1235,,yangyi,705,0,638,ClicsCore,Yi,Sino-Tibetan
 yangyi-SEGaoping,SE-Gaoping,,25.28618833,100.4230602638,,,yangyi,886,0,772,ClicsCore,Yi,Sino-Tibetan
 yangyi-SMangdi,S-Mangdi,,23.46902517,99.3155123394,sout3210,,yangyi,932,0,810,ClicsCore,Yi,Sino-Tibetan
+yangyi-SNisu,S Nisu,,23.32715901,102.326438,sout2723,,yangyi,368,0,353,ClicsCore,Yi,Sino-Tibetan
 yangyi-Sani,Sani,,24.77179693,103.290785,sani1269,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-SanniSanie,Sanni (Sanie),,25.04887917,102.6362707,sani1265,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yangyi-Senza,Senza,,28.30672651,102.4125175,yish1238,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
@@ -1065,3 +1710,98 @@ yangyi-Xuzhang,Xuzhang,,25.3277808,98.9970677185,xuzh1234,,yangyi,922,0,796,Clic
 yangyi-Yangliu,Yangliu,,25.1877608,98.9957997747,yang1304,,yangyi,925,0,795,ClicsCore,Yi,Sino-Tibetan
 yangyi-Yino,Yino,,28.32864,103.1321792,yinu1238,,yangyi,699,0,645,ClicsCore,Yi,Sino-Tibetan
 yuchinese-mand1415,Mandarin Chinese,,40.0209,116.228,mand1415,,yuchinese,1423,0,1305,ClicsCore,,Sino-Tibetan
+zgraggenmadang-amaimon,amaimon,,-5.18742,145.368,amai1246,,zgraggenmadang,334,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-amele,amele,,-5.29126,145.687,amel1241,,zgraggenmadang,385,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-anam,anam,,-4.68869,145.051,anam1247,,zgraggenmadang,353,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-anamgura,anamgura,,-4.63762,144.991,anam1248,,zgraggenmadang,348,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-anjam,anjam,,-5.45899,145.717,anja1238,,zgraggenmadang,340,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-apali,apali,,-5.1727,145.023,apal1256,,zgraggenmadang,349,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-arawum,arawum,,-5.52787,145.903,araw1272,,zgraggenmadang,334,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-asas,asas,,-5.69345,145.549,asas1240,,zgraggenmadang,334,0,289,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-atemble,atemble,,-5.08137,144.806,atem1241,,zgraggenmadang,344,0,295,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bagupi,bagupi,,-5.07778,145.632,bagu1252,,zgraggenmadang,348,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-baimak,baimak,,-5.18943,145.606,baim1245,,zgraggenmadang,360,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bargam,bargam,,-4.8723,145.756,barg1252,,zgraggenmadang,378,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bau,bau,,-5.26465,145.611,bauu1244,,zgraggenmadang,370,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bepour,bepour,,-4.5985,145.442,bepo1240,,zgraggenmadang,334,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bilakura,bilakura,,-4.93116,145.559,bila1257,,zgraggenmadang,341,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-biyom,biyom,,-5.79929,145.348,biyo1244,,zgraggenmadang,323,0,283,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-bongu,bongu,,-5.50519,145.806,bong1291,,zgraggenmadang,353,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-brem,brem,,-4.67372,145.562,brem1238,,zgraggenmadang,347,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-danaru,danaru,,-5.53634,145.457,dana1254,,zgraggenmadang,339,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-faita,faita,,-5.59947,145.298,fait1240,,zgraggenmadang,319,0,273,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-gal,gal,,-5.16351,145.623,gall1278,,zgraggenmadang,341,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-ganglau,ganglau,,-5.57945,146.1305,gang1270,,zgraggenmadang,336,0,293,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-garus,garus,,-4.9222,145.683,garu1246,,zgraggenmadang,349,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-gavak,gavak,,-4.8296,145.676,dimi1244,,zgraggenmadang,372,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-girawa,girawa,,-5.35342,145.423,gira1247,,zgraggenmadang,388,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-gumalu,gumalu,,-5.22189,145.618,guma1255,,zgraggenmadang,347,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-isebe,isebe,,-5.20719,145.691,iseb1246,,zgraggenmadang,349,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-jilim,jilim,,-5.56611,145.706,jili1241,,zgraggenmadang,331,0,288,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-kare,kare,,-5.07674,145.499,kare1341,,zgraggenmadang,374,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-kein,kein,,-5.3373,145.483,kein1239,,zgraggenmadang,350,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-kesawai,kesawai,,-5.76797,145.58,kesa1244,,zgraggenmadang,307,0,266,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-kobol,kobol,,-4.79614,145.284,kobo1248,,zgraggenmadang,346,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-korak,korak,,-4.5998,145.514,kora1296,,zgraggenmadang,342,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-kowaki,kowaki,,-4.63032,145.412,kowa1245,,zgraggenmadang,315,0,282,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mala,mala,,-4.35889,145.04,mala1494,,zgraggenmadang,344,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-malas,malas,,-4.76685,145.621,mala1495,,zgraggenmadang,327,0,289,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-male,male,,-5.49975,145.757,male1291,,zgraggenmadang,320,0,289,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-matepi,matepi,,-5.13857,145.617,mate1260,,zgraggenmadang,358,0,295,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mauwake,mauwake,,-4.52416,145.394,mauw1238,,zgraggenmadang,338,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mawak,mawak,,-4.61817,145.283,mawa1266,,zgraggenmadang,342,0,288,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mawan,mawan,,-5.2219,145.589,mawa1267,,zgraggenmadang,362,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-miani,miani,,-4.42116,145.276,mian1254,,zgraggenmadang,337,0,295,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-migum,migum,,-5.57832,146.212,kolo1267,,zgraggenmadang,300,0,261,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-moere,moere,,-4.62246,145.458,moer1240,,zgraggenmadang,303,0,279,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-moresada,moresada,,-4.57497,144.988,more1258,,zgraggenmadang,329,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mosimo,mosimo,,-4.95226,145.605,mosi1248,,zgraggenmadang,352,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-mum,mum,,-4.83462,145.059,mumm1238,,zgraggenmadang,338,0,284,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-munit,munit,,-5.24329,145.548,muni1257,,zgraggenmadang,376,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-murupi,murupi,,-5.0245,145.606,muru1273,,zgraggenmadang,380,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-musak,musak,,-5.37407,145.197,musa1266,,zgraggenmadang,343,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-musar,musar,,-4.70258,145.413,musa1265,,zgraggenmadang,342,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-nake,nake,,-5.09087,145.655,nake1240,,zgraggenmadang,368,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-nend,nend,,-5.04271,144.886,nend1239,,zgraggenmadang,328,0,287,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-nobonob,nobonob,,-5.06952,145.712,nobo1238,,zgraggenmadang,399,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-ogea,ogea,,-5.37766,145.71,ogea1238,,zgraggenmadang,346,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-pal,pal,,-4.756,145.24,pall1244,,zgraggenmadang,322,0,284,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-pamosu,pamosu,,-4.69874,145.288,pamo1253,,zgraggenmadang,317,0,281,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-panim,panim,,-5.21388,145.752,pani1258,,zgraggenmadang,352,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-paynamar,paynamar,,-4.94303,144.879,payn1244,,zgraggenmadang,335,0,287,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-pulabu,pulabu,,-5.59558,145.738,pula1267,,zgraggenmadang,276,0,251,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-rapting,rapting,,-4.99351,145.671,rapt1240,,zgraggenmadang,366,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-rempi,rempi,,-5.02487,145.782,remp1241,,zgraggenmadang,361,0,295,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-rerau,rerau,,-5.51361,145.716,rera1240,,zgraggenmadang,286,0,256,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-saep,saep,,-5.64812,146.078,saep1240,,zgraggenmadang,339,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sam,sam,,-5.55572,145.813,samm1244,,zgraggenmadang,316,0,280,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-samosa,samosa,,-5.01391,145.537,samo1306,,zgraggenmadang,342,0,289,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-saruga,saruga,,-5.08824,145.578,saru1243,,zgraggenmadang,355,0,299,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sausi,sausi,,-5.6873,145.492,saus1246,,zgraggenmadang,361,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sihan,sihan,,-5.28029,145.574,siha1245,,zgraggenmadang,368,0,298,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sileibi,sileibi,,-4.98243,145.225,sile1255,,zgraggenmadang,355,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-silopi,silopi,,-5.12302,145.586,silo1240,,zgraggenmadang,352,0,293,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sinsauru,sinsauru,,-5.64336,145.599,sins1241,,zgraggenmadang,352,0,293,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-siroi,siroi,,-5.52893,145.994,siro1249,,zgraggenmadang,332,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sop,sop,,-5.49605,145.361,sopp1247,,zgraggenmadang,376,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-sumau,sumau,,-5.48556,145.474,suma1270,,zgraggenmadang,349,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-tauya,tauya,,-5.74255,145.366,tauy1241,,zgraggenmadang,338,0,284,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-ukuriguma,ukuriguma,,-4.94407,145.514,ukur1240,,zgraggenmadang,351,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-urigina,urigina,,-5.58982,145.507,urig1240,,zgraggenmadang,354,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-usan,usan,,-4.84265,145.362,usan1239,,zgraggenmadang,340,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-utarmbung,utarmbung,,-4.82756,144.924,utar1238,,zgraggenmadang,336,0,287,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-utu,utu,,-5.16422,145.544,utuu1240,,zgraggenmadang,356,0,297,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-uya,uya,,-5.32246,145.47,uyaa1238,,zgraggenmadang,350,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-uyajitaya,uyajitaya,,-5.43119,145.642,dudu1240,,zgraggenmadang,351,0,289,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-wadaginam,wadaginam,,-4.52754,144.972,wada1263,,zgraggenmadang,324,0,282,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-wagi,wagi,,-5.17834,145.726,wagi1249,,zgraggenmadang,351,0,299,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-wamas,wamas,,-4.97757,145.541,wama1247,,zgraggenmadang,361,0,293,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-wanambre,wanambre,,-4.78822,145.419,wana1269,,zgraggenmadang,335,0,286,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-waskia,waskia,,-4.57978,145.979,wask1241,,zgraggenmadang,351,0,290,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-watiwa,watiwa,,-5.82002,145.655,dump1243,,zgraggenmadang,322,0,282,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-waube,waube,,-5.53799,145.629,kwat1244,,zgraggenmadang,347,0,292,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-yaben,yaben,,-4.90868,145.361,yabe1255,,zgraggenmadang,341,0,294,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-yabong,yabong,,-5.61718,146.2065,yabo1240,,zgraggenmadang,343,0,291,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-yangulam,yangulam,,-5.52697,145.858,yang1298,,zgraggenmadang,290,0,253,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-yarawata,yarawata,,-4.93943,145.454,yara1250,,zgraggenmadang,359,0,296,ClicsCore,,Nuclear Trans New Guinea
+zgraggenmadang-yoidik,yoidik,,-4.94044,145.758,yoid1240,,zgraggenmadang,349,0,296,ClicsCore,,Nuclear Trans New Guinea

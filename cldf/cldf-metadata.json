@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/lexibank/tjukabodyobject",
             "rdf:type": "prov:Entity",
-            "dc:created": "e743794",
+            "dc:created": "b23ea45",
             "dc:title": "Repository"
         },
         {
@@ -348,7 +348,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
-            "dc:extent": 106600,
+            "dc:extent": 180600,
             "tableSchema": {
                 "columns": [
                     {
@@ -449,7 +449,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 1066,
+            "dc:extent": 1806,
             "tableSchema": {
                 "columns": [
                     {
