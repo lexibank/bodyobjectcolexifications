@@ -302,7 +302,7 @@ class Dataset(BaseDataset):
 
         def _colex_value(lang_id, bodyp, obj):
             if not forms_by_concept[lang_id, bodyp] or not forms_by_concept[lang_id, obj]:
-                return None
+                return 'None'
             elif forms_by_concept[lang_id, bodyp] & forms_by_concept[lang_id, obj]:
                 return 'True'
             else:
