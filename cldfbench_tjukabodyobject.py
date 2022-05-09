@@ -61,10 +61,7 @@ def _make_cldf_lang(lang, collection):
 
 
 def _code_id(feat_id, val):
-    #if val is not None:
     return '{}-{}'.format(feat_id, val)
-    #else:
-    #       return None
 
 
 class Dataset(BaseDataset):
@@ -294,13 +291,13 @@ class Dataset(BaseDataset):
                 'ID': _code_id(f['ID'], val),
                 'Parameter_ID': f['ID'],
                 'Name': desc,
-                'Description': "",
             }
             for f in features
             for val, desc in (
-                ('True', 'colexifies {} and {}'.format(f['Bodypart'], f['Object'])),
-                ('False', 'does not colexify {} and {}'.format(f['Bodypart'],
-                    f['Object'])),
+                ('True', 'colexifies {} and {}'.format(
+                    f['Bodypart'], f['Object'])),
+                ('False', 'does not colexify {} and {}'.format(
+                    f['Bodypart'], f['Object'])),
                 ('None', "missing value"))]
 
         def _colex_value(lang_id, bodyp, obj):
@@ -323,9 +320,6 @@ class Dataset(BaseDataset):
             for lang in languages
             for feat in features]
 
-
-        code_values = {code['ID']: code['Name'] for code in codes}
-
         # languages_with_data = collections.Counter(
         #     val['Language_ID']
         #     for val in values
@@ -338,7 +332,6 @@ class Dataset(BaseDataset):
         #     val
         #     for val in values
         #     if languages_with_data.get(val['Language_ID'], 0) >= 20]
-        print(len(values))
 
         # Write CLDF data
 
