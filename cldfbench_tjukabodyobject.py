@@ -326,18 +326,18 @@ class Dataset(BaseDataset):
 
         code_values = {code['ID']: code['Name'] for code in codes}
 
-        languages_with_data = collections.Counter(
-            val['Language_ID']
-            for val in values
-            if val.get('Value', "missing data") != "missing data")
-        languages = [
-            lang
-            for lang in languages
-            if languages_with_data.get(lang['ID'], 0) >= 20]
-        values = [
-            val
-            for val in values
-            if languages_with_data.get(val['Language_ID'], 0) >= 20]
+        # languages_with_data = collections.Counter(
+        #     val['Language_ID']
+        #     for val in values
+        #     if val.get('Value', "missing data") != "missing data")
+        # languages = [
+        #     lang
+        #     for lang in languages
+        #     if languages_with_data.get(lang['ID'], 0) >= 20]
+        # values = [
+        #     val
+        #     for val in values
+        #     if languages_with_data.get(val['Language_ID'], 0) >= 20]
         print(len(values))
 
         # Write CLDF data
