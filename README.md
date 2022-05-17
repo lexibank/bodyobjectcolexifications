@@ -6,7 +6,7 @@ For the workflow and additional information, please check the files `workflow.md
 
 Cite as:
 
-> Tjuka, Annika; Englisch, Johannes; List, Johann-Mattis (2022): Body-Object-CLICS: A publicly available repository of cross-linguistic body-object colexifications [Dataset, Version 0.1].
+> Tjuka, Annika; List, Johann-Mattis; Englisch, Johannes (2022): Body-Object-CLICS: A publicly available repository of cross-linguistic body-object colexifications [Dataset, Version 0.1].
 
 
 ## Lexibank Analysed
