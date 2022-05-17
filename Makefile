@@ -16,6 +16,6 @@ plot-jpg:
 	cldfbench cldfviz.map cldf/cldf-metadata.json --colormaps '{"True":"#FF4500","False":"#BA55D3","None":"#808080"}' --format jpg --width 20 --height 10 --dpi 300 --pacific-centered --markersize=20 --parameters=MouthAndDoor --output=plots/MouthAndDoor --zorder='{"True": 6, "False": 5, "None": 4}'
 	cldfbench cldfviz.map cldf/cldf-metadata.json --colormaps '{"True":"#FF4500","False":"#BA55D3","None":"#808080"}' --format jpg --width 20 --height 10 --dpi 300 --pacific-centered --markersize=20 --parameters=FootAndWheel --output=plots/FootAndWheel --zorder='{"True": 6, "False": 5, "None": 4}'
 
-plot-map:
+plot-family-map:
 	cldfbench cldfviz.map cldf/cldf-metadata.json --language-properties-colormaps=tol --language-properties=Family --format jpg --width 20 --height 10 --dpi 300 --pacific-centered --markersize=30 --output=plots/family-map
 	cldfbench cldfviz.map cldf/cldf-metadata.json --language-properties-colormaps=tol --language-properties=Family --format html --pacific-centered --markersize=15 --output=plots/family-map
