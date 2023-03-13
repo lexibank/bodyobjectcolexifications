@@ -43,9 +43,13 @@ def _make_cldf_collection(collection, contributions):
     }
 
 
+def _new_language_id(lang):
+    return lang.glottocode or lang.id
+
+
 def _make_cldf_lang(lang, collection):
     return {
-        "ID": lang.id,
+        "ID": _new_language_id(lang),
         "Name": lang.name,
         "Glottocode": lang.glottocode,
         "Dataset": lang.dataset,
@@ -211,7 +215,7 @@ class Dataset(BaseDataset):
         the_concepts_we_want = set(itertools.chain(bodyparts, objects))
 
         forms_by_concept = collections.defaultdict(set)
-        languages = []
+        languages = collections.OrderedDict()
         contributions = []
 
         for dataset in self._datasets('ClicsCore'):
@@ -248,11 +252,14 @@ class Dataset(BaseDataset):
             for lang in ds_languages:
                 for form in lang.forms:
                     if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
-                        forms_by_concept[lang.id, form.concept.concepticon_gloss].add(form.form)
+                        forms_by_concept[_new_language_id(lang), form.concept.concepticon_gloss].add(form.form)
 
-            languages.extend(
-                _make_cldf_lang(lang, collection)
-                for lang in ds_languages)
+            # XXX: This code needs to be adapted if we ever should decide to
+            # draw data from more than one collection.
+            languages.update(
+                (_new_language_id(lang), _make_cldf_lang(lang, collection))
+                for lang in ds_languages
+                if _new_language_id(lang) not in languages)
 
         cldf_colls = [_make_cldf_collection(collection, contributions)]
 
@@ -317,16 +324,16 @@ class Dataset(BaseDataset):
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
             }
-            for lang in languages
+            for lang in languages.values()
             for feat in features]
 
         languages_with_data = collections.Counter(
             val['Language_ID']
             for val in values
             if val.get('Value', 'None') != 'None')
-        languages = [
+        language_table = [
             lang
-            for lang in languages
+            for lang in languages.values()
             if languages_with_data.get(lang['ID'], 0) >= 20]
         values = [
             val
@@ -339,12 +346,12 @@ class Dataset(BaseDataset):
 
         features.sort(key=lambda f: f['ID'])
         codes.sort(key=lambda c: c['ID'])
-        languages.sort(key=lambda l: l['ID'])
+        language_table.sort(key=lambda l: l['ID'])
         values.sort(key=lambda v: v['ID'])
 
         args.writer.objects['ParameterTable'] = features
         args.writer.objects['CodeTable'] = codes
-        args.writer.objects['LanguageTable'] = languages
+        args.writer.objects['LanguageTable'] = language_table
         args.writer.objects['ValueTable'] = values
         args.writer.objects['ContributionTable'] = contributions
         args.writer.objects['collections.csv'] = cldf_colls
