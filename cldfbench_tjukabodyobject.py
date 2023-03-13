@@ -21,7 +21,7 @@ CONDITIONS = {
 }
 
 
-def _make_cldf_collection(collection, contributions):
+def make_cldf_collection(collection, contributions):
     langs = 0
     glottocodes = 0
     concepts = 0
@@ -43,13 +43,13 @@ def _make_cldf_collection(collection, contributions):
     }
 
 
-def _new_language_id(lang):
+def new_language_id(lang):
     return lang.glottocode or lang.id
 
 
-def _make_cldf_lang(lang, collection):
+def make_cldf_lang(lang, collection):
     return {
-        "ID": _new_language_id(lang),
+        "ID": new_language_id(lang),
         "Name": lang.name,
         "Glottocode": lang.glottocode,
         "Dataset": lang.dataset,
@@ -64,7 +64,7 @@ def _make_cldf_lang(lang, collection):
     }
 
 
-def _code_id(feat_id, val):
+def code_id(feat_id, val):
     return '{}-{}'.format(feat_id, val)
 
 
@@ -252,16 +252,16 @@ class Dataset(BaseDataset):
             for lang in ds_languages:
                 for form in lang.forms:
                     if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
-                        forms_by_concept[_new_language_id(lang), form.concept.concepticon_gloss].add(form.form)
+                        forms_by_concept[new_language_id(lang), form.concept.concepticon_gloss].add(form.form)
 
             # XXX: This code needs to be adapted if we ever should decide to
             # draw data from more than one collection.
             languages.update(
-                (_new_language_id(lang), _make_cldf_lang(lang, collection))
+                (new_language_id(lang), make_cldf_lang(lang, collection))
                 for lang in ds_languages
-                if _new_language_id(lang) not in languages)
+                if new_language_id(lang) not in languages)
 
-        cldf_colls = [_make_cldf_collection(collection, contributions)]
+        cldf_colls = [make_cldf_collection(collection, contributions)]
 
         # Process data
 
@@ -295,7 +295,7 @@ class Dataset(BaseDataset):
 
         codes = [
             {
-                'ID': _code_id(f['ID'], val),
+                'ID': code_id(f['ID'], val),
                 'Parameter_ID': f['ID'],
                 'Name': desc,
             }
@@ -320,7 +320,7 @@ class Dataset(BaseDataset):
                 'Language_ID': lang['ID'],
                 'Parameter_ID': feat['ID'],
                 'Value': _colex_value(lang['ID'], feat['Bodypart'], feat['Object']),
-                'Code_ID': _code_id(
+                'Code_ID': code_id(
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
             }
