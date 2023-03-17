@@ -392,6 +392,11 @@ class Dataset(BaseDataset):
             val
             for val in values
             if languages_with_data.get(val['Language_ID'], 0) >= 20]
+
+        remaining_concepts = {
+            concept
+            for feature in features
+            for concept in (feature['Bodypart'], feature['Object'])}
         forms_by_language = {
             lang_id: forms
             for lang_id, forms in forms_by_language.items()
@@ -404,7 +409,8 @@ class Dataset(BaseDataset):
                 'Translated_Text': form['Concepticon_Gloss'],
             }
             for lang_forms in forms_by_language.values()
-            for form in lang_forms]
+            for form in lang_forms
+            if form['Concepticon_Gloss'] in remaining_concepts]
 
         # Write CLDF data
 
