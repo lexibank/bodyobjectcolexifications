@@ -348,8 +348,8 @@ class Dataset(BaseDataset):
             else:
                 return 'False'
 
-        form_index = default_dict(list)
-        for lang_forms in lang:
+        form_index = collections.defaultdict(list)
+        for lang_forms in forms_by_language.values():
             for form in lang_forms:
                 lang_id = form['Language_ID']
                 gloss = form['Concepticon_Gloss']
@@ -365,7 +365,7 @@ class Dataset(BaseDataset):
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
                 'Example_IDs': sorted(
-                    form_index[lang['UD'], concept, form]
+                    form_index[lang['ID'], concept, form]
                     for concept in (feat['Bodypart'], feat['Object'])
                     for form in forms_by_concept[lang['ID'], concept]),
             }
