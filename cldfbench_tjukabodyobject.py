@@ -292,7 +292,7 @@ class Dataset(BaseDataset):
                     form_counts[lang.glottocode] = len(lang_forms)
 
             languages.update(
-                (lang.id, make_cldf_lang(lang, collection))
+                (language_id(lang), make_cldf_lang(lang, collection))
                 for lang in ds_languages)
 
         cldf_colls = [make_cldf_collection(collection, contributions)]
