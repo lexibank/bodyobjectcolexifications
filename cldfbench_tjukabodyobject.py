@@ -1,6 +1,8 @@
 import collections
 import itertools
 import pathlib
+import re
+import unicodedata
 
 import pycldf
 from cldfbench import CLDFSpec
@@ -8,7 +10,6 @@ from cldfbench import Dataset as BaseDataset
 from cltoolkit import Wordlist
 from cldfzenodo import oai_lexibank
 from git import Repo, GitCommandError
-from csvw.utils import slug
 
 COLLECTIONS = {
     'ClicsCore': (
@@ -19,6 +20,15 @@ COLLECTIONS = {
 CONDITIONS = {
     "ClicsCore": lambda x: len(x.concepts) >= 250,
 }
+
+
+def slug(s):
+    res = ''.join(
+        c.lower()
+        for c in unicodedata.normalize('NFD', s)
+        if c.isascii() and c.isalnum())
+    assert re.match('[A-Za-z0-9]*$', res), res
+    return res
 
 
 def make_cldf_collection(collection, contributions):
@@ -43,13 +53,13 @@ def make_cldf_collection(collection, contributions):
     }
 
 
-def new_language_id(lang):
+def language_id(lang):
     return lang.glottocode or lang.id
 
 
 def make_cldf_lang(lang, collection):
     return {
-        "ID": new_language_id(lang),
+        "ID": language_id(lang),
         "Name": lang.name,
         "Glottocode": lang.glottocode,
         "Dataset": lang.dataset,
@@ -61,6 +71,18 @@ def make_cldf_lang(lang, collection):
         "FormsWithSounds": len(lang.forms_with_sounds or []),
         "Concepts": len(lang.concepts),
         "Incollections": collection,
+    }
+
+
+def make_form(form):
+    return {
+        'ID': '{}-{}-{}'.format(
+            language_id(form.language),
+            slug(form.concept.concepticon_gloss),
+            slug(form.form)),
+        'Language_ID': language_id(form.language),
+        'Form': form.form,
+        'Concepticon_Gloss': form.concept.concepticon_gloss,
     }
 
 
@@ -193,6 +215,7 @@ class Dataset(BaseDataset):
             {'name': 'Senses', 'datatype': 'integer'},
             {'name': 'Forms', 'datatype': 'integer'},
         )
+        writer.cldf.add_component('ExampleTable')
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
 
     def cmd_makecldf(self, args):
@@ -214,7 +237,8 @@ class Dataset(BaseDataset):
 
         the_concepts_we_want = set(itertools.chain(bodyparts, objects))
 
-        forms_by_concept = collections.defaultdict(set)
+        form_counts = {}
+        forms_by_language = collections.defaultdict(list)
         languages = collections.OrderedDict()
         contributions = []
 
@@ -243,27 +267,42 @@ class Dataset(BaseDataset):
                     return False
                 elif not lang.latitude or not condition(lang):
                     return False
+                elif lang.glottocode and len(lang.forms) < form_counts.get(lang.glottocode, 0):
+                    return False
                 else:
                     return True
 
-            ds_languages = [
-                l for l in wordlist.languages if _valid_language(l)]
+            def _valid_form(form):
+                return form.concept and form.concept.concepticon_gloss in the_concepts_we_want
 
-            for lang in ds_languages:
-                for form in lang.forms:
-                    if form.concept and form.concept.concepticon_gloss in the_concepts_we_want:
-                        forms_by_concept[new_language_id(lang), form.concept.concepticon_gloss].add(form.form)
+            ds_languages = []
+            for lang in wordlist.languages:
+                if _valid_language(lang):
+                    ds_languages.append(lang)
+                    if lang.glottocode:
+                        form_counts[lang.glottocode] = len(lang.forms)
 
-            # XXX: This code needs to be adapted if we ever should decide to
-            # draw data from more than one collection.
+            forms_by_language.update(
+                (
+                    language_id(lang),
+                    [make_form(f) for f in lang.forms if _valid_form(f)],
+                )
+                for lang in ds_languages)
+
             languages.update(
-                (new_language_id(lang), make_cldf_lang(lang, collection))
-                for lang in ds_languages
-                if new_language_id(lang) not in languages)
+                (lang.id, make_cldf_lang(lang, collection))
+                for lang in ds_languages)
 
         cldf_colls = [make_cldf_collection(collection, contributions)]
 
         # Process data
+
+        forms_by_concept = collections.defaultdict(set)
+        for form_list in forms_by_language.values():
+            for form in form_list:
+                lang_id = form['Language_ID']
+                gloss = form['Concepticon_Gloss']
+                forms_by_concept[lang_id, gloss].add(form['Form'])
 
         colexifications = collections.defaultdict(set)
         for (lang_id, gloss), _forms in forms_by_concept.items():
@@ -314,6 +353,7 @@ class Dataset(BaseDataset):
                 return 'True'
             else:
                 return 'False'
+
         values = [
             {
                 'ID': '{}-{}'.format(lang['ID'], feat['ID']),
@@ -323,6 +363,10 @@ class Dataset(BaseDataset):
                 'Code_ID': code_id(
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
+                'Example_IDs': sorted(
+                    '{}-{}-{}'.format(lang['ID'], concept, form)
+                    for concept in (feat['Bodypart'], feat['Object'])
+                    for form in forms_by_concept[lang['ID'], concept]),
             }
             for lang in languages.values()
             for feat in features]
@@ -339,6 +383,19 @@ class Dataset(BaseDataset):
             val
             for val in values
             if languages_with_data.get(val['Language_ID'], 0) >= 20]
+        forms_by_language = {
+            lang_id: forms
+            for lang_id, forms in forms_by_language.items()
+            if languages_with_data.get(lang_id, 0) >= 20}
+        example_table = [
+            {
+                'ID': form['ID'],
+                'Language_ID': form['Language_ID'],
+                'Primary_Text': form['Form'],
+                'Translated_Text': form['Concepticon_Gloss'],
+            }
+            for form_list in forms_by_language.values()
+            for form in form_list]
 
         # Write CLDF data
 
@@ -348,10 +405,12 @@ class Dataset(BaseDataset):
         codes.sort(key=lambda c: c['ID'])
         language_table.sort(key=lambda l: l['ID'])
         values.sort(key=lambda v: v['ID'])
+        example_table.sort(key=lambda e: e['ID'])
 
         args.writer.objects['ParameterTable'] = features
         args.writer.objects['CodeTable'] = codes
         args.writer.objects['LanguageTable'] = language_table
+        args.writer.objects['ExampleTable'] = example_table
         args.writer.objects['ValueTable'] = values
         args.writer.objects['ContributionTable'] = contributions
         args.writer.objects['collections.csv'] = cldf_colls
