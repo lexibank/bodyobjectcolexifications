@@ -267,8 +267,6 @@ class Dataset(BaseDataset):
                     return False
                 elif not lang.latitude or not condition(lang):
                     return False
-                elif lang.glottocode and len(lang.forms) < form_counts.get(lang.glottocode, 0):
-                    return False
                 else:
                     return True
 
@@ -277,17 +275,16 @@ class Dataset(BaseDataset):
 
             ds_languages = []
             for lang in wordlist.languages:
-                if _valid_language(lang):
-                    ds_languages.append(lang)
-                    if lang.glottocode:
-                        form_counts[lang.glottocode] = len(lang.forms)
-
-            forms_by_language.update(
-                (
-                    language_id(lang),
-                    [make_form(f) for f in lang.forms if _valid_form(f)],
-                )
-                for lang in ds_languages)
+                if not _valid_language(lang):
+                    continue
+                lang_forms = [
+                    make_form(f) for f in lang.forms if _valid_form(f)]
+                if lang.glottocode and len(lang_forms) < form_counts.get(lang.glottocode, 0):
+                    continue
+                ds_languages.append(lang)
+                forms_by_language[language_id(lang)] = lang_forms
+                if lang.glottocode:
+                    form_counts[lang.glottocode] = len(lang.forms)
 
             languages.update(
                 (lang.id, make_cldf_lang(lang, collection))
@@ -298,8 +295,8 @@ class Dataset(BaseDataset):
         # Process data
 
         forms_by_concept = collections.defaultdict(set)
-        for form_list in forms_by_language.values():
-            for form in form_list:
+        for lang_forms in forms_by_language.values():
+            for form in lang_forms:
                 lang_id = form['Language_ID']
                 gloss = form['Concepticon_Gloss']
                 forms_by_concept[lang_id, gloss].add(form['Form'])
@@ -394,8 +391,8 @@ class Dataset(BaseDataset):
                 'Primary_Text': form['Form'],
                 'Translated_Text': form['Concepticon_Gloss'],
             }
-            for form_list in forms_by_language.values()
-            for form in form_list]
+            for lang_forms in forms_by_language.values()
+            for form in lang_forms]
 
         # Write CLDF data
 
