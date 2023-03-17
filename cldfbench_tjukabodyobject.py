@@ -76,10 +76,7 @@ def make_cldf_lang(lang, collection):
 
 def make_form(form):
     return {
-        'ID': '{}-{}-{}'.format(
-            language_id(form.language),
-            slug(form.concept.concepticon_gloss),
-            slug(form.form)),
+        'ID': form.id,
         'Language_ID': language_id(form.language),
         'Form': form.form,
         'Concepticon_Gloss': form.concept.concepticon_gloss,
@@ -351,6 +348,13 @@ class Dataset(BaseDataset):
             else:
                 return 'False'
 
+        form_index = default_dict(list)
+        for lang_forms in lang:
+            for form in lang_forms:
+                lang_id = form['Language_ID']
+                gloss = form['Concepticon_Gloss']
+                phon = form['Form']
+                form_index[lang_id, gloss, phon] = form['ID']
         values = [
             {
                 'ID': '{}-{}'.format(lang['ID'], feat['ID']),
@@ -361,7 +365,7 @@ class Dataset(BaseDataset):
                     feat['ID'],
                     _colex_value(lang['ID'], feat['Bodypart'], feat['Object'])),
                 'Example_IDs': sorted(
-                    '{}-{}-{}'.format(lang['ID'], concept, form)
+                    form_index[lang['UD'], concept, form]
                     for concept in (feat['Bodypart'], feat['Object'])
                     for form in forms_by_concept[lang['ID'], concept]),
             }
