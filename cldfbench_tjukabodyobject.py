@@ -214,6 +214,14 @@ class Dataset(BaseDataset):
         )
         writer.cldf.add_component('ExampleTable')
         writer.cldf.add_foreign_key('ContributionTable', 'Collection_IDs', 'collections.csv', 'ID')
+        writer.cldf.add_columns(
+            'ValueTable',
+            {
+                'name': 'Example_IDs',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#exampleReference',
+                'separator': ';',
+            },
+        )
 
     def cmd_makecldf(self, args):
         # Read data
@@ -281,7 +289,7 @@ class Dataset(BaseDataset):
                 ds_languages.append(lang)
                 forms_by_language[language_id(lang)] = lang_forms
                 if lang.glottocode:
-                    form_counts[lang.glottocode] = len(lang.forms)
+                    form_counts[lang.glottocode] = len(lang_forms)
 
             languages.update(
                 (lang.id, make_cldf_lang(lang, collection))
