@@ -151,7 +151,7 @@ class Dataset(BaseDataset):
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
 
-    def _datasets(self, set_=None):
+    def _dataset_ids(self, set_=None):
         """
         Load all datasets from a defined group of datasets.
         """
@@ -165,7 +165,9 @@ class Dataset(BaseDataset):
 
         # avoid duplicates
         dataset_ids = sorted(set(dataset_ids))
+        return dataset_ids
 
+    def _iter_datasets(self, dataset_ids):
         for dataset_id in dataset_ids:
             dataset = pycldf.Dataset.from_metadata(
                 self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
@@ -247,7 +249,10 @@ class Dataset(BaseDataset):
         languages = collections.OrderedDict()
         contributions = []
 
-        for dataset in self._datasets('ClicsCore'):
+        dataset_list = self.etc_dir.read_csv(
+            'datasets.tsv', delimiter='\t', dicts=True)
+
+        for dataset in self._iter_datasets(ds['ID'] for ds in dataset_list):
             wordlist = Wordlist(datasets=[dataset])
             dataset_id = wordlist.datasets[0].metadata_dict['rdf:ID']
 
