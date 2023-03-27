@@ -68,7 +68,6 @@ def make_cldf_lang(lang, collection):
         "Subgroup": lang.subgroup,
         "Family": lang.family,
         "Forms": len(lang.forms or []),
-        "FormsWithSounds": len(lang.forms_with_sounds or []),
         "Concepts": len(lang.concepts),
         "Incollections": collection,
     }
@@ -155,8 +154,6 @@ class Dataset(BaseDataset):
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#contributionReference',
             },
             {'name': 'Forms', 'datatype': 'integer', 'dc:description': 'Number of forms'},
-            {'name': "FormsWithSounds", "datatype": "integer",
-                "dc:description": "Number of forms with sounds"},
             {'name': 'Concepts', 'datatype': 'integer', 'dc:description': 'Number of concepts'},
             {'name': 'Incollections'},
             'Subgroup',
