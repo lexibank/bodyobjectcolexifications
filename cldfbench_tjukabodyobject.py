@@ -96,22 +96,6 @@ class Dataset(BaseDataset):
             metadata_fname='cldf-metadata.json',
             dir=self.cldf_dir, module="StructureDataset")
 
-    @property
-    def dataset_meta(self):
-        # XXX: is this still needed?
-        try:
-            return self._dataset_meta
-        except AttributeError:
-            dataset_meta = collections.OrderedDict()
-            for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
-                if not row['Zenodo'].strip():
-                    continue
-                row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
-                if 'ClicsCore' in row['collections']:
-                    dataset_meta[row['Dataset']] = row
-            self._dataset_meta = dataset_meta
-            return self._dataset_meta
-
     def cmd_download(self, args):
         github_info_by_doi = {rec.doi: rec.github_repos for rec in oai_lexibank()}
         dataset_list = self.etc_dir.read_csv(
@@ -162,28 +146,6 @@ class Dataset(BaseDataset):
                     except AttributeError:
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
-
-    def _dataset_ids(self, set_=None):
-        """
-        Load all datasets from a defined group of datasets.
-        """
-        if set_:
-            dataset_ids = [
-                dataset_id
-                for dataset_id, md in self.dataset_meta.items()
-                if set_ in md['collections']]
-        else:
-            dataset_ids = list(self.dataset_meta)
-
-        # avoid duplicates
-        dataset_ids = sorted(set(dataset_ids))
-        return dataset_ids
-
-    def _iter_datasets(self, dataset_ids):
-        for dataset_id in dataset_ids:
-            dataset = pycldf.Dataset.from_metadata(
-                self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
-            yield dataset
 
     def _schema(self, writer):
         writer.cldf.add_component(
@@ -264,9 +226,11 @@ class Dataset(BaseDataset):
         dataset_list = self.etc_dir.read_csv(
             'datasets.tsv', delimiter='\t', dicts=True)
 
-        for dataset in self._iter_datasets(ds['ID'] for ds in dataset_list):
+        for dataset_info in dataset_list:
+            dataset_id = dataset_info['ID']
+            dataset = pycldf.Dataset.from_metadata(
+                self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
             wordlist = Wordlist(datasets=[dataset])
-            dataset_id = wordlist.datasets[0].metadata_dict['rdf:ID']
 
             contributions.append({
                 'ID': dataset_id,
