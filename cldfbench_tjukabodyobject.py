@@ -98,6 +98,7 @@ class Dataset(BaseDataset):
 
     @property
     def dataset_meta(self):
+        # XXX: is this still needed?
         try:
             return self._dataset_meta
         except AttributeError:
@@ -112,12 +113,23 @@ class Dataset(BaseDataset):
             return self._dataset_meta
 
     def cmd_download(self, args):
-        github_info = {rec.doi: rec.github_repos for rec in oai_lexibank()}
+        github_info_by_doi = {rec.doi: rec.github_repos for rec in oai_lexibank()}
+        dataset_list = self.etc_dir.read_csv(
+            'datasets.tsv', delimiter='\t', dicts=True)
 
-        for dataset, row in self.dataset_meta.items():
-            ghinfo = github_info[row['Zenodo']]
-            args.log.info("Checking {}".format(dataset))
-            dest = self.raw_dir / dataset
+        for row in dataset_list:
+            dataset_id = row['ID']
+            doi = row['Zenodo']
+            github_org = row['Organisation']
+            github_repo = row['Repository']
+            clone_url = 'https://github.com/{}/{}'.format(
+                github_org, github_repo)
+            if row.get('Zenodo'):
+                tag = github_info_by_doi[doi].tag
+            else:
+                tag = None
+            args.log.info("Checking {}".format(dataset_id))
+            dest = self.raw_dir / dataset_id
 
             # download data
             if dest.exists():
@@ -125,18 +137,18 @@ class Dataset(BaseDataset):
                 for remote in Repo(str(dest)).remotes:
                     remote.fetch()
             else:
-                args.log.info("... cloning {}".format(dataset))
+                args.log.info("... cloning {}".format(dataset_id))
                 try:
-                    Repo.clone_from(ghinfo.clone_url, str(dest))
+                    Repo.clone_from(clone_url, str(dest))
                 except GitCommandError as e:
                     args.log.error("... download failed\n{}".format(str(e)))
                     continue
 
             # check out release (fall back to master branch)
             repo = Repo(str(dest))
-            if ghinfo.tag:
-                args.log.info('... checking out tag {}'.format(ghinfo.tag))
-                repo.git.checkout(ghinfo.tag)
+            if tag:
+                args.log.info('... checking out tag {}'.format(tag))
+                repo.git.checkout(tag)
             else:
                 args.log.warning('... could not determine tag to check out')
                 args.log.info('... checking out master')
