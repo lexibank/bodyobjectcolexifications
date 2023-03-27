@@ -68,7 +68,6 @@ def make_cldf_lang(lang, collection):
         "Subgroup": lang.subgroup,
         "Family": lang.family,
         "Forms": len(lang.forms or []),
-        "FormsWithSounds": len(lang.forms_with_sounds or []),
         "Concepts": len(lang.concepts),
         "Incollections": collection,
     }
@@ -96,28 +95,24 @@ class Dataset(BaseDataset):
             metadata_fname='cldf-metadata.json',
             dir=self.cldf_dir, module="StructureDataset")
 
-    @property
-    def dataset_meta(self):
-        try:
-            return self._dataset_meta
-        except AttributeError:
-            dataset_meta = collections.OrderedDict()
-            for row in self.etc_dir.read_csv('lexibank.csv', delimiter=',', dicts=True):
-                if not row['Zenodo'].strip():
-                    continue
-                row['collections'] = set(key for key in COLLECTIONS if row.get(key, '').strip() == 'x')
-                if 'ClicsCore' in row['collections']:
-                    dataset_meta[row['Dataset']] = row
-            self._dataset_meta = dataset_meta
-            return self._dataset_meta
-
     def cmd_download(self, args):
-        github_info = {rec.doi: rec.github_repos for rec in oai_lexibank()}
+        github_info_by_doi = {rec.doi: rec.github_repos for rec in oai_lexibank()}
+        dataset_list = self.etc_dir.read_csv(
+            'datasets.tsv', delimiter='\t', dicts=True)
 
-        for dataset, row in self.dataset_meta.items():
-            ghinfo = github_info[row['Zenodo']]
-            args.log.info("Checking {}".format(dataset))
-            dest = self.raw_dir / dataset
+        for row in dataset_list:
+            dataset_id = row['ID']
+            doi = row['Zenodo']
+            github_org = row['Organisation']
+            github_repo = row['Repository']
+            clone_url = 'https://github.com/{}/{}'.format(
+                github_org, github_repo)
+            if row.get('Zenodo'):
+                tag = github_info_by_doi[doi].tag
+            else:
+                tag = None
+            args.log.info("Checking {}".format(dataset_id))
+            dest = self.raw_dir / dataset_id
 
             # download data
             if dest.exists():
@@ -125,18 +120,18 @@ class Dataset(BaseDataset):
                 for remote in Repo(str(dest)).remotes:
                     remote.fetch()
             else:
-                args.log.info("... cloning {}".format(dataset))
+                args.log.info("... cloning {}".format(dataset_id))
                 try:
-                    Repo.clone_from(ghinfo.clone_url, str(dest))
+                    Repo.clone_from(clone_url, str(dest))
                 except GitCommandError as e:
                     args.log.error("... download failed\n{}".format(str(e)))
                     continue
 
             # check out release (fall back to master branch)
             repo = Repo(str(dest))
-            if ghinfo.tag:
-                args.log.info('... checking out tag {}'.format(ghinfo.tag))
-                repo.git.checkout(ghinfo.tag)
+            if tag:
+                args.log.info('... checking out tag {}'.format(tag))
+                repo.git.checkout(tag)
             else:
                 args.log.warning('... could not determine tag to check out')
                 args.log.info('... checking out master')
@@ -151,28 +146,6 @@ class Dataset(BaseDataset):
                         args.log.error('found neither main nor master branch')
                 repo.git.merge()
 
-    def _dataset_ids(self, set_=None):
-        """
-        Load all datasets from a defined group of datasets.
-        """
-        if set_:
-            dataset_ids = [
-                dataset_id
-                for dataset_id, md in self.dataset_meta.items()
-                if set_ in md['collections']]
-        else:
-            dataset_ids = list(self.dataset_meta)
-
-        # avoid duplicates
-        dataset_ids = sorted(set(dataset_ids))
-        return dataset_ids
-
-    def _iter_datasets(self, dataset_ids):
-        for dataset_id in dataset_ids:
-            dataset = pycldf.Dataset.from_metadata(
-                self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
-            yield dataset
-
     def _schema(self, writer):
         writer.cldf.add_component(
             'LanguageTable',
@@ -181,8 +154,6 @@ class Dataset(BaseDataset):
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#contributionReference',
             },
             {'name': 'Forms', 'datatype': 'integer', 'dc:description': 'Number of forms'},
-            {'name': "FormsWithSounds", "datatype": "integer",
-                "dc:description": "Number of forms with sounds"},
             {'name': 'Concepts', 'datatype': 'integer', 'dc:description': 'Number of concepts'},
             {'name': 'Incollections'},
             'Subgroup',
@@ -252,9 +223,11 @@ class Dataset(BaseDataset):
         dataset_list = self.etc_dir.read_csv(
             'datasets.tsv', delimiter='\t', dicts=True)
 
-        for dataset in self._iter_datasets(ds['ID'] for ds in dataset_list):
+        for dataset_info in dataset_list:
+            dataset_id = dataset_info['ID']
+            dataset = pycldf.Dataset.from_metadata(
+                self.raw_dir / dataset_id / "cldf" / "cldf-metadata.json")
             wordlist = Wordlist(datasets=[dataset])
-            dataset_id = wordlist.datasets[0].metadata_dict['rdf:ID']
 
             contributions.append({
                 'ID': dataset_id,
