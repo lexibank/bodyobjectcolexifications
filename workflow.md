@@ -17,8 +17,8 @@ The workflow consists of a sequence of calls to `cldfbench` subcommands, which i
 
 1. Install the package (including Dependencies)
    ```shell
-   $ git clone https://github.com/lexibank/tjukabodyobject
-   $ cd tjukabodyobject
+   $ git clone https://github.com/lexibank/bodyobjectcolexifications
+   $ cd bodyobjectcolexifications
    $ pip install -e .
    ```
 
@@ -27,16 +27,16 @@ The workflow consists of a sequence of calls to `cldfbench` subcommands, which i
    The data collections will be downloaded by reading the most recent selection of lexibank datasets from the file `src/lexibank/data/lexibank.tsv` and then downloading the relevant datasets to a folder which you specify with the kewyord `destination`. We will call the folder `datasets` in the following.
 
    ```shell
-   $ cldfbench download tjukabodyobject.py
+   $ cldfbench download cldfbench_bodyobjectcolexifications.py
    ```
 
 3. Compute body-object colexifcations
 
-   The analysis results of `tjukabodyobject` are stored in one CLDF Datasets including the 100 most frequent body-object colexifications.
+   The analysis results of `bodyobjectcolexifications` are stored in one CLDF Datasets including the 100 most frequent body-object colexifications.
 
    These data are created running
    ```shell
-   $ cldfbench makecldf --with-cldfreadme cldfbench_tjukabodyobject.py
+   $ cldfbench makecldf --with-cldfreadme cldfbench_bodyobjectcolexifications.py
    ```
 
 4. Make sure valid CLDF data has been created:
