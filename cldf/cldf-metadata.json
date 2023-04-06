@@ -9,18 +9,18 @@
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:title": "Tjuka 2022: Body-Object Colexifications",
-    "dcat:accessURL": "https://github.com/lexibank/tjukabodyobject",
+    "dcat:accessURL": "https://github.com/lexibank/bodyobjectcolexifications",
     "prov:wasDerivedFrom": [
         {
-            "rdf:about": "https://github.com/lexibank/tjukabodyobject",
+            "rdf:about": "https://github.com/lexibank/bodyobjectcolexifications",
             "rdf:type": "prov:Entity",
-            "dc:created": "v0.2-100-gf53b2c1",
+            "dc:created": "v0.2-132-gf430523",
             "dc:title": "Repository"
         },
         {
             "rdf:about": "https://github.com/glottolog/glottolog",
             "rdf:type": "prov:Entity",
-            "dc:created": "v4.5",
+            "dc:created": "v4.4",
             "dc:title": "Glottolog"
         },
         {
@@ -30,45 +30,9 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/lexibank/zhoubizic",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/simsrma",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.1",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/satterthwaitetb",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v4.0",
-            "dc:title": "Repository"
-        },
-        {
             "rdf:about": "https://github.com/lexibank/robinsonap",
             "rdf:type": "prov:Entity",
             "dc:created": "v4.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/intercontinental-dictionary-series/lindseyende",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/SequenceComparison/starostinpie",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/mannburmish",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
             "dc:title": "Repository"
         },
         {
@@ -84,18 +48,6 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/lexibank/castrozhuang",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0.1",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/logos",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v4.0",
-            "dc:title": "Repository"
-        },
-        {
             "rdf:about": "https://github.com/lexibank/zgraggenmadang",
             "rdf:type": "prov:Entity",
             "dc:created": "v4.0",
@@ -108,21 +60,15 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/SequenceComparison/zhivlovobugrian",
+            "rdf:about": "https://github.com/lexibank/lamanisoic",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.0.1",
+            "dc:created": "a1e4ddc",
             "dc:title": "Repository"
         },
         {
             "rdf:about": "https://github.com/lexibank/hantganbangime",
             "rdf:type": "prov:Entity",
             "dc:created": "v1.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/intercontinental-dictionary-series/yuchinese",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
             "dc:title": "Repository"
         },
         {
@@ -150,9 +96,21 @@
             "dc:title": "Repository"
         },
         {
+            "rdf:about": "https://github.com/lexibank/savelyevturkic",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v2.0",
+            "dc:title": "Repository"
+        },
+        {
             "rdf:about": "https://github.com/lexibank/chindialectsurvey",
             "rdf:type": "prov:Entity",
             "dc:created": "v1.0",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/lexibank/othanieljen",
+            "rdf:type": "prov:Entity",
+            "dc:created": "402c7e8",
             "dc:title": "Repository"
         },
         {
@@ -163,12 +121,6 @@
         },
         {
             "rdf:about": "https://github.com/lexibank/polyglottaafricana",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/clarkkimmun",
             "rdf:type": "prov:Entity",
             "dc:created": "v1.0",
             "dc:title": "Repository"
@@ -192,39 +144,9 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/intercontinental-dictionary-series/ids",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v4.1",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/clics/clics1-cldf",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
-            "dc:title": "Repository"
-        },
-        {
             "rdf:about": "https://github.com/lexibank/bodtkhobwa",
             "rdf:type": "prov:Entity",
             "dc:created": "v3.0.1",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/castroyi",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0.1",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/aaleykusunda",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/diacl",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v3.0",
             "dc:title": "Repository"
         },
         {
@@ -240,9 +162,15 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/SequenceComparison/listsamplesize",
+            "rdf:about": "https://github.com/tupian-language-resources/tuled",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
+            "dc:created": "v0.12-8-g2664817",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/lexibank/oskolskayatungusic",
+            "rdf:type": "prov:Entity",
+            "dc:created": "24184ab",
             "dc:title": "Repository"
         },
         {
@@ -259,12 +187,6 @@
         },
         {
             "rdf:about": "https://github.com/lexibank/huntergatherer",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v1.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/lexibank/hsiuhmongmien",
             "rdf:type": "prov:Entity",
             "dc:created": "v1.0",
             "dc:title": "Repository"
@@ -288,12 +210,6 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/lexibank/castrosui",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v3.0.1",
-            "dc:title": "Repository"
-        },
-        {
             "rdf:about": "https://github.com/lexibank/sagartst",
             "rdf:type": "prov:Entity",
             "dc:created": "v2.0",
@@ -312,21 +228,15 @@
             "dc:title": "Repository"
         },
         {
-            "rdf:about": "https://github.com/lexibank/gerarditupi",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
-            "dc:title": "Repository"
-        },
-        {
-            "rdf:about": "https://github.com/intercontinental-dictionary-series/visserkalamang",
-            "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
-            "dc:title": "Repository"
-        },
-        {
             "rdf:about": "https://github.com/lexibank/naganorgyalrongic",
             "rdf:type": "prov:Entity",
             "dc:created": "v3.0",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/intercontinental-dictionary-series/idssegmented",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v0.2",
             "dc:title": "Repository"
         }
     ],
@@ -340,15 +250,12 @@
             "dc:relation": "requirements.txt"
         }
     ],
-    "rdf:ID": "tjukabodyobject",
+    "rdf:ID": "bodyobjectcolexifications",
     "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
-    "dialect": {
-        "commentPrefix": null
-    },
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
-            "dc:extent": 106600,
+            "dc:extent": 93100,
             "tableSchema": {
                 "columns": [
                     {
@@ -404,6 +311,11 @@
                         "required": false,
                         "separator": ";",
                         "name": "Source"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#exampleReference",
+                        "separator": ";",
+                        "name": "Example_IDs"
                     }
                 ],
                 "foreignKeys": [
@@ -439,6 +351,17 @@
                                 "ID"
                             ]
                         }
+                    },
+                    {
+                        "columnReference": [
+                            "Example_IDs"
+                        ],
+                        "reference": {
+                            "resource": "examples.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
                     }
                 ],
                 "primaryKey": [
@@ -449,7 +372,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 1066,
+            "dc:extent": 931,
             "tableSchema": {
                 "columns": [
                     {
@@ -500,7 +423,7 @@
                         },
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
                         "required": false,
-                        "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}",
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}",
                         "name": "Glottocode"
                     },
                     {
@@ -520,11 +443,6 @@
                         "dc:description": "Number of forms",
                         "datatype": "integer",
                         "name": "Forms"
-                    },
-                    {
-                        "dc:description": "Number of forms with sounds",
-                        "datatype": "integer",
-                        "name": "FormsWithSounds"
                     },
                     {
                         "dc:description": "Number of concepts",
@@ -587,6 +505,12 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
                         "required": false,
                         "name": "Description"
+                    },
+                    {
+                        "datatype": "json",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#columnSpec",
+                        "required": false,
+                        "name": "ColumnSpec"
                     },
                     {
                         "datatype": "string",
@@ -702,7 +626,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
-            "dc:extent": 51,
+            "dc:extent": 36,
             "tableSchema": {
                 "columns": [
                     {
@@ -781,6 +705,106 @@
                 ]
             },
             "url": "contributions.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
+            "dc:extent": 63219,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "required": true,
+                        "name": "Language_ID"
+                    },
+                    {
+                        "dc:description": "The example text in the source language.",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
+                        "required": true,
+                        "name": "Primary_Text"
+                    },
+                    {
+                        "dc:description": "The sequence of words of the primary text to be aligned with glosses",
+                        "dc:extent": "multivalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
+                        "required": false,
+                        "separator": "\t",
+                        "name": "Analyzed_Word"
+                    },
+                    {
+                        "dc:description": "The sequence of glosses aligned with the words of the primary text",
+                        "dc:extent": "multivalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
+                        "required": false,
+                        "separator": "\t",
+                        "name": "Gloss"
+                    },
+                    {
+                        "dc:description": "The translation of the example text in a meta language",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
+                        "required": false,
+                        "name": "Translated_Text"
+                    },
+                    {
+                        "dc:description": "References the language of the translated text",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
+                        "required": false,
+                        "name": "Meta_Language_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "required": false,
+                        "name": "Comment"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Meta_Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "examples.csv"
         }
     ]
 }
