@@ -20,9 +20,6 @@ setup(
         'cldfbench.dataset': [
             'tjukabodyobject=cldfbench_tjukabodyobject:Dataset',
         ],
-        'cldfbench.commands': [
-            'tjukabodyobject=tjukabodyobject_commands',
-        ],
     },
     platforms='any',
     python_requires='>=3.6',
