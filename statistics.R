@@ -6,9 +6,9 @@ library(ggplot2)
 
 #### Import data tables (please change the path to the repository accordingly)
 
-values <- read_csv("./lexibank/tjukabodyobject/cldf/values.csv")
-languages <- read_csv("./lexibank/tjukabodyobject/cldf/languages.csv")
-features <- read_csv("./lexibank/tjukabodyobject/cldf/parameters.csv")
+values <- read_csv("./lexibank/bodyobjectcolexifications/cldf/values.csv")
+languages <- read_csv("./lexibank/bodyobjectcolexifications/cldf/languages.csv")
+features <- read_csv("./lexibank/bodyobjectcolexifications/cldf/parameters.csv")
 
 
 #### Include only distinct language names and delete bookkeeping languages
