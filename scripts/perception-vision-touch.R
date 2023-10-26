@@ -67,7 +67,7 @@ cat("Standard Deviation for Touch Residuals:", sd_touch, "\n")
 ### Visualize the results
 
 # Define a colorblind friendly color palette
-colors = c("#009E73", "#E69F00")
+colors = c("#0047AB", "#E69F00")
 
 # Calculate mean values for vision and touch for each body-object colexification
 interaction_means <- aggregate(value ~ perception_type + BODY + OBJECT, data_tf, mean)
