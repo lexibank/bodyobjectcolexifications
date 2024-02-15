@@ -88,7 +88,7 @@ def code_id(feat_id, val):
 
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
-    id = 'bodyobjectcolexifications'
+    id = 'tjukabodyobject'
 
     def cldf_specs(self):
         return CLDFSpec(

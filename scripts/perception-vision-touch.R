@@ -8,7 +8,7 @@ groundhog.library(pkgs, "2023-10-01")
 
 
 # Load data
-# The body-object colexifications were extracted from the GitHub repository of the study: https://github.com/lexibank/bodyobjectcolexifications/blob/main/cldf/values.csv
+# The body-object colexifications were extracted from the GitHub repository of the study: https://github.com/lexibank/tjukabodyobject/blob/main/cldf/values.csv
 # For the ratings on visual and haptic perception, I used the Lancaster Sensorimotor Norms (Lynott et al. 2020) 
 # that were mapped to the Concepticon concept sets and added to the NoRaRe database (Tjuka et al. 2023). 
 # The data can be downloaded here: https://github.com/concepticon/norare-data/blob/v1.0.1/datasets/Lynott-2020-Sensorimotor/Lynott-2020-Sensorimotor.tsv

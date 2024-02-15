@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='bodyobjectcolexifications',
+    name='tjukabodyobject',
     version='0.1.0.dev0',
     description='',
     author='',
@@ -11,14 +11,14 @@ setup(
     long_description_content_type='text/markdown',
     keywords='',
     license='MIT',
-    url='https://github.com/lexibank/bodyobjectcolexifications',
-    py_modules=['cldfbench_bodyobjectcolexifications'],
+    url='https://github.com/lexibank/tjukabodyobject',
+    py_modules=['cldfbench_tjukabodyobject'],
     packages=find_packages(where='.'),
     include_package_data=True,
     zip_safe=False,
     entry_points={
         'cldfbench.dataset': [
-            'bodyobjectcolexifications=cldfbench_bodyobjectcolexifications:Dataset',
+            'tjukabodyobject=cldfbench_tjukabodyobject:Dataset',
         ],
     },
     platforms='any',
